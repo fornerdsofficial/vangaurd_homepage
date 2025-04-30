@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* Fonts */
+  --font-pretendard-variable: "Pretendard Variable";
+  --font-gmarket-sans: "Gmarket Sans";
+  --font-inter: Inter;
+  --font-garet: Garet;
+
+  /* font sizes */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-mini: 15px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-5xl: 24px;
+  --font-size-7xl: 26px;
+  --font-size-11xl: 30px;
+  --font-size-13xl: 32px;
+  --font-size-17xl: 36px;
+  --font-size-21xl: 40px;
+  --font-size-45xl: 64px;
+  --font-size-77xl: 96px;
+
+  /* Colors */
+  --color-darkslategray-100: #3c3c3c;
+  --color-dimgray: #4b5563;
+  --color-gainsboro-100: #e0e0e0;
+  --color-gainsboro-200: #d6d9dd;
+  --color-gray-100: #8e8e8e;
+  --color-gray-200: #7c7d84;
+  --color-gray-300: #7c7c84;
+  --color-gray-400: rgba(255, 255, 255, 0.84);
+  --color-lavender-100: #dee4f0;
+  --color-lavender-200: #d8e0f0;
+  --color-lavender-300: #d1dbeb;
+  --color-lightslategray: #7e889b;
+  --color-lightsteelblue-100: #c3ccdd;
+  --color-silver-100: #c0c6d3;
+  --color-white: #fff;
+  --color-whitesmoke: #f0f2f6;
+
+  /* Gaps */
+  --gap-0: 0px;
+  --gap-3xs: 10px;
+  --gap-xs: 12px;
+  --gap-sm: 14px;
+  --gap-mini: 15px;
+  --gap-base: 16px;
+  --gap-lgi: 19px;
+  --gap-xl: 20px;
+  --gap-2xl: 21px;
+  --gap-5xl: 24px;
+  --gap-11xl: 30px;
+  --gap-15xl: 34px;
+  --gap-20xl: 39px;
+  --gap-21xl: 40px;
+  --gap-23xl: 42px;
+  --gap-28xl: 47px;
+  --gap-31xl: 50px;
+  --gap-40xl: 59px;
+  --gap-41xl: 60px;
+  --gap-44xl: 63px;
+  --gap-47xl: 66px;
+  --gap-49xl: 68px;
+  --gap-50xl: 69px;
+  --gap-61xl: 80px;
+  --gap-81xl: 100px;
+  --gap-101xl: 120px;
+  --gap-121xl: 140px;
+  --gap-141xl: 160px;
+  --gap-181xl: 200px;
+  --gap-281xl: 300px;
+
+  /* Paddings */
+  --padding-11xs: 2px;
+  --padding-8xs: 5px;
+  --padding-7xs: 6px;
+  --padding-4xs: 9px;
+  --padding-3xs: 10px;
+  --padding-2xs: 11px;
+  --padding-sm: 14px;
+  --padding-mini: 15px;
+  --padding-base: 16px;
+  --padding-mid: 17px;
+  --padding-lgi: 19px;
+  --padding-xl: 20px;
+  --padding-2xl: 21px;
+  --padding-3xl: 22px;
+  --padding-7xl: 26px;
+  --padding-11xl: 30px;
+  --padding-15xl: 34px;
+  --padding-17xl: 36px;
+  --padding-31xl: 50px;
+  --padding-35xl: 54px;
+  --padding-43xl: 62px;
+  --padding-44xl: 63px;
+  --padding-45xl: 64px;
+  --padding-111xl: 130px;
+
+  /* Border radiuses */
+  --br-8xs: 5px;
+  --br-5xs-5: 7.5px;
+  --br-5xs: 8px;
+  --br-3xs: 10px;
+  --br-xs: 12px;
+  --br-smi: 13px;
+  --br-base: 16px;
+  --br-mid: 17px;
+  --br-4xl: 23px;
+  --br-11xl: 30px;
+  --br-22xl: 41px;
+  --br-44xl: 63px;
+
+  /* Figma Variables */
+
+  /* Color Variables */
+  --Color-Black: #393b57;
+  --Color-Line: #c2cbe0;
+  --ColorLine2: #a2a3b5;
+  --Icon-Default-Default: #1e1e1e;
+  --KeyColor: #21479b;
+  --KeyColor2: #5482e7;
+}
