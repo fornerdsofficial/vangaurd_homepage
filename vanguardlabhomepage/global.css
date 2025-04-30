@@ -3,6 +3,73 @@ body {
   line-height: normal;
 }
 
+/* 공통 footer 스타일 */
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-white);
+  width: 1440px;
+  height: 355px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-31xl) var(--padding-111xl);
+  box-sizing: border-box;
+  gap: var(--gap-50xl);
+  font-size: var(--font-size-17xl);
+  color: var(--color-lightslategray);
+  z-index: 10; /* 다른 요소보다 위에 표시하기 위해 추가 */
+}
+
+.footer-vanguardlab {
+  position: relative;
+  text-shadow: 1.5px 0 0#7e889b, 0 1.5px 0#7e889b, -1.5px 0 0#7e889b,
+    0-1.5px 0#7e889b;
+}
+
+.footer-contain {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-sm);
+}
+
+.footer-telfax-container {
+  position: relative;
+  font-size: var(--font-size-mini);
+  font-family: var(--font-inter);
+}
+
+.footer-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-28xl);
+}
+
+.footer-copyright-vanguardlab-all {
+  width: 396px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.footer-copyrights {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--font-size-mini);
+  font-family: var(--font-inter);
+}
+
 :root {
   /* Fonts */
   --font-pretendard-variable: "Pretendard Variable";
