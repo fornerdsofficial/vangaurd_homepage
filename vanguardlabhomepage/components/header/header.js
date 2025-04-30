@@ -1,0 +1,158 @@
+// header Web Component 정의
+class HeaderComponent extends HTMLElement {
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    // Shadow DOM 대신 일반 DOM 사용 - 전역 CSS가 적용되도록 함
+    
+    // HTML 템플릿 생성
+    this.innerHTML = `
+      <div class="header1">
+        <div class="vanguardlab" id="vanguardlabText">Vanguardlab</div>
+        <div class="nav-container">
+          <div class="taps">
+            <div class="contain">
+              <div class="tap" id="companyBtn">
+                <div class="company">Company</div>
+              </div>
+              <div class="tap" id="serviceBtn">
+                <div class="company">Service</div>
+              </div>
+              <div class="tap" id="solutionBtn">
+                <div class="company">Solution</div>
+              </div>
+              <div class="tap" id="referencesBtn">
+                <div class="company">References</div>
+              </div>
+            </div>
+            <div class="contain22">
+              <div class="divider"></div>
+              <div class="contain1">
+                <div class="tap" id="blogBtn">
+                  <div class="company">Blog</div>
+                </div>
+                <div class="tap" id="contactBtn">
+                  <div class="company">Contact</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mega-dropdown" id="megaDropdown">
+        <div class="mega-dropdown-container">
+          <div class="dropdown-menu-row">
+            <!-- Company 드롭다운 메뉴 -->
+            <div class="dropdown-menu" id="companyDropdown">
+              <div class="category-links">
+                <a href="./company-overview.html">Overview</a>
+                <a href="./company-ceo.html">CEO Message</a>
+                <a href="./company-history.html">History</a>
+              </div>
+            </div>
+            <!-- Service 드롭다운 메뉴 -->
+            <div class="dropdown-menu" id="serviceDropdown">
+              <div class="category-links">
+                <a href="./service-mendix.html">Mendix</a>
+                <a href="./service-perfec-twin.html">Perfectwin</a>
+                <a href="./service-system-integration.html">System Integration</a>
+              </div>
+            </div>
+            <!-- Solution 드롭다운 메뉴 -->
+            <div class="dropdown-menu" id="solutionDropdown">
+              <div class="category-links">
+                <a href="./solution-g-r-s.html">Global Report System</a>
+                <a href="./solution-smart-report.html">Smart System</a>
+                <a href="./solution-t-a-l-o-n.html">TALON</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+    
+    // 이벤트 리스너 추가
+    const vanguardlabText = document.getElementById("vanguardlabText");
+    if (vanguardlabText) {
+      vanguardlabText.addEventListener("click", () => {
+        // 현재 페이지가 main.html이 아닌 경우에만 이동
+        if (!window.location.href.includes('main.html')) {
+          window.location.href = "./main.html";
+        }
+      });
+    }
+    
+    // 메뉴 클릭 이벤트 추가
+    const referencesBtn = document.getElementById("referencesBtn");
+    if (referencesBtn) {
+      referencesBtn.addEventListener("click", () => {
+        window.location.href = "./references.html";
+      });
+    }
+    
+    const contactBtn = document.getElementById("contactBtn");
+    if (contactBtn) {
+      contactBtn.addEventListener("click", () => {
+        window.location.href = "./c-o-n-t-a-c-t.html";
+      });
+    }
+    
+    // 드롭다운 메뉴 동작 처리
+    const megaDropdown = document.getElementById('megaDropdown');
+    const menuItems = document.querySelectorAll('#companyBtn, #serviceBtn, #solutionBtn');
+    
+    // 초기에는 드롭다운 숨기기
+    megaDropdown.style.display = 'none';
+    
+    // 마우스 오버 이벤트
+    menuItems.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        // 버튼에 active 클래스 추가
+        menuItems.forEach(btn => btn.classList.remove('active'));
+        item.classList.add('active');
+        
+        // 해당 버튼 ID 확인용
+        const btnId = item.id;
+        if (['companyBtn', 'serviceBtn', 'solutionBtn'].includes(btnId)) {
+          // 메가메뉴 표시
+          megaDropdown.style.display = 'block';
+          
+          // 모든 드롭다운 메뉴 표시
+          document.getElementById('companyDropdown').style.display = 'block';
+          document.getElementById('serviceDropdown').style.display = 'block';
+          document.getElementById('solutionDropdown').style.display = 'block';
+        } else {
+          // 다른 메뉴는 메가메뉴 숨김
+          megaDropdown.style.display = 'none';
+        }
+      });
+    });
+    
+    // 드롭다운에 마우스 온
+    megaDropdown.addEventListener('mouseenter', () => {
+      megaDropdown.style.display = 'block';
+    });
+    
+    // 드롭다운에서 마우스 아웃
+    megaDropdown.addEventListener('mouseleave', (e) => {
+      megaDropdown.style.display = 'none';
+      menuItems.forEach(item => item.classList.remove('active'));
+    });
+    
+    // 헤더에서 마우스 아웃
+    const header = document.querySelector('.header1');
+    header.addEventListener('mouseleave', (e) => {
+      // 마우스가 드롭다운으로 이동하는 경우 제외
+      if (!megaDropdown.contains(e.relatedTarget)) {
+        megaDropdown.style.display = 'none';
+        menuItems.forEach(item => item.classList.remove('active'));
+      }
+    });
+  }
+}
+
+// 커스텀 요소 등록
+customElements.define('header-component', HeaderComponent);
