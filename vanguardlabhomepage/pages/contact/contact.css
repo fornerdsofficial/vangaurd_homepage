@@ -173,7 +173,33 @@
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
-  object-fit: cover;
+}
+
+/* Leaflet 지도 컨테이너를 위한 스타일 */
+#map {
+  width: 100%;
+  height: 450px;
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+/* Leaflet 팝업 스타일 구현 */
+.leaflet-popup-content {
+  position: relative;
+  background: #fff;
+  border-radius: 8px;
+  font-family: var(--font-pretendard-variable);
+  font-size: 14px;
+  font-weight: 400;
+  color: #393b57;
+  text-align: center;
+}
+
+/* 모바일 반응형 스타일 */
+@media screen and (max-width: 768px) {
+  #map {
+    height: 350px;
+  }
 }
 .frame-parent57 {
   width: 1182px;
