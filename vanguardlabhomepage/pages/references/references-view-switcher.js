@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="contain66">
                 <div class="title57">
                     <div class="client">
-                        <img class="x-icon" alt="" src="./public/2x@2x.png" />
+                        <img class="x-icon" alt="" src="../../public/2x@2x.png" />
                     </div>
                     <div class="tag">
                         <div class="mendix34">Mendix</div>

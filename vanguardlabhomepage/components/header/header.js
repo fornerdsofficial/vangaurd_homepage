@@ -48,25 +48,25 @@ class HeaderComponent extends HTMLElement {
             <!-- Company 드롭다운 메뉴 -->
             <div class="dropdown-menu" id="companyDropdown">
               <div class="category-links">
-                <a href="./company-overview.html">Overview</a>
-                <a href="./company-ceo.html">CEO Message</a>
-                <a href="./company-history.html">History</a>
+                <a href="../company-overview/company-overview.html">Overview</a>
+                <a href="../company-ceo/company-ceo.html">CEO Message</a>
+                <a href="../company-history/company-history.html">History</a>
               </div>
             </div>
             <!-- Service 드롭다운 메뉴 -->
             <div class="dropdown-menu" id="serviceDropdown">
               <div class="category-links">
-                <a href="./service-mendix.html">Mendix</a>
-                <a href="./service-perfec-twin.html">Perfectwin</a>
-                <a href="./service-system-integration.html">System Integration</a>
+                <a href="../service-mendix/service-mendix.html">Mendix</a>
+                <a href="../service-perfec-twin/service-perfec-twin.html">Perfectwin</a>
+                <a href="../service-system-integration/service-system-integration.html">System Integration</a>
               </div>
             </div>
             <!-- Solution 드롭다운 메뉴 -->
             <div class="dropdown-menu" id="solutionDropdown">
               <div class="category-links">
-                <a href="./solution-grs.html">Global Report System</a>
-                <a href="./solution-smart-report.html">Smart System</a>
-                <a href="./solution-talon.html">TALON</a>
+                <a href="../solution-grs/solution-grs.html">Global Report System</a>
+                <a href="../solution-smart-report/solution-smart-report.html">Smart System</a>
+                <a href="../solution-talon/solution-talon.html">TALON</a>
               </div>
             </div>
           </div>
@@ -80,7 +80,7 @@ class HeaderComponent extends HTMLElement {
       vanguardlabText.addEventListener("click", () => {
         // 현재 페이지가 main.html이 아닌 경우에만 이동
         if (!window.location.href.includes('main.html')) {
-          window.location.href = "./main.html";
+          window.location.href = "../main/main.html";
         }
       });
     }
@@ -89,14 +89,14 @@ class HeaderComponent extends HTMLElement {
     const referencesBtn = document.getElementById("referencesBtn");
     if (referencesBtn) {
       referencesBtn.addEventListener("click", () => {
-        window.location.href = "./references.html";
+        window.location.href = "../references/references.html";
       });
     }
     
     const contactBtn = document.getElementById("contactBtn");
     if (contactBtn) {
       contactBtn.addEventListener("click", () => {
-        window.location.href = "./contact.html";
+        window.location.href = "../contact/contact.html";
       });
     }
     

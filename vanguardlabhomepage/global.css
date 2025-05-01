@@ -310,6 +310,7 @@ header-component .dropdown-content a:hover {
   position: relative;
   text-shadow: 1.5px 0 0#7e889b, 0 1.5px 0#7e889b, -1.5px 0 0#7e889b,
     0-1.5px 0#7e889b;
+    font-family: var(--font-garet), sans-serif;
 }
 
 .footer-contain {
@@ -324,6 +325,10 @@ header-component .dropdown-content a:hover {
   position: relative;
   font-size: var(--font-size-mini);
   font-family: var(--font-inter);
+}
+
+.global-report {
+  margin: 0px;
 }
 
 .footer-contents {
