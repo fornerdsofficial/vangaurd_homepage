@@ -5,6 +5,7 @@
   background-color: var(--color-whitesmoke);
   width: 1440px;
   height: 1820px;
+  z-index: 2;
 }
 .integration {
   margin: 0;
@@ -322,6 +323,7 @@
 .header-parent5 {
   align-self: stretch;
   gap: var(--gap-181xl);
+  z-index: 2;
 }
 .main-content {
   display: flex;
@@ -330,7 +332,8 @@
   justify-content: flex-start;
   margin: 0 auto;
   max-width: 1440px;
-  padding-top: 100px; /* 헤더 아래로 내용 시작하도록 패딩 추가 */
+  padding-top: 360px;
+  padding-bottom: 600px;
   gap: var(--gap-21xl);
 }
 .service-system-integration {
