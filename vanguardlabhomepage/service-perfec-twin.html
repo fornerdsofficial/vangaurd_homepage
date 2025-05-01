@@ -22,45 +22,22 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
     />
+    <!-- Web Components 스크립트 추가 -->
+    <script src="./components/header/header.js"></script>
+    <script src="./components/footer/footer.js"></script>
   </head>
   <body>
     <div class="service-perfectwin">
       <div class="service-perfectwin-child"></div>
-      <div class="frame-parent17">
+      
+      <!-- 웹 컴포넌트를 이용한 footer 적용 -->
+      <footer-component></footer-component>
+      
+      <!-- 웹 컴포넌트를 이용한 header 적용 -->
+      <header-component></header-component>
+      
+      <div class="main-content">
         <div class="header-parent3">
-          <div class="header12">
-            <div class="header13">
-              <div class="vanguardlab13" id="vanguardlabText">Vanguardlab</div>
-              <div class="taps6">
-                <div class="contain34">
-                  <div class="tap36">
-                    <div class="company36">Company</div>
-                  </div>
-                  <div class="tap36">
-                    <div class="company36">Service</div>
-                  </div>
-                  <div class="tap36">
-                    <div class="company36">Solution</div>
-                  </div>
-                  <div class="tap39" id="tapContainer3">
-                    <div class="company36">References</div>
-                  </div>
-                </div>
-                <div class="contain35">
-                  <img class="line-icon6" alt="" src="./public/line1.svg" />
-
-                  <div class="contain36">
-                    <div class="tap36">
-                      <div class="company36">Blog</div>
-                    </div>
-                    <div class="tap39" id="tapContainer1">
-                      <div class="company36">Contect</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="title-parent3">
             <div class="title26">
               <div class="title27">
@@ -80,7 +57,7 @@
                     <div class="mendix23">
                       PerfecTwin은 실제 발생하고 있는 사용자 및 대외 연계 거래를
                       TO-BE 시스템에서 반복 재현함으로써 오픈 시 발생할 수
-                      있는 다양한 결함들을 사전에 완벽히 차단하여 시스템 품질에
+                      있는 다양한 결함들을 사전에 완벽히 차단하여 시스템 품질에
                       대한 확신을 가질 수 있도록 합니다.
                     </div>
                   </div>
@@ -240,50 +217,7 @@
             </div>
           </div>
         </div>
-        <div class="footer6">
-          <div class="contents15">
-            <div class="contain37">
-              <div class="vanguardlab14">Vanguardlab</div>
-              <div class="div94">
-                [08390] 서울시 구로구 디지털로32길 30.
-                1201호(코오롱디지털타워빌란트 1차)
-              </div>
-            </div>
-            <div class="div94">
-              <p class="p43">Tel/Fax: +82.2.2103.5567/5566</p>
-              <p class="p43">Email: contact@vanguardlab.net</p>
-            </div>
-          </div>
-          <div class="copyrights6">
-            <div class="copyright-vanguardlab-all6">
-              @Copyright Vanguardlab. All Rights Reserved
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-
-    <script>
-      var vanguardlabText = document.getElementById("vanguardlabText");
-      if (vanguardlabText) {
-        vanguardlabText.addEventListener("click", function (e) {
-          window.location.href = "./landing-page.html";
-        });
-      }
-      
-      var tapContainer3 = document.getElementById("tapContainer3");
-      if (tapContainer3) {
-        tapContainer3.addEventListener("click", function (e) {
-          window.location.href = "./references.html";
-        });
-      }
-      
-      var tapContainer1 = document.getElementById("tapContainer1");
-      if (tapContainer1) {
-        tapContainer1.addEventListener("click", function (e) {
-          window.location.href = "./c-o-n-t-a-c-t.html";
-        });
-      }
-      </script>
   </body>
 </html>

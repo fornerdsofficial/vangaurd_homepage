@@ -1,84 +1,5 @@
-.vanguardlab {
-  position: relative;
-  text-shadow: 0.8px 0 0#393b57, 0 0.8px 0#393b57, -0.8px 0 0#393b57,
-    0-0.8px 0#393b57;
-  cursor: pointer;
-}
-.company {
-  position: relative;
-  text-shadow: 0.2px 0 0#393b57, 0 0.2px 0#393b57, -0.2px 0 0#393b57,
-    0-0.2px 0#393b57;
-}
-.tap {
-  width: 100px;
-  justify-content: center;
-  padding: var(--padding-3xs) 0;
-  box-sizing: border-box;
-}
-.contain,
-.tap,
-.tap3 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.tap3 {
-  width: 100px;
-  justify-content: center;
-  padding: var(--padding-3xs) 0;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-.contain {
-  justify-content: flex-start;
-  gap: var(--gap-61xl);
-}
-.line-icon {
-  width: 0.1px;
-  position: relative;
-  height: 24px;
-  object-fit: contain;
-}
-.contain1 {
-  justify-content: flex-start;
-  gap: var(--gap-5xl);
-}
-.contain1,
-.header1,
-.taps {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.taps {
-  justify-content: flex-start;
-  gap: var(--gap-21xl);
-  font-size: var(--font-size-mini);
-}
-.header1 {
-  position: absolute;
-  height: 80%;
-  width: 90.58%;
-  top: 10%;
-  right: 4.71%;
-  bottom: 10%;
-  left: 4.71%;
-  overflow: hidden;
-  justify-content: space-between;
-  padding: var(--padding-3xs) var(--padding-44xl);
-  box-sizing: border-box;
-  gap: var(--gap-0);
-}
-.header,
 .mendix {
   position: relative;
-}
-.header {
-  align-self: stretch;
-  background-color: var(--color-white);
-  height: 149px;
-}
-.mendix {
   line-height: 140%;
   text-shadow: 1.6px 0 0#393b57, 0 1.6px 0#393b57, -1.6px 0 0#393b57,
     0-1.6px 0#393b57;
@@ -281,78 +202,25 @@
   gap: var(--gap-181xl);
   flex: 1; /* 남은 공간 채우기 */
 }
-.vanguardlab1 {
-  position: relative;
-  text-shadow: 1.5px 0 0#7e889b, 0 1.5px 0#7e889b, -1.5px 0 0#7e889b,
-    0-1.5px 0#7e889b;
-}
-.contain3 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-sm);
-}
-.telfax-822210355675566-container {
-  position: relative;
-  font-size: var(--font-size-mini);
-  font-family: var(--font-inter);
-}
-.contents {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-28xl);
-}
-.copyright-vanguardlab-all {
-  width: 396px;
-  position: relative;
-  display: inline-block;
-  flex-shrink: 0;
-}
-.copyrights {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: var(--font-size-mini);
-  font-family: var(--font-inter);
-}
-.footer,
-.frame-parent {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.footer {
-  align-self: stretch;
-  background-color: var(--color-white);
-  height: 355px;
-  box-sizing: border-box;
-  gap: var(--gap-50xl);
-  font-size: var(--font-size-17xl);
-  color: var(--color-lightslategray);
-}
 .frame-parent {
   position: relative;
-  width: 1441px;
-  padding-bottom: 355px; /* 푸터 높이만큼 패딩 추가 */
-  gap: var(--gap-281xl);
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 100px; /* 헤더 아래로 내용 시작하도록 패딩 추가 */
+  gap: var(--gap-21xl);
 }
+
 .company-ceo-message {
   width: 100%;
   position: relative;
   background-color: var(--color-white);
-  min-height: 100vh; /* 최소 높이를 뷰포트 높이로 설정 */
   overflow: hidden;
   text-align: left;
   font-size: var(--font-size-5xl);
   color: var(--Color-Black);
   font-family: var(--font-garet);
-  display: flex; /* 컨테이너 내용 중앙 정렬 */
-  flex-direction: column; /* 세로 방향으로 배치 */
-  align-items: center; /* 중앙 정렬 */
 }

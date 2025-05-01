@@ -5,7 +5,7 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
     <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./c-o-n-t-a-c-t.css" />
+    <link rel="stylesheet" href="./contact.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Garet:wght@400&display=swap"
@@ -22,68 +22,20 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
     />
+    <!-- Web Components 스크립트 추가 -->
+    <script src="./components/header/header.js"></script>
+    <script src="./components/footer/footer.js"></script>
   </head>
   <body>
     <div class="contact">
-      <div class="footer12">
-        <div class="contents51">
-          <div class="contain89">
-            <div class="vanguardlab27">Vanguardlab</div>
-            <div class="div256">
-              [08390] 서울시 구로구 디지털로32길 30.
-              1201호(코오롱디지털타워빌란트 1차)
-            </div>
-          </div>
-          <div class="div256">
-            <p class="telfax-82221035567556614">
-              Tel/Fax: +82.2.2103.5567/5566
-            </p>
-            <p class="telfax-82221035567556614">
-              Email: contact@vanguardlab.net
-            </p>
-          </div>
-        </div>
-        <div class="copyrights14">
-          <div class="copyright-vanguardlab-all14">
-            @Copyright Vanguardlab. All Rights Reserved
-          </div>
-        </div>
-      </div>
+      <!-- 웹 컴포넌트를 이용한 footer 적용 -->
+      <footer-component></footer-component>
+      
+      <!-- 웹 컴포넌트를 이용한 header 적용 -->
+      <header-component></header-component>
+      
       <div class="frame-parent56">
         <div class="header-parent9">
-          <div class="header24">
-            <div class="header25">
-              <div class="vanguardlab28" id="vanguardlabText">Vanguardlab</div>
-              <div class="taps12">
-                <div class="contain90">
-                  <div class="tap72">
-                    <div class="company72">CEO</div>
-                  </div>
-                  <div class="tap72">
-                    <div class="company72">Service</div>
-                  </div>
-                  <div class="tap72">
-                    <div class="company72">Solution</div>
-                  </div>
-                  <div class="tap75" id="tapContainer3">
-                    <div class="company72">References</div>
-                  </div>
-                </div>
-                <div class="contain91">
-                  <img class="line-icon12" alt="" src="./public/line2.svg" />
-
-                  <div class="contain92">
-                    <div class="tap72">
-                      <div class="company72">Blog</div>
-                    </div>
-                    <div class="tap75" id="tapContainer1">
-                      <div class="company72">Contect</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="frame-parent57">
             <div class="title-parent20">
               <div class="title77">
@@ -183,54 +135,7 @@
             />
           </div>
         </div>
-        <div class="contents-container">
-          <div class="contents51">
-            <div class="contain89">
-              <div class="vanguardlab27">Vanguardlab</div>
-              <div class="div256">
-                [08390] 서울시 구로구 디지털로32길 30.
-                1201호(코오롱디지털타워빌란트 1차)
-              </div>
-            </div>
-            <div class="div256">
-              <p class="telfax-82221035567556614">
-                Tel/Fax: +82.2.2103.5567/5566
-              </p>
-              <p class="telfax-82221035567556614">
-                Email: contact@vanguardlab.net
-              </p>
-            </div>
-          </div>
-          <div class="copyrights14">
-            <div class="copyright-vanguardlab-all14">
-              @Copyright Vanguardlab. All Rights Reserved
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-
-    <script>
-      var vanguardlabText = document.getElementById("vanguardlabText");
-      if (vanguardlabText) {
-        vanguardlabText.addEventListener("click", function (e) {
-          window.location.href = "./main.html";
-        });
-      }
-      
-      var tapContainer3 = document.getElementById("tapContainer3");
-      if (tapContainer3) {
-        tapContainer3.addEventListener("click", function (e) {
-          window.location.href = "./references.html";
-        });
-      }
-      
-      var tapContainer1 = document.getElementById("tapContainer1");
-      if (tapContainer1) {
-        tapContainer1.addEventListener("click", function (e) {
-          window.location.href = "./c-o-n-t-a-c-t.html";
-        });
-      }
-      </script>
   </body>
 </html>

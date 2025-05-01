@@ -22,69 +22,22 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
     />
+    <!-- Web Components 스크립트 추가 -->
+    <script src="./components/header/header.js"></script>
+    <script src="./components/footer/footer.js"></script>
   </head>
   <body>
     <div class="references">
       <div class="references-child"></div>
-      <div class="footer10">
-        <div class="contents30">
-          <div class="contain62">
-            <div class="vanguardlab21">Vanguardlab</div>
-            <div class="div162">
-              [08390] 서울시 구로구 디지털로32길 30.
-              1201호(코오롱디지털타워빌란트 1차)
-            </div>
-          </div>
-          <div class="div162">
-            <p class="telfax-82221035567556610">
-              Tel/Fax: +82.2.2103.5567/5566
-            </p>
-            <p class="telfax-82221035567556610">
-              Email: contact@vanguardlab.net
-            </p>
-          </div>
-        </div>
-        <div class="copyrights10">
-          <div class="copyright-vanguardlab-all10">
-            @Copyright Vanguardlab. All Rights Reserved
-          </div>
-        </div>
-      </div>
+      
+      <!-- 웹 컴포넌트를 이용한 footer 적용 -->
+      <footer-component></footer-component>
+      
+      <!-- 웹 컴포넌트를 이용한 header 적용 -->
+      <header-component></header-component>
+      
       <div class="frame-parent50">
         <div class="header-parent7">
-          <div class="header20">
-            <div class="header21">
-              <div class="vanguardlab22" id="vanguardlabText">Vanguardlab</div>
-              <div class="taps10">
-                <div class="contain63">
-                  <div class="tap60">
-                    <div class="company60">CEO</div>
-                  </div>
-                  <div class="tap60">
-                    <div class="company60">Service</div>
-                  </div>
-                  <div class="tap60">
-                    <div class="company60">Solution</div>
-                  </div>
-                  <div class="tap63" id="tapContainer3">
-                    <div class="company60">References</div>
-                  </div>
-                </div>
-                <div class="contain64">
-                  <img class="line-icon10" alt="" src="./public/line3.svg" />
-
-                  <div class="contain65">
-                    <div class="tap60">
-                      <div class="company60">Blog</div>
-                    </div>
-                    <div class="tap63" id="tapContainer1">
-                      <div class="company60">Contect</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="title-parent18">
             <div class="title54">
               <div class="title55">
@@ -119,7 +72,7 @@
                   </div>
                   <div class="titlebutton63">
                     <div class="contain65">
-                      <div class="div163">GRS-Model </div>
+                      <div class="div163">GRS-Model </div>
                     </div>
                   </div>
                   <div class="titlebutton63">
@@ -678,88 +631,12 @@
                       </div>
                     </div>
                   </div>
-                  <div class="referencesbox2">
-                    <div class="contain66">
-                      <div class="title57">
-                        <div class="client">
-                          <img
-                            class="x-icon"
-                            alt=""
-                            src="./public/2x1@2x.png"
-                          />
-                        </div>
-                        <div class="tag">
-                          <div class="mendix34">Mendix</div>
-                        </div>
-                      </div>
-                      <div class="contents31">
-                        <div class="div170">
-                          <span class="txt4">
-                            <p class="telfax-82221035567556610">
-                              전북은행 책무구조도 이행점검
-                            </p>
-                            <p class="telfax-82221035567556610">시스템 구축</p>
-                          </span>
-                        </div>
-                      </div>
-                      <div class="date7">
-                        <div class="div171">2025.01 - 2025.04</div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="contents-parent">
-          <div class="contents30">
-            <div class="contain62">
-              <div class="vanguardlab21">Vanguardlab</div>
-              <div class="div162">
-                [08390] 서울시 구로구 디지털로32길 30.
-                1201호(코오롱디지털타워빌란트 1차)
-              </div>
-            </div>
-            <div class="div162">
-              <p class="telfax-82221035567556610">
-                Tel/Fax: +82.2.2103.5567/5566
-              </p>
-              <p class="telfax-82221035567556610">
-                Email: contact@vanguardlab.net
-              </p>
-            </div>
-          </div>
-          <div class="copyrights10">
-            <div class="copyright-vanguardlab-all10">
-              @Copyright Vanguardlab. All Rights Reserved
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-
-    <script>
-      var vanguardlabText = document.getElementById("vanguardlabText");
-      if (vanguardlabText) {
-        vanguardlabText.addEventListener("click", function (e) {
-          window.location.href = "./main.html";
-        });
-      }
-      
-      var tapContainer3 = document.getElementById("tapContainer3");
-      if (tapContainer3) {
-        tapContainer3.addEventListener("click", function (e) {
-          window.location.href = "./references.html";
-        });
-      }
-      
-      var tapContainer1 = document.getElementById("tapContainer1");
-      if (tapContainer1) {
-        tapContainer1.addEventListener("click", function (e) {
-          window.location.href = "./c-o-n-t-a-c-t.html";
-        });
-      }
-      </script>
   </body>
 </html>

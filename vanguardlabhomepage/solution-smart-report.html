@@ -22,45 +22,22 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
     />
+    <!-- Web Components 스크립트 추가 -->
+    <script src="./components/header/header.js"></script>
+    <script src="./components/footer/footer.js"></script>
   </head>
   <body>
     <div class="solution-smartreport">
       <div class="solution-smartreport-child"></div>
-      <div class="frame-parent19">
+      
+      <!-- 웹 컴포넌트를 이용한 footer 적용 -->
+      <footer-component></footer-component>
+      
+      <!-- 웹 컴포넌트를 이용한 header 적용 -->
+      <header-component></header-component>
+      
+      <div class="main-content">
         <div class="header-parent4">
-          <div class="header14">
-            <div class="header15">
-              <div class="vanguardlab15" id="vanguardlabText">Vanguardlab</div>
-              <div class="taps7">
-                <div class="contain38">
-                  <div class="tap42">
-                    <div class="company42">Company</div>
-                  </div>
-                  <div class="tap42">
-                    <div class="company42">Service</div>
-                  </div>
-                  <div class="tap42">
-                    <div class="company42">Solution</div>
-                  </div>
-                  <div class="tap45" id="tapContainer3">
-                    <div class="company42">References</div>
-                  </div>
-                </div>
-                <div class="contain39">
-                  <img class="line-icon7" alt="" src="./public/line2.svg" />
-
-                  <div class="contain40">
-                    <div class="tap42">
-                      <div class="company42">Blog</div>
-                    </div>
-                    <div class="tap45" id="tapContainer1">
-                      <div class="company42">Contect</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="title-parent4">
             <div class="title30">
               <div class="title31">
@@ -191,7 +168,7 @@
                   <div class="grs-report-framework-container">
                     보고서에 특화된 통합 모델을 기반으로 원천 자료를
                     집계/요약/가공하여 정형화된 대외보고서를 자동으로
-                    생성합니다. 이를 통해 보고서 관련 업무의 효율성 및 산출된
+                    생성합니다. 이를 통해 보고서 관련 업무의 효율성 및 산출된
                     보고서 계수의 신뢰성과 정합성을 제고합니다.
                   </div>
                 </div>
@@ -203,9 +180,9 @@
                   />
 
                   <div class="grs-report-framework-container">
-                    원천데이터 추출을 위한 Smart-Extract, 대외보고용 통합 데이터
-                    모델을 지원하는 Smart-Model 및 금감원보고서
-                    화면인 Smart-Report로 구성되어 있습니다.
+                    원천데이터 추출을 위한 Smart-Extract, 대외보고용 통합 데이터
+                    모델을 지원하는 Smart-Model 및 금감원보고서
+                    화면인 Smart-Report로 구성되어 있습니다.
                   </div>
                 </div>
                 <div class="imagedescriptionbox2">
@@ -230,12 +207,12 @@
 
                   <div class="grs-report-framework-container">
                     <p class="p45">
-                      금감원보고서 9개 영역 77종의 생성을 지원하고 있으며,
+                      금감원보고서 9개 영역 77종의 생성을 지원하고 있으며,
                       생성유형에 따라 배치생성 60종, 업로드생성 17종으로
                       구성됩니다.
                     </p>
                     <p class="p45">
-                      업무 필요성 보고서 대상 영역에 따라 지원대상 보고서
+                      업무 필요성 보고서 대상 영역에 따라 지원대상 보고서
                       추가/삭제가 용이합니다.
                     </p>
                   </div>
@@ -244,50 +221,7 @@
             </div>
           </div>
         </div>
-        <div class="footer7">
-          <div class="contents17">
-            <div class="contain43">
-              <div class="vanguardlab16">Vanguardlab</div>
-              <div class="div103">
-                [08390] 서울시 구로구 디지털로32길 30.
-                1201호(코오롱디지털타워빌란트 1차)
-              </div>
-            </div>
-            <div class="div103">
-              <p class="p45">Tel/Fax: +82.2.2103.5567/5566</p>
-              <p class="p45">Email: contact@vanguardlab.net</p>
-            </div>
-          </div>
-          <div class="copyrights7">
-            <div class="copyright-vanguardlab-all7">
-              @Copyright Vanguardlab. All Rights Reserved
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-
-    <script>
-      var vanguardlabText = document.getElementById("vanguardlabText");
-      if (vanguardlabText) {
-        vanguardlabText.addEventListener("click", function (e) {
-          window.location.href = "./landing-page.html";
-        });
-      }
-      
-      var tapContainer3 = document.getElementById("tapContainer3");
-      if (tapContainer3) {
-        tapContainer3.addEventListener("click", function (e) {
-          window.location.href = "./references.html";
-        });
-      }
-      
-      var tapContainer1 = document.getElementById("tapContainer1");
-      if (tapContainer1) {
-        tapContainer1.addEventListener("click", function (e) {
-          window.location.href = "./c-o-n-t-a-c-t.html";
-        });
-      }
-      </script>
   </body>
 </html>

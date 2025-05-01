@@ -22,45 +22,22 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
     />
+    <!-- Web Components 스크립트 추가 -->
+    <script src="./components/header/header.js"></script>
+    <script src="./components/footer/footer.js"></script>
   </head>
   <body>
     <div class="service-system-integration">
       <div class="service-system-integration-child"></div>
-      <div class="frame-parent20">
+      
+      <!-- 웹 컴포넌트를 이용한 footer 적용 -->
+      <footer-component></footer-component>
+      
+      <!-- 웹 컴포넌트를 이용한 header 적용 -->
+      <header-component></header-component>
+      
+      <div class="main-content">
         <div class="header-parent5">
-          <div class="header16">
-            <div class="header17">
-              <div class="vanguardlab17" id="vanguardlabText">Vanguardlab</div>
-              <div class="taps8">
-                <div class="contain44">
-                  <div class="tap48">
-                    <div class="company48">Company</div>
-                  </div>
-                  <div class="tap48">
-                    <div class="company48">Service</div>
-                  </div>
-                  <div class="tap48">
-                    <div class="company48">Solution</div>
-                  </div>
-                  <div class="tap51" id="tapContainer3">
-                    <div class="company48">References</div>
-                  </div>
-                </div>
-                <div class="contain45">
-                  <img class="line-icon8" alt="" src="./public/line.svg" />
-
-                  <div class="contain46">
-                    <div class="tap48">
-                      <div class="company48">Blog</div>
-                    </div>
-                    <div class="tap51" id="tapContainer1">
-                      <div class="company48">Contect</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="title-parent5">
             <div class="title34">
               <div class="title35">
@@ -323,50 +300,7 @@
             </div>
           </div>
         </div>
-        <div class="footer8">
-          <div class="contents18">
-            <div class="contain47">
-              <div class="vanguardlab18">Vanguardlab</div>
-              <div class="div121">
-                [08390] 서울시 구로구 디지털로32길 30.
-                1201호(코오롱디지털타워빌란트 1차)
-              </div>
-            </div>
-            <div class="div121">
-              <p class="integration">Tel/Fax: +82.2.2103.5567/5566</p>
-              <p class="integration">Email: contact@vanguardlab.net</p>
-            </div>
-          </div>
-          <div class="copyrights8">
-            <div class="copyright-vanguardlab-all8">
-              @Copyright Vanguardlab. All Rights Reserved
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-
-    <script>
-      var vanguardlabText = document.getElementById("vanguardlabText");
-      if (vanguardlabText) {
-        vanguardlabText.addEventListener("click", function (e) {
-          window.location.href = "./landing-page.html";
-        });
-      }
-      
-      var tapContainer3 = document.getElementById("tapContainer3");
-      if (tapContainer3) {
-        tapContainer3.addEventListener("click", function (e) {
-          window.location.href = "./references.html";
-        });
-      }
-      
-      var tapContainer1 = document.getElementById("tapContainer1");
-      if (tapContainer1) {
-        tapContainer1.addEventListener("click", function (e) {
-          window.location.href = "./c-o-n-t-a-c-t.html";
-        });
-      }
-      </script>
   </body>
 </html>

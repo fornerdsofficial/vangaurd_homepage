@@ -64,9 +64,9 @@ class HeaderComponent extends HTMLElement {
             <!-- Solution 드롭다운 메뉴 -->
             <div class="dropdown-menu" id="solutionDropdown">
               <div class="category-links">
-                <a href="./solution-g-r-s.html">Global Report System</a>
+                <a href="./solution-grs.html">Global Report System</a>
                 <a href="./solution-smart-report.html">Smart System</a>
-                <a href="./solution-t-a-l-o-n.html">TALON</a>
+                <a href="./solution-talon.html">TALON</a>
               </div>
             </div>
           </div>
@@ -96,7 +96,7 @@ class HeaderComponent extends HTMLElement {
     const contactBtn = document.getElementById("contactBtn");
     if (contactBtn) {
       contactBtn.addEventListener("click", () => {
-        window.location.href = "./c-o-n-t-a-c-t.html";
+        window.location.href = "./contact.html";
       });
     }
     
