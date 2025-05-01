@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="./global.css" />
     <link rel="stylesheet" href="./references.css" />
+    <link rel="stylesheet" href="./references-style.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Garet:wght@400&display=swap"
@@ -26,7 +27,8 @@
     <script src="./components/header/header.js"></script>
     <script src="./components/footer/footer.js"></script>
   </head>
-  <body>
+
+  <body class="grid-view">
     <div class="references">
       <div class="references-child"></div>
       
@@ -154,29 +156,49 @@
                   </div>
                   <div class="referencesicon">
                     <div class="referencesicon-card-parent">
-                      <div class="referencesicon-card">
+                      <div class="referencesicon-card grid-view-icon active" id="gridViewBtn">
                         <div class="grid">
                           <img
-                            class="icon67"
-                            alt=""
+                            class="icon67 grid-icon"
+                            alt="그리드 뷰"
                             src="./public/icon32.svg"
+                            data-active-src="./public/icon32.svg"
+                            data-inactive-src="./public/icon34.svg"
                           />
                         </div>
                       </div>
-                      <div class="referencesicon-card">
+                      <div class="referencesicon-card list-view-icon" id="listViewBtn">
                         <div class="grid">
                           <img
-                            class="icon67"
-                            alt=""
+                            class="icon67 list-icon"
+                            alt="리스트 뷰"
                             src="./public/icon33.svg"
+                            data-active-src="./public/icon35.svg"
+                            data-inactive-src="./public/icon33.svg"
                           />
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                <!-- 테이블 뷰용 헤더 -->
+                <div class="table-header">
+                  <div class="client-cell">
+                    <b>발주기관</b>
+                  </div>
+                  <div class="line-separator"></div>
+                  <div class="project-cell">
+                    <b>사업명</b>
+                  </div>
+                  <div class="line-separator"></div>
+                  <div class="date-cell">
+                    <b>기간</b>
+                  </div>
+                </div>
+                
                 <div class="referencesbox2-parent">
                   <div class="referencesbox2">
+                    <!-- 그리드 뷰 용 컨테이너 -->
                     <div class="contain66">
                       <div class="title57">
                         <div class="client">
@@ -199,6 +221,24 @@
                       <div class="date7">
                         <div class="div171">2025.01 - 2025.04</div>
                       </div>
+                    </div>
+                    
+                    <!-- 리스트 뷰 용 구조 -->
+                    <div class="client-cell">
+                      <div class="client-name">전북은행</div>
+                    </div>
+                    <div class="line-separator"></div>
+                    <div class="project-cell">
+                      <div class="project-tag">
+                        <div class="perfectwin">Mendix</div>
+                      </div>
+                      <div class="project-name">
+                        전북은행 책무구조도 이행점검시스템 구축
+                      </div>
+                    </div>
+                    <div class="line-separator"></div>
+                    <div class="date-cell">
+                      <div class="project-date">2025.01 - 2025.04</div>
                     </div>
                   </div>
                   <div class="referencesbox2">
@@ -638,5 +678,7 @@
         </div>
       </div>
     </div>
+    <!-- 뷰 전환 스크립트 추가 -->
+    <script src="./references-view-switcher.js"></script>
   </body>
 </html>

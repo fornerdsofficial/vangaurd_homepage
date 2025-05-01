@@ -1,0 +1,227 @@
+/* 레퍼런스 페이지 그리드/리스트 뷰 전환을 위한 스타일 */
+
+/* 아이콘 활성화 스타일 */
+.referencesicon-card.active {
+  background-color: rgba(33, 71, 155, 0.1);
+  border-radius: 4px;
+}
+
+/* 그리드 뷰 (카드 형식) */
+.grid-view .referencesbox2-parent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: var(--gap-21xl) 25px;
+}
+
+.grid-view .referencesbox2 {
+  width: 370px;
+  border-radius: var(--br-xs);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-lavender-300);
+  box-sizing: border-box;
+  height: 245px;
+  flex-direction: column;
+  padding: 0 var(--padding-3xs);
+  display: flex;
+}
+
+/* 리스트 뷰 (테이블 형식) */
+.list-view .referencesbox2-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 0; /* 행 간격 제거 */
+}
+
+/* 테이블 헤더 스타일 */
+.list-view .table-header {
+  width: 100%;
+  border-radius: var(--br-5xs) var(--br-5xs) 0 0;
+  background-color: var(--Color-Black);
+  height: 54px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  color: var(--color-white);
+  font-weight: bold;
+  margin-bottom: 0;
+  border: 1px solid var(--Color-Black);
+}
+
+/* 테이블 헤더 셀 스타일도 행과 동일하게 설정 */
+.list-view .table-header .client-cell {
+  width: 200px;
+  min-width: 150px;
+  padding: 0 15px;
+  justify-content: flex-start;
+}
+
+.list-view .table-header .project-cell {
+  flex: 1;
+  min-width: 300px;
+  padding: 0 15px;
+  justify-content: flex-start;
+}
+
+.list-view .table-header .date-cell {
+  width: 200px;
+  min-width: 150px;
+  padding: 0 15px;
+  justify-content: center;
+}
+
+/* 테이블 행 스타일 */
+.list-view .referencesbox2 {
+  width: 100%;
+  border-radius: 0;
+  border: 1px solid var(--ColorLine2);
+  border-top: none; /* 상단 테두리 제거하여 행 겹침 방지 */
+  background-color: var(--color-white);
+  box-sizing: border-box;
+  height: 70px;
+  margin-top: 0; /* -1px 해제 */
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 테이블 셀 스타일 */
+.list-view .client-cell {
+  width: 200px;
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 15px;
+}
+
+.list-view .project-cell {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--gap-lgi);
+  padding: 0 15px;
+}
+
+.list-view .date-cell {
+  width: 200px;
+  min-width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+
+/* 리스트 뷰에서 표시하지 않을 요소 */
+.list-view .contents31,
+.list-view .title57 > .tag {
+  display: none;
+}
+
+/* 리스트 뷰에서만 표시할 요소 */
+.table-header,
+.client-cell,
+.project-cell,
+.date-cell,
+.line-separator {
+  display: none;
+}
+
+.list-view .table-header {
+  display: flex;
+}
+
+/* 그리드 뷰에서만 표시할 요소 */
+.list-view .contain66 {
+  display: none;
+}
+
+/* 마지막 세로 선 숨기기 */
+.list-view .referencesbox2:last-child .line-separator:last-of-type {
+  display: none !important;
+}
+
+/* 리스트 뷰 요소 레이아웃 */
+.list-view .referencesbox2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.list-view .referencesbox2:first-child {
+  border-top: none;
+}
+
+.list-view .referencesbox2:hover {
+  background-color: #f8f9fc;
+}
+
+/* 첫 번째 행은 상단 테두리 추가 */
+.list-view .referencesbox2:first-of-type {
+  border-top: 1px solid var(--ColorLine2);
+}
+
+.client-name, .project-name, .project-date {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* 리스트 뷰에서 선 스타일 */
+.list-view .line-separator {
+  width: 1px;
+  height: 70%;
+  background-color: var(--ColorLine2);
+  margin: 0 5px;
+}
+
+/* 헤더에서의 선 스타일 */
+.list-view .table-header .line-separator {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 리스트 뷰에서 태그 표시 */
+.list-view .project-tag {
+  display: flex;
+  border-radius: var(--br-11xl);
+  background-color: var(--KeyColor2);
+  padding: var(--padding-11xs) var(--padding-sm);
+  margin-right: 10px;
+}
+
+/* 뷰 전환 아이콘 호버 효과 */
+.referencesicon-card {
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  margin: 0 5px;
+}
+
+.referencesicon-card:hover {
+  background-color: rgba(33, 71, 155, 0.05);
+  transform: translateY(-2px);
+}
+
+/* 아이콘 색상 활성화/비활성화 스타일 */
+.icon67 {
+  transition: opacity 0.3s ease;
+}
+
+.referencesicon-card:not(.active) .icon67 {
+  opacity: 0.7;
+}
