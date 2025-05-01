@@ -1,8 +1,53 @@
+/* FAQ 리스트 업데이트 */
+.faqlist {
+  align-self: stretch;
+  gap: var(--gap-xl);
+  text-align: left;
+  font-size: var(--font-size-xl);
+  font-family: var(--font-pretendard-variable);
+  width: 1040px; /* 가로 너비 1040px로 설정 */
+  margin: 0 auto; /* 중앙 정렬 */
+  display: flex;
+  flex-direction: column;
+}
+
+/* FAQ 아코디언 아이템 스타일 */
+.faqlist .longcard {
+  height: auto;
+  padding: 22px 30px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.faqlist .longcard:hover {
+  box-shadow: 0 4px 10px rgba(33, 71, 155, 0.1);
+  transform: translateY(-2px);
+}
+
+/* 닫혀있을 때 오른쪽, 열렸을 때 아래 방향으로 회전 */
+.faqlist .q .chevron-right-icon1 {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.faqlist .q.open .chevron-right-icon1 {
+  transform: rotate(90deg);
+}
+
+.qa-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--gap-15xl);
+  width: 100%;
+}
+
 .service-mendix-child,
 .service-mendix-item {
   position: absolute;
-  top: 3676px;
-  left: 0;
+  top: 3856px;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: var(--color-whitesmoke);
   width: 1440px;
   height: 1446px;
@@ -157,6 +202,8 @@
   height: 36px;
   overflow: hidden;
   flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
 }
 .contents4,
 .mendix13 {
@@ -178,16 +225,21 @@
   gap: var(--gap-31xl);
 }
 .longcard {
-  width: 903px;
-  border-radius: var(--br-4xl);
+  width: 1040px;
+  border-radius: 23px;
   background-color: var(--color-white);
   height: 81px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: var(--padding-8xs) var(--padding-35xl);
+  padding: 15px 25px;
   box-sizing: border-box;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
 }
 .mendix16 {
   width: 719px;
@@ -400,26 +452,22 @@
 .group-div {
   width: 2014px;
   position: relative;
-  height: 947px;
+  height: 1047px;
   text-align: left;
 }
-.mendix-faq,
-.q1 {
-  position: relative;
-  font-weight: 500;
-}
 .mendix-faq {
+  position: relative;
   line-height: 56px;
+  font-weight: 500;
   text-shadow: 0.4px 0 0#393b57, 0 0.4px 0#393b57, -0.4px 0 0#393b57,
     0-0.4px 0#393b57;
+  margin-bottom: 30px;
 }
 .q1 {
+  position: relative;
   line-height: var(--font-size-13xl);
-}
-.div65,
-.text35 {
-  display: flex;
-  align-items: center;
+  font-weight: 500;
+  color: var(--KeyColor);
 }
 .div65 {
   width: 681px;
@@ -430,9 +478,11 @@
   flex-shrink: 0;
 }
 .text35 {
+  display: flex;
   flex-direction: row;
   justify-content: flex-start;
   gap: var(--gap-15xl);
+  align-items: center;
 }
 .chevron-right,
 .icon16 {
@@ -472,6 +522,8 @@
   flex-direction: row;
   justify-content: space-between;
   gap: var(--gap-0);
+  cursor: pointer;
+  padding: 5px 0;
 }
 .faq1 {
   border-radius: var(--br-mid);
@@ -494,12 +546,22 @@
   overflow: hidden;
   max-height: 100%;
   object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* 닫혀있을 때 오른쪽, 열렸을 때 아래 방향으로 회전 */
+.q .chevron-right-icon1 {
+  transform: rotate(0deg); /* 기본 상태 - 오른쪽 방향 */
+}
+.q.open .chevron-right-icon1 {
+  transform: rotate(90deg); /* 열린 상태 - 아래 방향 */
 }
 .microflow-domain {
   flex: 1;
   position: relative;
   font-size: var(--font-size-lg);
   line-height: 33px;
+  margin-left: 0;
 }
 .a,
 .contents9 {
@@ -510,11 +572,13 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: var(--gap-15xl);
+  align-self: stretch;
+  align-items: flex-start;
   color: var(--color-gray-300);
+  padding-top: 15px;
 }
 .contents9 {
-  gap: var(--gap-31xl);
+  gap: var(--gap-xl);
 }
 .contents9,
 .faq,
@@ -524,13 +588,35 @@
   flex-direction: column;
   justify-content: flex-start;
 }
-.faq3 {
+
+/* FAQ 개별 항목 스타일링 */
+.faqlist .faq3 {
   align-self: stretch;
-  border-radius: var(--br-mid);
-  background-color: var(--color-white);
+  border-radius: 23px;
+  background-color: #ffffff;
   align-items: center;
-  padding: var(--padding-7xl) var(--padding-43xl) var(--padding-31xl);
+  padding: 22px 30px;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  display: block;
 }
+
+.faqlist .faq3:hover {
+  box-shadow: 0 4px 10px rgba(33, 71, 155, 0.1);
+  transform: translateY(-2px);
+}
+
+/* FAQ 아코디언 스타일 */
+.faq-item {
+  margin-bottom: 15px;
+}
+
+.faq-item .q:hover .div65 {
+  color: var(--KeyColor);
+}
+
 .faq,
 .faqlist {
   align-items: flex-start;
@@ -541,10 +627,14 @@
   text-align: left;
   font-size: var(--font-size-xl);
   font-family: var(--font-pretendard-variable);
+  width: 1040px;
 }
 .faq {
   width: 1040px;
-  gap: var(--gap-61xl);
+  gap: var(--gap-31xl);
+  background-color: #F8F9FC;
+  border-radius: 18px;
+  padding: 30px;
 }
 .parent2 {
   gap: var(--gap-181xl);
@@ -575,7 +665,8 @@
   align-items: center;
   margin: 0 auto;
   max-width: 1440px;
-  padding-top: 100px; /* 헤더 아래로 내용 시작하도록 패딩 추가 */
+  padding-top: 360px;
+  padding-bottom: 600px;
 }
 .service-mendix {
   width: 100%;
