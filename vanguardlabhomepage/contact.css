@@ -207,7 +207,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 100px; /* 헤더 아래로 내용 시작하도록 패딩 추가 */
+  padding-top: 360px;
+  padding-bottom: 600px;
   gap: var(--gap-21xl);
   font-size: var(--font-size-5xl);
   color: var(--Color-Black);
