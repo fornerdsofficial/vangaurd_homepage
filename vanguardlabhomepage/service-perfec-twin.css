@@ -1,17 +1,21 @@
 .service-perfectwin-child {
   position: absolute;
-  top: 4722px;
-  left: calc(50% - 720px);
+  top: 4800px;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: var(--color-whitesmoke);
   width: 1440px;
-  height: 1814px;
+  height: 1446px;
 }
+
+/* 기본 페이지 구조 스타일 */
 .mendix22 {
   position: relative;
   line-height: 140%;
   text-shadow: 1.6px 0 0#393b57, 0 1.6px 0#393b57, -1.6px 0 0#393b57,
     0-1.6px 0#393b57;
 }
+
 .title27 {
   width: 404px;
   height: 330px;
@@ -22,14 +26,17 @@
   padding: var(--padding-3xs);
   box-sizing: border-box;
 }
+
 .p43 {
   margin: 0;
 }
+
 .ai-container5 {
   position: relative;
   line-height: var(--font-size-11xl);
   font-weight: 600;
 }
+
 .title28 {
   align-self: stretch;
   display: flex;
@@ -38,6 +45,7 @@
   justify-content: flex-start;
   padding: var(--padding-3xs);
 }
+
 .mendix23 {
   width: 595px;
   position: relative;
@@ -46,22 +54,26 @@
   display: inline-block;
   flex-shrink: 0;
 }
+
 .description19,
 .description20 {
   align-self: stretch;
   display: flex;
   align-items: flex-start;
 }
+
 .description20 {
   flex-direction: row;
   justify-content: center;
   padding: var(--padding-3xs);
   font-size: var(--font-size-base);
 }
+
 .description19 {
   flex-direction: column;
   justify-content: flex-start;
 }
+
 .div83 {
   position: relative;
   line-height: var(--font-size-13xl);
@@ -69,6 +81,7 @@
   text-shadow: 0.2px 0 0#393b57, 0 0.2px 0#393b57, -0.2px 0 0#393b57,
     0-0.2px 0#393b57;
 }
+
 .titlebutton35,
 .titlebutton40 {
   border-radius: var(--br-44xl);
@@ -81,14 +94,18 @@
   justify-content: center;
   padding: var(--padding-base) var(--padding-xl);
 }
+
 .titlebutton35 {
   display: flex;
 }
+
 .titlebutton40 {
   display: none;
 }
+
 .button5 {
   align-self: stretch;
+  display: flex;
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -98,27 +115,29 @@
   text-align: center;
   font-size: var(--font-size-sm);
   font-family: var(--font-gmarket-sans);
-}
-.button5,
-.description-parent3,
-.title26 {
-  display: flex;
   align-items: flex-start;
 }
+
 .description-parent3 {
   width: 616px;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: var(--gap-xl);
   font-size: var(--font-size-5xl);
   font-family: var(--font-pretendard-variable);
+  align-items: flex-start;
 }
+
 .title26 {
   align-self: stretch;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: var(--gap-0);
+  align-items: flex-start;
 }
+
 .img-perfecttwin1-1-icon {
   align-self: stretch;
   position: relative;
@@ -127,6 +146,7 @@
   max-height: 100%;
   object-fit: cover;
 }
+
 .img-perfecttwin1-1-parent {
   align-self: stretch;
   display: flex;
@@ -136,31 +156,126 @@
   gap: 176px;
   mix-blend-mode: multiply;
 }
-.mendix-faq2 {
+
+/* FAQ 스타일 */
+.faq {
+  width: 100%;
+  max-width: 1040px;
+  border-radius: 18px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-31xl);
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
   position: relative;
-  line-height: 56px;
-  font-weight: 500;
-  text-shadow: 0.4px 0 0#393b57, 0 0.4px 0#393b57, -0.4px 0 0#393b57,
-    0-0.4px 0#393b57;
+  z-index: 2; /* 다른 요소보다 앞에 표시 */
 }
-.title29 {
+
+.mendix-wrapper {
   align-self: stretch;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
-.q17 {
+
+.mendix-faq {
+  position: relative;
+  line-height: 56px;
+  font-weight: 500;
+  text-shadow: 0.4px 0 0#393b57, 0 0.4px 0#393b57, -0.4px 0 0#393b57, 0-0.4px 0#393b57;
+  margin-bottom: 30px;
+  color: var(--Color-Black);
+  font-family: var(--font-gmarket-sans);
+}
+
+.faqlist {
+  width: 100%;
+  max-width: 1040px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+  text-align: left;
+  font-size: var(--font-size-xl);
+  font-family: var(--font-pretendard-variable);
+  margin: 0 auto;
+}
+
+.longcard {
+  width: 100%;
+  max-width: 980px;
+  border-radius: 23px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 22px 30px;
+  box-sizing: border-box;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  margin: 0 auto 15px auto;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  z-index: 3; /* FAQ보다 더 앞에 표시 */
+}
+
+.longcard:hover {
+  box-shadow: 0 4px 10px rgba(33, 71, 155, 0.1);
+  transform: translateY(-2px);
+}
+
+.contents9 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+  width: 100%;
+}
+
+/* 질문 영역 스타일 */
+.q {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-0);
+  cursor: pointer;
+  padding: 5px 0;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.q:hover .div65 {
+  color: var(--KeyColor);
+}
+
+.text35 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-15xl);
+}
+
+.q1 {
   position: relative;
   line-height: var(--font-size-13xl);
   font-weight: 500;
+  color: var(--KeyColor);
 }
-.div90,
-.text57 {
-  display: flex;
-  align-items: center;
-}
-.div90 {
+
+.div65 {
   width: 681px;
   position: relative;
   line-height: var(--font-size-13xl);
@@ -168,12 +283,15 @@
   height: 37px;
   flex-shrink: 0;
 }
-.text57 {
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: var(--gap-15xl);
+
+.chevron {
+  width: 30px;
+  position: relative;
+  height: 30px;
 }
-.chevron-right-icon3 {
+
+/* 화살표 아이콘 회전 애니메이션 */
+.chevron-right-icon1 {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -185,134 +303,78 @@
   overflow: hidden;
   max-height: 100%;
   object-fit: contain;
+  transition: transform 0.3s ease;
 }
-.chevron8 {
-  width: 30px;
-  position: relative;
-  height: 30px;
+
+.q .chevron-right-icon1 {
+  transform: rotate(0deg); /* 기본 상태 - 오른쪽 방향 */
 }
-.q16 {
+
+.q.open .chevron-right-icon1 {
+  transform: rotate(90deg); /* 열린 상태 - 아래 방향 */
+}
+
+/* 답변 영역 스타일 */
+.a {
   align-self: stretch;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--gap-0);
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: var(--color-gray-300);
+  padding-top: 15px;
+  display: none; /* 초기에는 답변 숨기기 */
 }
-.microflow-domain2 {
+
+.qa-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-15xl);
+  width: 100%;
+}
+
+.microflow-domain {
   flex: 1;
   position: relative;
   font-size: var(--font-size-lg);
   line-height: 33px;
 }
-.a4,
-.contents14,
-.faq12 {
-  align-self: stretch;
-  display: flex;
-  justify-content: flex-start;
-}
-.a4 {
-  flex-direction: row;
-  align-items: flex-start;
-  gap: var(--gap-15xl);
-  color: var(--color-gray-300);
-}
-.contents14,
-.faq12 {
-  flex-direction: column;
-}
-.contents14 {
-  align-items: flex-start;
-  gap: var(--gap-31xl);
-}
-.faq12 {
-  border-radius: var(--br-mid);
-  background-color: var(--color-white);
-  align-items: center;
-  padding: var(--padding-7xl) var(--padding-43xl) var(--padding-31xl);
-}
-.chevron-right6,
-.icon22 {
-  position: absolute;
-  overflow: hidden;
-}
-.icon22 {
-  height: 50%;
-  width: 25%;
-  top: 25%;
-  right: 37.33%;
-  bottom: 25%;
-  left: 37.67%;
-  max-width: 100%;
-  max-height: 100%;
-}
-.chevron-right6 {
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.faq22 {
-  align-self: stretch;
-  border-radius: var(--br-mid);
-  background-color: var(--color-white);
-  height: 90px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: var(--padding-7xl) var(--padding-43xl);
-  box-sizing: border-box;
-}
-.faq6,
-.faqlist2 {
-  align-self: stretch;
-  align-items: flex-start;
-}
-.faqlist2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: var(--gap-xl);
-  text-align: left;
-  font-size: var(--font-size-xl);
-  font-family: var(--font-pretendard-variable);
-}
-.faq6 {
-  gap: var(--gap-61xl);
-}
-.faq6,
-.frame-parent18,
-.header-parent3,
-.title-parent3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
+
 .frame-parent18 {
   width: 1040px;
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
   gap: 380px;
   text-align: center;
   font-size: var(--font-size-21xl);
   font-family: var(--font-gmarket-sans);
+  position: relative;
+  z-index: 1; /* FAQ의 부모 요소에도 z-index 설정 */
 }
-.header-parent3,
-.title-parent3 {
-  align-items: center;
-}
+
 .title-parent3 {
   width: 1176px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   gap: var(--gap-121xl);
   font-size: var(--font-size-45xl);
 }
+
 .header-parent3 {
   align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   gap: var(--gap-181xl);
 }
+
 .main-content {
   display: flex;
   flex-direction: column;
@@ -320,9 +382,13 @@
   justify-content: flex-start;
   margin: 0 auto;
   max-width: 1440px;
-  padding-top: 100px; /* 헤더 아래로 내용 시작하도록 패딩 추가 */
+  padding-top: 360px;
+  padding-bottom: 600px;
   gap: var(--gap-21xl);
+  position: relative;
+  z-index: 1; /* 콘텐츠 영역 전체에 z-index 설정 */
 }
+
 .service-perfectwin {
   width: 100%;
   position: relative;
