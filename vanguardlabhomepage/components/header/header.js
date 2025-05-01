@@ -9,7 +9,7 @@ class HeaderComponent extends HTMLElement {
     
     // HTML 템플릿 생성
     this.innerHTML = `
-      <div class="header1">
+      <div class="header1" id="headerMain">
         <div class="vanguardlab" id="vanguardlabText">Vanguardlab</div>
         <div class="nav-container">
           <div class="taps">
@@ -72,6 +72,7 @@ class HeaderComponent extends HTMLElement {
           </div>
         </div>
       </div>
+      <!-- header-bg div 제거 -->
     `;
     
     // 이벤트 리스너 추가
@@ -102,10 +103,12 @@ class HeaderComponent extends HTMLElement {
     
     // 드롭다운 메뉴 동작 처리
     const megaDropdown = document.getElementById('megaDropdown');
+    const headerMain = document.getElementById('headerMain');
     const menuItems = document.querySelectorAll('#companyBtn, #serviceBtn, #solutionBtn');
     
     // 초기에는 드롭다운 숨기기
     megaDropdown.style.display = 'none';
+    headerMain.classList.remove('header-active');
     
     // 마우스 오버 이벤트
     menuItems.forEach(item => {
@@ -113,6 +116,9 @@ class HeaderComponent extends HTMLElement {
         // 버튼에 active 클래스 추가
         menuItems.forEach(btn => btn.classList.remove('active'));
         item.classList.add('active');
+        
+        // 헤더 배경 활성화
+        headerMain.classList.add('header-active');
         
         // 해당 버튼 ID 확인용
         const btnId = item.id;
@@ -131,14 +137,27 @@ class HeaderComponent extends HTMLElement {
       });
     });
     
+    // 헤더 메뉴 전체 호버 시 배경 표시
+    const navItems = document.querySelectorAll('.tap');
+    navItems.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        // 메뉴 아이템이 Company, Service, Solution인 경우에만 헤더 배경 활성화
+        if (['companyBtn', 'serviceBtn', 'solutionBtn'].includes(item.id)) {
+          headerMain.classList.add('header-active');
+        }
+      });
+    });
+    
     // 드롭다운에 마우스 온
     megaDropdown.addEventListener('mouseenter', () => {
       megaDropdown.style.display = 'block';
+      headerMain.classList.add('header-active');
     });
     
     // 드롭다운에서 마우스 아웃
     megaDropdown.addEventListener('mouseleave', (e) => {
       megaDropdown.style.display = 'none';
+      headerMain.classList.remove('header-active');
       menuItems.forEach(item => item.classList.remove('active'));
     });
     
@@ -148,6 +167,7 @@ class HeaderComponent extends HTMLElement {
       // 마우스가 드롭다운으로 이동하는 경우 제외
       if (!megaDropdown.contains(e.relatedTarget)) {
         megaDropdown.style.display = 'none';
+        headerMain.classList.remove('header-active');
         menuItems.forEach(item => item.classList.remove('active'));
       }
     });
