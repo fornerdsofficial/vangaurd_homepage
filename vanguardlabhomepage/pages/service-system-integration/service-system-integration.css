@@ -258,6 +258,7 @@
   background-color: var(--color-white);
   border: 1px solid var(--Color-Line);
   padding: var(--padding-11xl) var(--padding-17xl) var(--padding-31xl);
+  height: 534px;
 }
 .icon26,
 .icon27,
