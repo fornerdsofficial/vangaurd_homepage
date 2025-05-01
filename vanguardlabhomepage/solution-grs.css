@@ -6,6 +6,7 @@
   background-color: var(--color-whitesmoke);
   width: 1440px;
   height: 2698px;
+  z-index: 2;
 }
 .solution-grs-item {
   top: 704px;
@@ -295,6 +296,7 @@
 .mokup {
   justify-content: center;
   gap: var(--gap-101xl);
+  z-index: 2;
 }
 .img-grs-1-1-icon {
   width: 916px;
@@ -445,37 +447,160 @@
   bottom: 0;
   left: 0;
 }
-.faq21,
-.faq5,
-.faqlist1 {
-  display: flex;
-  flex-direction: column;
-}
-.faq21 {
-  align-self: stretch;
-  border-radius: var(--br-mid);
-  background-color: var(--color-white);
-  height: 90px;
-  align-items: center;
-  justify-content: center;
-  padding: var(--padding-7xl) var(--padding-43xl);
-  box-sizing: border-box;
-}
-.faq5,
-.faqlist1 {
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.faqlist1 {
+/* FAQ 리스트 업데이트 */
+.faqlist {
   align-self: stretch;
   gap: var(--gap-xl);
   text-align: left;
   font-size: var(--font-size-xl);
   font-family: var(--font-pretendard-variable);
+  width: 1040px; /* 가로 너비 1040px로 설정 */
+  margin: 0 auto; /* 중앙 정렬 */
+  display: flex;
+  flex-direction: column;
 }
-.faq5 {
+
+/* FAQ 아코디언 아이템 스타일 */
+.faqlist .longcard {
+  height: auto;
+  padding: 22px 30px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  border: 1px solid #e6e6e6;
+  border-radius: 23px;
+  background-color: var(--color-white);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.faqlist .longcard:hover {
+  box-shadow: 0 4px 10px rgba(33, 71, 155, 0.1);
+  transform: translateY(-2px);
+}
+
+/* 닫혀있을 때 오른쪽, 열렸을 때 아래 방향으로 회전 */
+.faqlist .q .chevron-right-icon1 {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.faqlist .q.open .chevron-right-icon1 {
+  transform: rotate(90deg);
+}
+
+.qa-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--gap-15xl);
+  width: 100%;
+}
+
+/* Q 질문 스타일 */
+.q {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-0);
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.q1 {
+  position: relative;
+  line-height: var(--font-size-13xl);
+  font-weight: 500;
+  color: var(--KeyColor);
+}
+
+.text35 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: var(--gap-15xl);
+  align-items: center;
+}
+
+.div65 {
+  width: 681px;
+  position: relative;
+  line-height: var(--font-size-13xl);
+  font-weight: 500;
+  height: 37px;
+  flex-shrink: 0;
+}
+
+.chevron {
+  width: 30px;
+  position: relative;
+  height: 30px;
+}
+
+.chevron-right-icon1 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* A 답변 스타일 */
+.a {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-self: stretch;
+  align-items: flex-start;
+  color: var(--color-gray-300);
+  padding-top: 15px;
+}
+
+.microflow-domain {
+  flex: 1;
+  position: relative;
+  font-size: var(--font-size-lg);
+  line-height: 33px;
+  margin-left: 0;
+}
+
+.contents9 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+}
+
+/* FAQ 섹션 전체 스타일 */
+.faq {
   width: 1040px;
-  gap: var(--gap-61xl);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-31xl);
+  border-radius: 18px;
+  padding: 30px;
+  margin-bottom: 60px;
+  z-index: 2;
+}
+
+.mendix-faq {
+  position: relative;
+  line-height: 56px;
+  font-weight: 500;
+  text-shadow: 0.4px 0 0#393b57, 0 0.4px 0#393b57, -0.4px 0 0#393b57,
+    0-0.4px 0#393b57;
+  margin-bottom: 30px;
 }
 .grs2,
 .p42 {
@@ -532,6 +657,7 @@
   width: 1435.1px;
   position: relative;
   height: 900.1px;
+  z-index: 2;
 }
 .frame-parent16 {
   align-self: stretch;
@@ -570,7 +696,8 @@
   justify-content: flex-start;
   margin: 0 auto;
   max-width: 1440px;
-  padding-top: 100px; /* 헤더 아래로 내용 시작하도록 패딩 추가 */
+  padding-top: 360px;
+  padding-bottom: 600px;
 }
 .solution-grs {
   width: 100%;
