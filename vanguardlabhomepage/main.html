@@ -79,16 +79,14 @@
             기업입니다. 고객의 성공이 곧 뱅가드랩의 성공이라는 신념으로 함께
             하겠습니다.
           </div>
-          <div class="landingpagebutton">
-            <div class="about-us-parent">
-              <div class="about-us">ABOUT US</div>
-              <img
-                class="arrow-right-icon"
-                alt=""
-                src="./public/arrow-right.svg"
-              />
-            </div>
-          </div>
+          <a href="./company-overview.html" class="landingpagebutton">
+            <div class="about-us">ABOUT US</div>
+            <img
+              class="arrow-right-icon"
+              alt=""
+              src="./public/arrow-right.svg"
+            />
+          </a>
         </div>
         <div class="instance-parent1">
           <div class="frame-parent2">
@@ -180,7 +178,7 @@
             </div>
           </div>
           <div class="servicecard-parent">
-            <div class="servicecard">
+            <a href="./service-mendix.html" class="servicecard card-link">
               <div class="text14">
                 <div class="decription">
                   <div class="all-in-one-low-code-platform">
@@ -192,8 +190,8 @@
                   <img class="icon7" alt="" src="./public/icon4.svg" />
                 </div>
               </div>
-            </div>
-            <div class="servicecard">
+            </a>
+            <a href="./service-perfec-twin.html" class="servicecard card-link">
               <div class="text14">
                 <div class="decription">
                   <div class="all-in-one-low-code-platform">
@@ -206,8 +204,8 @@
                   <img class="icon7" alt="" src="./public/icon4.svg" />
                 </div>
               </div>
-            </div>
-            <div class="servicecard">
+            </a>
+            <a href="./service-system-integration.html" class="servicecard card-link">
               <div class="text14">
                 <div class="decription">
                   <div class="all-in-one-low-code-platform">
@@ -219,10 +217,10 @@
                   <img class="icon7" alt="" src="./public/icon4.svg" />
                 </div>
               </div>
-            </div>
+            </a>
           </div>
           <div class="servicecard2variant">
-            <div class="servicecard2">
+            <a href="./solution-grs.html" class="servicecard2 card-link">
               <div class="contain15">
                 <div class="text18">
                   <div class="title11">
@@ -232,9 +230,8 @@
                     </div>
                   </div>
                   <div class="description8">
-                    <div class="div39">
-                      대외보고서 마트, 표준계수, 대외보고서의 업무를 빠르게
-                      구축할 수 있는 솔루션
+                    <div>
+                      대외보고서 마트, 표준계수, 대외보고서의 업무를 빠르게 구축할 수 있는 솔루션
                     </div>
                   </div>
                 </div>
@@ -242,8 +239,8 @@
                   <div class="view-more">View more</div>
                 </div>
               </div>
-            </div>
-            <div class="servicecard2">
+            </a>
+            <a href="./solution-smart-report.html" class="servicecard2 card-link">
               <div class="contain15">
                 <div class="text18">
                   <div class="title11">
@@ -253,9 +250,8 @@
                     </div>
                   </div>
                   <div class="description8">
-                    <div class="div39">
-                      캐피탈사를 위한 금융감독원, 한국은행 대외보고서 업무개선을
-                      위한 대외보고서 자동 제작 솔루션
+                    <div>
+                      캐피탈사를 위한 금융감독원, 한국은행 대외보고서 업무개선을 위한 대외보고서 자동 제작 솔루션
                     </div>
                   </div>
                 </div>
@@ -263,17 +259,18 @@
                   <div class="view-more">View more</div>
                 </div>
               </div>
-            </div>
-            <div class="servicecard2">
+            </a>
+            <a href="./solution-talon.html" class="servicecard2 card-link">
               <div class="contain15">
                 <div class="text18">
                   <div class="title11">
                     <div class="system-integration">TALON</div>
                   </div>
                   <div class="description8">
-                    <div class="div41">
-                      지배구조법 개정에 따른 내부통제 대응,실시간 관리,
-                      이행점검, 보고까지 가능한 All-in-One 솔루션
+                    <div>
+                      지배구조법 개정에 따른 내부통제 대응,
+                      실시간 관리, 이행점검, 보고까지 가능한
+                      All-in-One 솔루션
                     </div>
                   </div>
                 </div>
@@ -281,11 +278,39 @@
                   <div class="view-more">View more</div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
     </div>
 
   </body>
+  <script>
+    // 호버 효과를 위한 자바스크립트
+    document.addEventListener('DOMContentLoaded', function() {
+      const cards = document.querySelectorAll('.servicecard2');
+      const cardsContainer = document.querySelector('.servicecard2variant');
+      
+      cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+          // 현재 호버된 카드 크기 증가
+          this.style.width = '450px';
+          
+          // 다른 카드들 크기 감소
+          cards.forEach(otherCard => {
+            if (otherCard !== this) {
+              otherCard.style.width = '334px';
+            }
+          });
+        });
+        
+        card.addEventListener('mouseleave', function() {
+          // 모든 카드 크기 초기화
+          cards.forEach(card => {
+            card.style.width = '373px';
+          });
+        });
+      });
+    });
+  </script>
 </html>

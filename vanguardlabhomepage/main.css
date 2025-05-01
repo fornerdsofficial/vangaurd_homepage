@@ -204,48 +204,61 @@
   text-shadow: 0.2px 0 0#393b57, 0 0.2px 0#393b57, -0.2px 0 0#393b57,
     0-0.2px 0#393b57;
 }
-.about-us,
-.it {
-  position: relative;
-}
-.arrow-right-icon {
-  width: 27px;
-  position: relative;
-  height: 35px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-.about-us-parent {
-  width: 160px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--gap-0);
-}
-.landingpagebutton,
-.parent1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
 .landingpagebutton {
   width: 200px;
-  border-radius: var(--br-11xl);
-  background-color: var(--color-white);
-  border: 1px solid var(--KeyColor2);
+  border-radius: 30px;
+  background-color: #fff;
+  border: 1px solid #5482e7;
   box-sizing: border-box;
   height: 44px;
-  align-items: flex-start;
-  padding: 4px var(--padding-xl);
+  position: relative;
+  padding: 0;
   text-align: left;
-  font-size: var(--font-size-base);
-  color: var(--KeyColor2);
-  font-family: var(--font-garet);
+  font-size: 16px;
+  color: #5482e7;
+  font-family: Garet, sans-serif;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landingpagebutton:hover {
+  width: 180px;
+}
+
+.about-us {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: left 0.3s ease;
+}
+
+.arrow-right-icon {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  transition: right 0.3s ease;
+}
+
+.landingpagebutton:hover .arrow-right-icon {
+  right: 30px;
+}
+
+.landingpagebutton:hover .about-us {
+  left: 30px;
 }
 .parent1 {
   width: 522px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   gap: var(--gap-23xl);
   font-size: 34px;
 }
@@ -411,6 +424,7 @@
   width: 34px;
   position: relative;
   height: 27px;
+  transition: transform 0.3s ease;
 }
 .title8 {
   align-self: stretch;
@@ -438,6 +452,12 @@
   height: 141px;
   padding: var(--padding-4xs) var(--padding-xl);
   box-sizing: border-box;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.servicecard:hover {
+  box-shadow: 0 4px 10px rgba(33, 71, 155, 0.1);
 }
 .servicecard-parent {
   align-self: stretch;
@@ -452,8 +472,14 @@
   position: relative;
   line-height: 34px;
   font-weight: 500;
-  text-shadow: 0.5px 0 0#393b57, 0 0.5px 0#393b57, -0.5px 0 0#393b57,
-    0-0.5px 0#393b57;
+  text-shadow: 0.5px 0 0#393b57, 0 0.5px 0#393b57, -0.5px 0 0#393b57, 0-0.5px 0#393b57;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+.title8:hover .system-integration, .servicecard:hover .system-integration {
+  transform: translateX(10px);
+  color: var(--KeyColor);
 }
 .title11 {
   height: 88px;
@@ -463,7 +489,10 @@
   justify-content: center;
   padding: var(--padding-3xs);
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
+
+
 .div39 {
   width: 315px;
   position: relative;
@@ -471,24 +500,33 @@
   display: inline-block;
   flex-shrink: 0;
 }
-.description8,
-.text18 {
+.description8 {
   align-self: stretch;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-}
-.description8 {
-  height: 196px;
+  height: auto;
+  text-align: left;
   flex-direction: row;
   padding: var(--padding-3xs);
   box-sizing: border-box;
   font-size: var(--font-size-xl);
   font-family: var(--font-pretendard-variable);
 }
+
+.description8 > div {
+  margin-top: 0;
+  text-align: left;
+  width: 100%;
+}
 .text18 {
   flex-direction: column;
   gap: var(--gap-xl);
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  transition: all 0.3s ease;
 }
 .view-more {
   position: relative;
@@ -508,13 +546,14 @@
   color: var(--color-gray-100);
 }
 .contain15 {
-  width: 335px;
+  width: 100%;
   height: 366px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
   gap: var(--gap-0);
+  transition: width 0.3s ease;
 }
 .servicecard2 {
   width: 373px;
@@ -527,6 +566,22 @@
   justify-content: flex-start;
   padding: var(--padding-3xl) var(--padding-lgi);
   box-sizing: border-box;
+  cursor: pointer;
+  transition: width 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* 호버 효과 - 카드 미디어 쿼리를 사용하는 브라우저를 위한 아마 가능한 배정 */
+@supports (selector(:has(*))) {
+  .servicecard2variant:has(.servicecard2:hover) .servicecard2:not(:hover) {
+    width: 334px;
+  }
+  
+  .servicecard2:hover {
+    width: 450px;
+    box-shadow: 0 4px 10px rgba(33, 71, 155, 0.1);
+    z-index: 1;
+  }
 }
 .div41 {
   width: 315px;
@@ -544,6 +599,7 @@
   justify-content: space-between;
   gap: var(--gap-0);
   font-size: var(--font-size-11xl);
+  transition: gap 0.3s ease;
 }
 .frame-parent6,
 .group-parent {
@@ -582,4 +638,31 @@
   display: flex; /* 추가: 페이지 컨텐츠 중앙 정렬을 위해 flex 적용 */
   justify-content: center; /* 추가: 가로 방향 중앙 정렬 */
   align-items: center; /* 추가: 세로 방향 중앙 정렬 */
+}
+
+/* 카드 링크 스타일 */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 호버 시 타이틀과 내용 정렬 변경 */
+.servicecard2:hover .title11 {
+  justify-content: flex-start;
+  padding-left: 15px;
+}
+
+.servicecard2:hover .text18 {
+  align-items: flex-start;
+}
+
+/* 호버 시 카드 타이틀 색상 변경 */
+.servicecard2:hover .system-integration {
+  color: #4c7bf7;
+}
+
+/* 기본 호버 효과 - 자바스크립트가 비활성화된 환경에서도 적용 */
+.servicecard2:hover {
+  box-shadow: 0 4px 10px rgba(33, 71, 155, 0.1);
+  z-index: 1;
 }
