@@ -1,0 +1,110 @@
+/* Rectangle 슬라이더 스타일 */
+.rectangle-parent {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.rectangle-parent .banner-slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.rectangle-parent .banner-slider-track {
+  display: flex;
+  width: 300%; /* 슬라이드 수 * 100% */
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.rectangle-parent .banner-slide {
+  width: 33.333%; /* 100% / 슬라이드 수 */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 배너 슬라이더 컨트롤 */
+.rectangle-parent .banner-slider-controls {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.rectangle-parent .banner-prev-btn, 
+.rectangle-parent .banner-next-btn {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.rectangle-parent .banner-prev-btn:hover, 
+.rectangle-parent .banner-next-btn:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.rectangle-parent .banner-indicators {
+  display: flex;
+  gap: 6px;
+}
+
+.rectangle-parent .banner-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.rectangle-parent .banner-indicator.active {
+  background-color: white;
+  transform: scale(1.2);
+}
+
+/* 원래 슬라이더 요소 스타일 유지 */
+.rectangle-parent .group-child,
+.rectangle-parent .group-item,
+.rectangle-parent .group-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* 모바일 대응 */
+@media screen and (max-width: 768px) {
+  .rectangle-parent .banner-slider-controls {
+    bottom: 5px;
+  }
+  
+  .rectangle-parent .banner-prev-btn, 
+  .rectangle-parent .banner-next-btn {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+  }
+  
+  .rectangle-parent .banner-indicator {
+    width: 6px;
+    height: 6px;
+  }
+}

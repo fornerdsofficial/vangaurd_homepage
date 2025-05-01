@@ -1,0 +1,110 @@
+/* 배너 슬라이더 스타일 */
+.banner-slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.banner-slider-track {
+  display: flex;
+  width: 300%; /* 슬라이드 수 * 100% */
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.banner-slide {
+  width: 33.333%; /* 100% / 슬라이드 수 */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* 배너 슬라이더 컨트롤 */
+.banner-slider-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.banner-prev-btn, 
+.banner-next-btn {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.banner-prev-btn:hover, 
+.banner-next-btn:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.banner-indicators {
+  display: flex;
+  gap: 6px;
+}
+
+.banner-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.banner-indicator.active {
+  background-color: white;
+  transform: scale(1.2);
+}
+
+/* 슬라이드 콘텐츠 스타일 */
+.service-partner,
+.it-consulting,
+.enterprise {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* 첫 번째 슬라이드의 요소만 보이게 시작 */
+.banner-slide:first-child .service-partner,
+.banner-slide:first-child .it-consulting,
+.banner-slide:first-child .enterprise {
+  opacity: 1;
+}
+
+/* 모바일 대응 */
+@media screen and (max-width: 768px) {
+  .banner-slider-controls {
+    bottom: 10px;
+  }
+  
+  .banner-prev-btn, 
+  .banner-next-btn {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+  }
+  
+  .banner-indicator {
+    width: 6px;
+    height: 6px;
+  }
+}

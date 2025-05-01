@@ -56,7 +56,7 @@
   position: absolute;
   top: 0;
   left: 250px; /* 왼쪽 정렬로 변경 - 헤더 로고와 맞춘 값 */
-  width: 761px;
+  width: 800px;
   height: 330px;
 }
 .landingpage-inner {

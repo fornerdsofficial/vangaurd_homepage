@@ -1,0 +1,103 @@
+/* 모컵 슬라이더 스타일 */
+.mokup-slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.mokup-slider-track {
+  display: flex;
+  width: 300%; /* 슬라이드 수 * 100% */
+  transition: transform 0.5s ease-in-out;
+}
+
+.mokup-slide {
+  width: 33.333%; /* 100% / 슬라이드 수 */
+  display: flex;
+  flex-direction: column;
+}
+
+/* 기존 스타일 보존하면서 슬라이더 기능 추가 */
+.contain31, .contain32 {
+  width: 100%;
+}
+
+.mokupcontents, .mokupcontents1 {
+  display: flex;
+  width: 100%;
+}
+
+/* 화살표 버튼 스타일 */
+.chevronleft, .chevronleft1, .chevronleft2 {
+  cursor: pointer;
+  z-index: 10;
+  transition: opacity 0.3s;
+}
+
+.chevronleft:hover, .chevronleft1:hover, .chevronleft2:hover,
+.chevronright-icon:hover, .chevronright-icon1:hover, .chevronright-icon2:hover {
+  opacity: 0.7;
+}
+
+/* 인디케이터 스타일 */
+.pageindicator, .pageindicator2, .pageindicator4 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pageindicator1, .pageindicator3, .pageindicator5 {
+  display: flex;
+  gap: 6px;
+}
+
+.off, .off10, .off14 {
+  width: 8px;
+  height: 8px;
+  background-color: #D1DBEB;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.on, .on1, .on2 {
+  width: 20px;
+  height: 8px;
+  background-color: var(--KeyColor);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* 슬라이더 내용 슬라이드인 효과 */
+.mokup-slide {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* 클릭 이벤트를 위한 스타일 조정 */
+.off, .off10, .off14, .on, .on1, .on2 {
+  cursor: pointer;
+  margin: 0 3px;
+}
+
+/* 모바일 대응 */
+@media screen and (max-width: 768px) {
+  .mokup-slide {
+    flex-direction: column;
+  }
+  
+  .mokup1, .mokup3, .mokupcontents, .mokupcontents1 {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .off, .off10, .off14 {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .on, .on1, .on2 {
+    width: 16px;
+    height: 6px;
+  }
+}

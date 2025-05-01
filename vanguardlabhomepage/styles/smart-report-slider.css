@@ -1,0 +1,47 @@
+/* Smart Report 페이지 전용 슬라이더 스타일 */
+#smart-report-mokup-slider .mokup-slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+#smart-report-mokup-slider .mokup-slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+#smart-report-mokup-slider .mokup-slide {
+  width: 33.333%; /* 100% / 슬라이드 수 */
+  flex-shrink: 0;
+}
+
+/* 인디케이터 스타일 */
+.pageindicator4 {
+  margin-top: 20px;
+}
+
+.pageindicator5 {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* 화살표 버튼 스타일 */
+.chevronleft2 img,
+#smart-report-next-btn {
+  cursor: pointer;
+  z-index: 10;
+  transition: opacity 0.3s;
+}
+
+.chevronleft2 img:hover,
+#smart-report-next-btn:hover {
+  opacity: 0.7;
+}
+
+/* 모바일 대응 */
+@media screen and (max-width: 768px) {
+  #smart-report-mokup-slider .mokupcontents1 {
+    flex-direction: column;
+  }
+}

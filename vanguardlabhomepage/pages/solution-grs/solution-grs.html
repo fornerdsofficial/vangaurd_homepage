@@ -6,6 +6,8 @@
 
     <link rel="stylesheet" href="../../global.css" />
     <link rel="stylesheet" href="./solution-grs.css" />
+    <link rel="stylesheet" href="../../styles/mokup-slider.css" />
+    <link rel="stylesheet" href="../../styles/grs-slider.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Garet:wght@400&display=swap"
@@ -108,59 +110,115 @@
                 <div class="grs-wrapper">
                   <div class="grs1">GRS 화면 예시</div>
                 </div>
-                <div class="contain31">
+                <div class="contain31" id="grs-mokup-slider">
                   <div class="contain32">
                     <div class="chevronleft1">
                       <img
                         class="chevronleft-icon"
-                        alt=""
+                        alt="이전 슬라이드"
                         src="../../public/chevronleft@2x.png"
                       />
                     </div>
-                    <div class="mokupcontents">
-                      <div class="mokup1">
-                        <img
-                          class="mockup-1-icon"
-                          alt=""
-                          src="../../public/mockup-1@2x.png"
-                        />
-
-                        <img
-                          class="img-grs-5-icon"
-                          alt=""
-                          src="../../public/img-grs-5@2x.png"
-                        />
-                      </div>
-                      <div class="contents11">
-                        <div class="title24">
-                          <div class="ai-container4">
-                            <p class="grs">금융감독원</p>
-                            <p class="grs">보고서_2</p>
+                    <div class="mokup-slider-container">
+                      <div class="mokup-slider-track">
+                        <!-- 슬라이드 1 -->
+                        <div class="mokup-slide">
+                          <div class="mokupcontents">
+                            <div class="mokup1">
+                              <img
+                                class="mockup-1-icon"
+                                alt=""
+                                src="../../public/mockup-1@2x.png"
+                              />
+                            </div>
+                            <div class="contents11">
+                              <div class="title24">
+                                <div class="ai-container4">
+                                  <p class="grs">금융감독원</p>
+                                  <p class="grs">보고서_1</p>
+                                </div>
+                              </div>
+                              <div class="description18">
+                                <div class="react-native1">
+                                  대외보고서 양식에 맞춘 데이터 추출 및 검증 기능을
+                                  제공합니다. 자동화된 검증 프로세스로 보고서 오류를
+                                  줄이고 업무 효율성을 높입니다.
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div class="description18">
-                          <div class="react-native1">
-                            수익과 비용 보고서 화면에 대한 자세한 설명을
-                            추가하면 좋을 것 같습니다. 기왕이면 2줄 이상이 되면
-                            화면 간 통일성이 있어 추천드립니다.
+                        
+                        <!-- 슬라이드 2 -->
+                        <div class="mokup-slide">
+                          <div class="mokupcontents">
+                            <div class="mokup1">
+                              <img
+                                class="img-grs-5-icon"
+                                alt=""
+                                src="../../public/img-grs-5@2x.png"
+                              />
+                            </div>
+                            <div class="contents11">
+                              <div class="title24">
+                                <div class="ai-container4">
+                                  <p class="grs">금융감독원</p>
+                                  <p class="grs">보고서_2</p>
+                                </div>
+                              </div>
+                              <div class="description18">
+                                <div class="react-native1">
+                                  수익과 비용 보고서 화면에 대한 자세한 설명을
+                                  추가하면 좋을 것 같습니다. 기왕이면 2줄 이상이 되면
+                                  화면 간 통일성이 있어 추천드립니다.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!-- 슬라이드 3 -->
+                        <div class="mokup-slide">
+                          <div class="mokupcontents">
+                            <div class="mokup1">
+                              <img
+                                class="mockup-1-icon"
+                                alt=""
+                                src="../../public/mockup-11@2x.png"
+                              />
+                            </div>
+                            <div class="contents11">
+                              <div class="title24">
+                                <div class="ai-container4">
+                                  <p class="grs">금융감독원</p>
+                                  <p class="grs">보고서_3</p>
+                                </div>
+                              </div>
+                              <div class="description18">
+                                <div class="react-native1">
+                                  표준화된 대시보드를 제공하여 보고서 생성 및 제출 현황을
+                                  한눈에 파악할 수 있습니다. 직관적인 인터페이스로
+                                  업무 효율을 높입니다.
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                     <img
                       class="chevronright-icon1"
-                      alt=""
+                      id="grs-next-btn"
+                      alt="다음 슬라이드"
                       src="../../public/chevronright1@2x.png"
+                      style="cursor: pointer; z-index: 10;"
                     />
                   </div>
                   <div class="pageindicator2">
                     <div class="pageindicator3">
-                      <div class="off10"></div>
-                      <div class="on1"></div>
-                      <div class="off11">
-                        <div class="off10"></div>
-                        <div class="off10"></div>
-                      </div>
+                      <div class="off10" style="cursor: pointer;"></div>
+                      <div class="on1" style="cursor: pointer;"></div>
+                      <div class="off10" style="cursor: pointer;"></div>
                     </div>
                   </div>
                 </div>
@@ -364,6 +422,8 @@
     </div>
 
   </body>
+  <script src="../../scripts/mokup-slider.js"></script>
+  <script src="../../scripts/grs-slider.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       // FAQ 항목 클릭 이벤트 처리
