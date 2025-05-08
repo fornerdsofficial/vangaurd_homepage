@@ -23,9 +23,14 @@
 }
 .mendix20 {
   position: relative;
-  line-height: 140%;
-  text-shadow: 1.6px 0 0#393b57, 0 1.6px 0#393b57, -1.6px 0 0#393b57,
-    0-1.6px 0#393b57;
+  color: var(--Color-Black, #393B57);
+  -webkit-text-stroke-width: 3.2px;
+  -webkit-text-stroke-color: var(--Color-Black, #393B57);
+  font-family: Garet;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 140%; /* 89.6px */
 }
 .title22 {
   width: 404px;
@@ -39,8 +44,12 @@
 }
 .ai-container4 {
   position: relative;
-  line-height: var(--font-size-11xl);
+  color: var(--Color-Black, #393B57);
+  font-family: "Pretendard Variable";
+  font-size: 24px;
+  font-style: normal;
   font-weight: 600;
+  line-height: 30px; /* 125% */
 }
 .title23 {
   align-self: stretch;
@@ -53,10 +62,16 @@
 .mendix21 {
   width: 595px;
   position: relative;
-  line-height: 25px;
-  font-weight: 300;
   display: inline-block;
   flex-shrink: 0;
+  color: #393B57;
+
+  /* pre Light 16_25 */
+  font-family: "Pretendard Variable";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px; /* 156.25% */
 }
 .description16,
 .description17 {
@@ -76,10 +91,17 @@
 }
 .div70 {
   position: relative;
-  line-height: var(--font-size-13xl);
+  color: var(--Color-Black, #393B57);
+  text-align: center;
+  
+  /* Gmarket Light 14_32 */
+  -webkit-text-stroke-width: 0.4px;
+  -webkit-text-stroke-color: var(--Color-Black, #393B57);
+  font-family: "Gmarket Sans";
+  font-size: 14px;
+  font-style: normal;
   font-weight: 300;
-  text-shadow: 0.2px 0 0#393b57, 0 0.2px 0#393b57, -0.2px 0 0#393b57,
-    0-0.2px 0#393b57;
+  line-height: 32px; /* 228.571% */
 }
 .titlebutton28,
 .titlebutton32 {
@@ -134,13 +156,18 @@
 .grs1 {
   width: 890px;
   position: relative;
-  line-height: 56px;
-  font-weight: 500;
   display: inline-block;
-  height: 55px;
-  flex-shrink: 0;
-  text-shadow: 0.4px 0 0#393b57, 0 0.4px 0#393b57, -0.4px 0 0#393b57,
-    0-0.4px 0#393b57;
+  color: var(--Color-Black, #393B57);
+  text-align: center;
+  
+  /* Gmarket Medium 40_56 */
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: var(--Color-Black, #393B57);
+  font-family: "Gmarket Sans";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 56px; /* 140% */
 }
 .grs-wrapper {
   align-self: stretch;
@@ -201,10 +228,16 @@
 .react-native1 {
   width: 655px;
   position: relative;
-  line-height: var(--font-size-13xl);
-  font-weight: 500;
   display: inline-block;
   flex-shrink: 0;
+  color: var(--Color-Black, #393B57);
+
+  /* pre Medium 20_32 */
+  font-family: "Pretendard Variable";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; /* 160% */
 }
 .description18 {
   width: 677px;
@@ -525,10 +558,15 @@
 .div65 {
   width: 681px;
   position: relative;
-  line-height: var(--font-size-13xl);
-  font-weight: 500;
-  height: 37px;
   flex-shrink: 0;
+  color: #393B57;
+
+  /* pre Medium 20_32 */
+  font-family: "Pretendard Variable";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; /* 160% */
 }
 
 .chevron {
@@ -566,9 +604,12 @@
 .microflow-domain {
   flex: 1;
   position: relative;
-  font-size: var(--font-size-lg);
-  line-height: 33px;
-  margin-left: 0;
+  color: #7C7D84;
+  font-family: "Pretendard Variable";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33px; /* 183.333% */
 }
 
 .contents9 {
@@ -596,11 +637,17 @@
 
 .mendix-faq {
   position: relative;
-  line-height: 56px;
-  font-weight: 500;
-  text-shadow: 0.4px 0 0#393b57, 0 0.4px 0#393b57, -0.4px 0 0#393b57,
-    0-0.4px 0#393b57;
-  margin-bottom: 30px;
+  color: #393B57;
+  text-align: center;
+
+  /* Gmarket Medium 40_56 */
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: #393B57;
+  font-family: "Gmarket Sans";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 56px; /* 140% */
 }
 .grs2,
 .p42 {
@@ -708,4 +755,47 @@
   font-size: var(--font-size-5xl);
   color: var(--Color-Black);
   font-family: var(--font-garet);
+}
+
+/* 추가: PDF 다운로드 버튼 스타일 */
+.pdf-download-button {
+  margin: 20px 0;
+}
+
+.pdf-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #393B57;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+}
+
+.pdf-button:hover {
+  background-color: #2e304a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.pdf-button-text {
+  font-family: "Pretendard Variable";
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.pdf-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download-icon {
+  width: 18px;
+  height: 18px;
 }

@@ -8,9 +8,15 @@
 }
 .mendix24 {
   position: relative;
-  line-height: 140%;
-  text-shadow: 1.6px 0 0#393b57, 0 1.6px 0#393b57, -1.6px 0 0#393b57,
-    0-1.6px 0#393b57;
+  color: var(--Color-Black, #393B57);
+  -webkit-text-stroke-width: 3.2px;
+  -webkit-text-stroke-color: var(--Color-Black, #393B57);
+  font-family: Garet;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 140%; /* 89.6px */
+  white-space: nowrap;
 }
 .title31 {
   width: 404px;
@@ -34,14 +40,24 @@
   align-items: flex-start;
   justify-content: flex-start;
   padding: var(--padding-3xs);
+  color: var(--Color-Black, #393B57);
+  font-family: "Pretendard Variable";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px; /* 125% */
 }
 .mendix25 {
   width: 595px;
   position: relative;
-  line-height: 25px;
+  color: #393B57;
+
+  /* pre Light 16_25 */
+  font-family: "Pretendard Variable";
+  font-size: 16px;
+  font-style: normal;
   font-weight: 300;
-  display: inline-block;
-  flex-shrink: 0;
+  line-height: 25px; /* 156.25% */
 }
 .description21,
 .description22 {
@@ -61,10 +77,17 @@
 }
 .div95 {
   position: relative;
-  line-height: var(--font-size-13xl);
+  color: var(--Color-Black, #393B57);
+  text-align: center;
+
+  /* Gmarket Light 14_32 */
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: var(--Color-Black, #393B57);
+  font-family: "Gmarket Sans";
+  font-size: 14px;
+  font-style: normal;
   font-weight: 300;
-  text-shadow: 0.2px 0 0#393b57, 0 0.2px 0#393b57, -0.2px 0 0#393b57,
-    0-0.2px 0#393b57;
+  line-height: 32px; /* 228.571% */
 }
 .titlebutton42,
 .titlebutton47 {
@@ -119,13 +142,18 @@
 .grs3 {
   width: 890px;
   position: relative;
-  line-height: 56px;
-  font-weight: 500;
   display: inline-block;
-  height: 55px;
-  flex-shrink: 0;
-  text-shadow: 0.4px 0 0#393b57, 0 0.4px 0#393b57, -0.4px 0 0#393b57,
-    0-0.4px 0#393b57;
+  color: var(--Color-Black, #393B57);
+  text-align: center;
+  
+  /* Gmarket Medium 40_56 */
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: var(--Color-Black, #393B57);
+  font-family: "Gmarket Sans";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 56px; /* 140% */
 }
 .grs-frame {
   align-self: stretch;
@@ -175,6 +203,14 @@
 }
 .p45 {
   margin: 0;
+  color: var(--Color-Black, #393B57);
+
+  /* pre SemiBold 24_30 */
+  font-family: "Pretendard Variable";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px; /* 125% */
 }
 .title33 {
   width: 196px;
@@ -189,10 +225,16 @@
 .react-native2 {
   width: 655px;
   position: relative;
-  line-height: var(--font-size-13xl);
-  font-weight: 500;
   display: inline-block;
   flex-shrink: 0;
+  color: var(--Color-Black, #393B57);
+
+  /* pre Medium 20_32 */
+  font-family: "Pretendard Variable";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; /* 160% */
 }
 .description23 {
   width: 677px;
@@ -307,7 +349,12 @@
 .grs-report-framework-container {
   align-self: stretch;
   position: relative;
-  line-height: 33px;
+  color: #7C7D84;
+  font-family: "Pretendard Variable";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33px; /* 183.333% */
 }
 .imagedescriptionbox-group {
   width: 1040px;
@@ -365,4 +412,47 @@
   font-size: var(--font-size-5xl);
   color: var(--Color-Black);
   font-family: var(--font-garet);
+}
+
+/* 추가: PDF 다운로드 버튼 스타일 */
+.pdf-download-button {
+  margin: 20px 0;
+}
+
+.pdf-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #393B57;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+}
+
+.pdf-button:hover {
+  background-color: #2e304a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.pdf-button-text {
+  font-family: "Pretendard Variable";
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.pdf-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download-icon {
+  width: 18px;
+  height: 18px;
 }
