@@ -1,8 +1,13 @@
 .mendix {
   position: relative;
-  line-height: 140%;
-  text-shadow: 1.6px 0 0#393b57, 0 1.6px 0#393b57, -1.6px 0 0#393b57,
-    0-1.6px 0#393b57;
+  color: var(--Color-Black, #393B57);
+  -webkit-text-stroke-width: 3.2px;
+  -webkit-text-stroke-color: var(--Color-Black, #393B57);
+  font-family: Garet;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 140%; /* 89.6px */
 }
 .title {
   width: 404px;
@@ -125,12 +130,14 @@
 .mendix-container {
   width: 703px;
   position: relative;
-  line-height: var(--font-size-13xl);
+  color: #393B57;
+  -webkit-text-stroke-width: 0.4px;
+  -webkit-text-stroke-color: #393B57;
+  font-family: "Pretendard Variable";
+  font-size: 20px;
+  font-style: normal;
   font-weight: 200;
-  display: inline-block;
-  flex-shrink: 0;
-  text-shadow: 0.2px 0 0#393b57, 0 0.2px 0#393b57, -0.2px 0 0#393b57,
-    0-0.2px 0#393b57;
+  line-height: 32px; /* 160% */
 }
 .mendix-201-wrapper {
   align-self: stretch;
@@ -142,10 +149,14 @@
 }
 .div7 {
   position: relative;
-  line-height: var(--font-size-13xl);
+  color: #393B57;
+  -webkit-text-stroke-width: 0.4px;
+  -webkit-text-stroke-color: #393B57;
+  font-family: "Pretendard Variable";
+  font-size: 20px;
+  font-style: normal;
   font-weight: 200;
-  text-shadow: 0.2px 0 0#393b57, 0 0.2px 0#393b57, -0.2px 0 0#393b57,
-    0-0.2px 0#393b57;
+  line-height: 32px; /* 160% */
 }
 .img-organization-ceo-sign-1-icon {
   width: 217.4px;
