@@ -11,9 +11,14 @@
 /* 기본 페이지 구조 스타일 */
 .mendix22 {
   position: relative;
-  line-height: 140%;
-  text-shadow: 1.6px 0 0#393b57, 0 1.6px 0#393b57, -1.6px 0 0#393b57,
-    0-1.6px 0#393b57;
+  color: var(--Color-Black, #393B57);
+  -webkit-text-stroke-width: 3.2px;
+  -webkit-text-stroke-color: var(--Color-Black, #393B57);
+  font-family: Garet;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 140%; /* 89.6px */
 }
 
 .title27 {
@@ -29,6 +34,12 @@
 
 .p43 {
   margin: 0;
+  color: var(--Color-Black, #393B57);
+  font-family: "Pretendard Variable";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px; /* 125% */
 }
 
 .ai-container5 {
@@ -49,10 +60,14 @@
 .mendix23 {
   width: 595px;
   position: relative;
-  line-height: 25px;
+  color: var(--Color-Black, #393B57);
+
+  /* pre Light 16_25 */
+  font-family: "Pretendard Variable";
+  font-size: 16px;
+  font-style: normal;
   font-weight: 300;
-  display: inline-block;
-  flex-shrink: 0;
+  line-height: 25px; /* 156.25% */
 }
 
 .description19,
@@ -76,10 +91,17 @@
 
 .div83 {
   position: relative;
-  line-height: var(--font-size-13xl);
+  color: var(--Color-Black, #393B57);
+  text-align: center;
+
+  /* Gmarket Light 14_32 */
+  -webkit-text-stroke-width: 0.4px;
+  -webkit-text-stroke-color: var(--Color-Black, #393B57);
+  font-family: "Gmarket Sans";
+  font-size: 14px;
+  font-style: normal;
   font-weight: 300;
-  text-shadow: 0.2px 0 0#393b57, 0 0.2px 0#393b57, -0.2px 0 0#393b57,
-    0-0.2px 0#393b57;
+  line-height: 32px; /* 228.571% */
 }
 
 .titlebutton35,
@@ -185,12 +207,17 @@
 
 .mendix-faq {
   position: relative;
-  line-height: 56px;
-  font-weight: 500;
-  text-shadow: 0.4px 0 0#393b57, 0 0.4px 0#393b57, -0.4px 0 0#393b57, 0-0.4px 0#393b57;
-  margin-bottom: 30px;
-  color: var(--Color-Black);
-  font-family: var(--font-gmarket-sans);
+  color: #393B57;
+  text-align: center;
+
+  /* Gmarket Medium 40_56 */
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: #393B57;
+  font-family: "Gmarket Sans";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 56px; /* 140% */
 }
 
 .faqlist {
@@ -278,10 +305,14 @@
 .div65 {
   width: 681px;
   position: relative;
-  line-height: var(--font-size-13xl);
+  color: #393B57;
+
+  /* pre Medium 20_32 */
+  font-family: "Pretendard Variable";
+  font-size: 20px;
+  font-style: normal;
   font-weight: 500;
-  height: 37px;
-  flex-shrink: 0;
+  line-height: 32px; /* 160% */
 }
 
 .chevron {
@@ -338,8 +369,12 @@
 .microflow-domain {
   flex: 1;
   position: relative;
-  font-size: var(--font-size-lg);
-  line-height: 33px;
+  color: #7C7D84;
+  font-family: "Pretendard Variable";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33px; /* 183.333% */
 }
 
 .frame-parent18 {
