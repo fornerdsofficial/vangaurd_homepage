@@ -58,9 +58,14 @@
 }
 .mendix10 {
   position: relative;
-  line-height: 140%;
-  text-shadow: 1.6px 0 0#393b57, 0 1.6px 0#393b57, -1.6px 0 0#393b57,
-    0-1.6px 0#393b57;
+  color: var(--Color-Black, #393B57);
+  -webkit-text-stroke-width: 3.2px;
+  -webkit-text-stroke-color: var(--Color-Black, #393B57);
+  font-family: Garet;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 140%; /* 89.6px */
 }
 .title17 {
   width: 404px;
@@ -77,8 +82,14 @@
 }
 .ai-container3 {
   position: relative;
-  line-height: var(--font-size-11xl);
+  color: var(--Color-Black, #393B57);
+
+  /* pre SemiBold 24_30 */
+  font-family: "Pretendard Variable";
+  font-size: 24px;
+  font-style: normal;
   font-weight: 600;
+  line-height: 30px; /* 125% */
 }
 .title18 {
   align-self: stretch;
@@ -91,10 +102,14 @@
 .mendix11 {
   width: 595px;
   position: relative;
-  line-height: 25px;
+  color: var(--Color-Black, #393B57);
+
+  /* pre Light 16_25 */
+  font-family: "Pretendard Variable";
+  font-size: 16px;
+  font-style: normal;
   font-weight: 300;
-  display: inline-block;
-  flex-shrink: 0;
+  line-height: 25px; /* 156.25% */
 }
 .description13,
 .description14 {
@@ -114,10 +129,17 @@
 }
 .div57 {
   position: relative;
-  line-height: var(--font-size-13xl);
+  color: var(--Color-Black, #393B57);
+  text-align: center;
+
+  /* Gmarket Light 14_32 */
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: var(--Color-Black, #393B57);
+  font-family: "Gmarket Sans";
+  font-size: 14px;
+  font-style: normal;
   font-weight: 300;
-  text-shadow: 0.2px 0 0#393b57, 0 0.2px 0#393b57, -0.2px 0 0#393b57,
-    0-0.2px 0#393b57;
+  line-height: 32px; /* 228.571% */
 }
 .titlebutton21 {
   border-radius: var(--br-44xl);
@@ -171,6 +193,15 @@
 }
 .mendix-container2 {
   width: 100%;
+  color: #393B57;
+  text-align: center;
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: #393B57;
+  font-family: "Gmarket Sans";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 57px; /* 142.5% */
 }
 .mendix-container1 {
   width: 558px;
@@ -213,10 +244,12 @@
 .mendix13 {
   width: 719px;
   position: relative;
-  line-height: var(--font-size-13xl);
+  color: #393B57;
+  font-family: "Pretendard Variable";
+  font-size: 20px;
+  font-style: normal;
   font-weight: 500;
-  height: 72px;
-  flex-shrink: 0;
+  line-height: 32px; /* 160% */
 }
 .contents4 {
   width: 836px;
@@ -295,13 +328,21 @@
 .mendix-container3 {
   width: 890px;
   position: relative;
-  line-height: 56px;
-  font-weight: 500;
   display: inline-block;
   height: 131px;
   flex-shrink: 0;
   text-shadow: 0.4px 0 0#393b57, 0 0.4px 0#393b57, -0.4px 0 0#393b57,
     0-0.4px 0#393b57;
+  color: var(--Color-Black, #393B57);
+
+  /* Gmarket Medium 40_56 */
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: var(--Color-Black, #393B57);
+  font-family: "Gmarket Sans";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 56px; /* 140% */
 }
 .mendix-wrapper {
   align-self: stretch;
@@ -338,8 +379,8 @@
   object-fit: cover;
 }
 .title19 {
-  width: 196px;
-  height: 116px;
+  width: 100%;
+  height: 80px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -348,23 +389,30 @@
   box-sizing: border-box;
 }
 .react-native {
-  width: 655px;
+  width: 100%;
   position: relative;
   line-height: var(--font-size-13xl);
   font-weight: 500;
-  white-space: pre-wrap;
-  display: inline-block;
-  flex-shrink: 0;
+  white-space: normal;
+  display: block;
 }
 .description15 {
-  width: 677px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: center;
-  padding: var(--padding-3xs);
-  box-sizing: border-box;
-  font-size: var(--font-size-xl);
+  justify-content: flex-start;
+
+  max-height: 140px;
+  overflow-y: auto;
+  color: var(--Color-Black, #393B57);
+
+  /* pre Medium 20_32 */
+  font-family: "Pretendard Variable";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; /* 160% */
 }
 .contain26,
 .mendixtextbox {
@@ -374,13 +422,18 @@
 }
 .mendixtextbox {
   align-self: stretch;
-  flex-direction: row;
-  gap: var(--gap-11xl);
+  flex-direction: column;
+  height: 220px;
 }
 .contain26 {
   width: 904px;
   flex-direction: column;
-  gap: var(--gap-44xl);
+  height: 580px;
+  gap: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 .chevronright-icon {
   width: 86px;
@@ -394,6 +447,8 @@
   align-items: center;
   justify-content: center;
   gap: var(--gap-49xl);
+  position: relative;
+  padding: 20px 0;
 }
 .off,
 .on {
@@ -429,8 +484,14 @@
   align-items: center;
 }
 .pageindicator {
-  width: 1212px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 .contain25,
 .mendix18 {
@@ -439,8 +500,12 @@
 }
 .contain25 {
   align-self: stretch;
-  font-size: var(--font-size-5xl);
-  font-family: var(--font-pretendard-variable);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding-bottom: 50px;
 }
 .mendix18 {
   position: absolute;
@@ -457,11 +522,16 @@
 }
 .mendix-faq {
   position: relative;
-  line-height: 56px;
-  font-weight: 500;
-  text-shadow: 0.4px 0 0#393b57, 0 0.4px 0#393b57, -0.4px 0 0#393b57,
-    0-0.4px 0#393b57;
-  margin-bottom: 30px;
+  text-align: center;
+
+  /* Gmarket Medium 40_56 */
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: #393B57;
+  font-family: "Gmarket Sans";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 56px; /* 140% */
 }
 .q1 {
   position: relative;
@@ -472,10 +542,15 @@
 .div65 {
   width: 681px;
   position: relative;
-  line-height: var(--font-size-13xl);
-  font-weight: 500;
-  height: 37px;
   flex-shrink: 0;
+  color: #393B57;
+
+  /* pre Medium 20_32 */
+  font-family: "Pretendard Variable";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; /* 160% */
 }
 .text35 {
   display: flex;
@@ -559,9 +634,12 @@
 .microflow-domain {
   flex: 1;
   position: relative;
-  font-size: var(--font-size-lg);
-  line-height: 33px;
-  margin-left: 0;
+  color: #7C7D84;
+  font-family: "Pretendard Variable";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33px; /* 183.333% */
 }
 .a,
 .contents9 {
@@ -677,4 +755,211 @@
   font-size: var(--font-size-5xl);
   color: var(--Color-Black);
   font-family: var(--font-garet);
+}
+
+/* 슬라이드 컨테이너 스타일 */
+.slides-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  min-height: 650px; /* 컨테이너 높이 증가 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 슬라이드 아이템 스타일 */
+.slide-item {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.slide-item.active {
+  display: flex;
+  opacity: 1;
+  position: relative;
+}
+
+/* 슬라이드 콘텐츠 컨테이너 */
+.contain26 {
+  width: 904px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 580px; /* 높이 증가 */
+  position: relative;
+}
+
+/* 이미지 래퍼 스타일 */
+.slide-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 33px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px; /* 간격 증가 */
+  transition: transform 0.3s ease;
+  height: 330px; /* 높이 증가 */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-image-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+.img-mendix-feature-02-1-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 33px;
+  transition: transform 0.5s ease;
+}
+
+/* 텍스트 영역 레이아웃 변경 - 가로 배치 */
+.mendixtextbox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 160px;
+  gap: 30px;
+}
+
+/* 타이틀 영역 - 왼쪽 */
+.title19 {
+  width: 200px;
+  flex-shrink: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-3xs);
+  box-sizing: border-box;
+}
+
+.ai-container3 {
+  position: relative;
+  color: var(--Color-Black, #393B57);
+  font-family: "Pretendard Variable";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+/* 설명 영역 - 오른쪽 */
+.description15 {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-3xs);
+  box-sizing: border-box;
+  font-size: var(--font-size-xl);
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.react-native {
+  width: 100%;
+  position: relative;
+  line-height: var(--font-size-13xl);
+  font-weight: 500;
+  white-space: normal;
+  display: block;
+}
+
+/* 펄스 애니메이션 추가 */
+.slide-item.active .img-mendix-feature-02-1-icon {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 화살표 네비게이션 스타일 */
+.chevronleft, .chevronright {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.chevronleft:hover, .chevronright:hover {
+  opacity: 0.8;
+}
+
+/* 전체 슬라이드 섹션 컨테이너 */
+.contain25 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+/* 인디케이터 고정 위치 */
+.pageindicator {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageindicator1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.indicator-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #D9D9D9;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #393B57;
 }
