@@ -1,3 +1,46 @@
+/* 폰트 정의 - TTF 파일 사용 */
+@font-face {
+  font-family: 'Pretendard Variable';
+  src: local('Pretendard Variable'),
+       url('public/fonts/PretendardVariable.ttf') format('truetype');
+  font-weight: 200 800; /* 가변 폰트 가중치 범위 */
+  font-display: swap;
+  font-smooth: always;
+}
+
+@font-face {
+  font-family: 'Gmarket Sans';
+  src: local('Gmarket Sans Light'),
+       url('public/fonts/GmarketSansLight.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-smooth: always;
+}
+
+@font-face {
+  font-family: 'Gmarket Sans';
+  src: local('Gmarket Sans Medium'),
+       url('public/fonts/GmarketSansMedium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-smooth: always;
+}
+
+/* 폰트 로드 및 텍스트 렌더링 관련 스타일 */
+html {
+  font-display: swap;
+  opacity: 1;
+  transition: opacity 0.2s;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* 웹폰트 로드 전 숨김 처리 - JS에서 제어 */
+.fonts-loading {
+  opacity: 0;
+}
+
 body {
   margin: 0;
   line-height: normal;
@@ -317,9 +360,14 @@ header-component .dropdown-content a:hover {
 
 .footer-vanguardlab {
   position: relative;
-  text-shadow: 1.5px 0 0#7e889b, 0 1.5px 0#7e889b, -1.5px 0 0#7e889b,
-    0-1.5px 0#7e889b;
-    font-family: var(--font-garet), sans-serif;
+  color: #7F889B;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #7F889B;
+  font-family: Garet;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
 }
 
 .footer-contain {
@@ -368,8 +416,8 @@ header-component .dropdown-content a:hover {
 
 :root {
   /* Fonts */
-  --font-pretendard-variable: "Pretendard Variable";
-  --font-gmarket-sans: "Gmarket Sans";
+  --font-pretendard-variable: "Pretendard Variable", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  --font-gmarket-sans: "Gmarket Sans", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
   --font-inter: Inter;
   --font-garet: Garet;
 
