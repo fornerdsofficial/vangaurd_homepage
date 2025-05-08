@@ -6,18 +6,12 @@
 
     <link rel="stylesheet" href="../../global.css" />
     <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="../../styles/rectangle-slider.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Garet:wght@400&display=swap"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Pretendard+Variable:wght@200;300;400;500;600;700;800&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Gmarket Sans:wght@300;500&display=swap"
-    />
+    <!-- 한글 폰트는 로컬에서 로드 -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
@@ -38,21 +32,44 @@
       <!-- 웹 컴포넌트를 이용한 header 적용 -->
       <header-component></header-component>
       <div class="landingpage-inner">
-        <div class="service-partner-parent">
-          <div class="service-partner">Service Partner</div>
-          <div class="it-consulting">IT Consulting &</div>
-          <div class="enterprise">Enterprise</div>
+        <div class="slider-container">
+          <!-- 슬라이드 1 -->
+          <div class="slide">
+            <div class="slide-content">
+              <div class="slide-title">Service Partner</div>
+              <div class="slide-subtitle">IT Consulting &</div>
+              <div class="slide-heading">Enterprise</div>
+            </div>
+          </div>
+          <!-- 슬라이드 2 -->
+          <div class="slide">
+            <div class="slide-content">
+              <div class="slide-title">Digital Solution</div>
+              <div class="slide-subtitle">Innovation &</div>
+              <div class="slide-heading">Business</div>
+            </div>
+          </div>
+          <!-- 슬라이드 3 -->
+          <div class="slide">
+            <div class="slide-content">
+              <div class="slide-title">Tech Partner</div>
+              <div class="slide-subtitle">Low-Code &</div>
+              <div class="slide-heading">Integration</div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="rectangle-parent">
-        <div class="group-child"></div>
-        <div class="group-item"></div>
-        <div class="group-inner"></div>
-      </div>
-      <div class="group-parent">
+        <div class="group-parent">
+          <div class="rectangle-parent">
+            <div class="slider-indicator">
+              <div class="indicator active" data-index="0"></div>
+              <div class="indicator" data-index="1"></div>
+              <div class="indicator" data-index="2"></div>
+            </div>
+          </div>
         <div class="trusted-by-parent">
           <div class="trusted-by">Trusted by.</div>
-          <div class="container">
+          <!-- <div class="container">
             <div class="div28">
               <div class="group1">
                 <img class="group-icon" alt="" src="../../public/group.svg" />
@@ -66,9 +83,87 @@
             <img class="icon1" alt="" src="../../public/--11.svg" />
 
             <img class="icon2" alt="" src="../../public/--12.svg" />
+          </div> -->
+          
+          <!-- 파트너사 로고 슬라이더 -->
+          <div class="partners-slider-container">
+            <!-- 슬라이더 네비게이션 버튼 -->            
+            <div class="partners-slider">
+              <!-- 전체 13개 로고를 포함하는 슬라이더 영역 -->
+              <div class="partners-logos-wrapper">
+                <div class="partner-logo-container">
+                  <img class="partner-logo" alt="KDB산업은행" src="../../public/partners/logo_kdb.gif" />
+                </div>
+                <div class="partner-logo-container">
+                  <img class="partner-logo" alt="하나은행" src="../../public/partners/logo_hanabank.png" />
+                </div>
+                <div class="partner-logo-container">
+                  <img class="partner-logo" alt="NH농협" src="../../public/partners/logo_nh.png" />
+                </div>
+                <div class="partner-logo-container">
+                  <img class="partner-logo" alt="롯데" src="../../public/partners/logo_lotte.png" />
+                </div>
+                <div class="partner-logo-container">
+                  <img class="partner-logo" alt="MG새마을금고" src="../../public/partners/logo_mg.png" />
+                </div>
+                <div class="partner-logo-container">
+                  <img class="partner-logo" alt="LGU+" src="../../public/partners/logo_lguplus.png" />
+                </div>
+                <div class="partner-logo-container">
+                  <img class="partner-logo" alt="전북은행" src="../../public/partners/logo_jbbank.png" />
+                </div>
+                <div class="partner-logo-container">
+                  <img class="partner-logo" alt="LG CNS" src="../../public/partners/logo_lgcns.png" />
+                </div>
+                <div class="partner-logo-container">
+                  <img class="partner-logo" alt="에큐온저축은행" src="../../public/partners/logo_acuonsb.png" />
+                </div>
+                <div class="partner-logo-container">
+                  <img class="partner-logo" alt="광주은행" src="../../public/partners/logo_kjbank.png" />
+                </div>
+                <div class="partner-logo-container">
+                  <img class="partner-logo" alt="로카 모빌리티" src="../../public/partners/logo_loca.png" />
+                </div>
+                <div class="partner-logo-container">
+                  <img class="partner-logo" alt="미래에셋" src="../../public/partners/logo_miraeasset.png" />
+                </div>
+                <div class="partner-logo-container">
+                  <img class="partner-logo" alt="IBK기업은행" src="../../public/partners/logo_ibk.svg" />
+                </div>
+                <!-- 무한 스크롤을 위한 복제 로고 (첫 4개 복제) -->
+                <div class="partner-logo-container">
+                  <img class="partner-logo" alt="KDB산업은행" src="../../public/partners/logo_kdb.gif" />
+                </div>
+                <div class="partner-logo-container">
+                  <img class="partner-logo" alt="하나은행" src="../../public/partners/logo_hanabank.png" />
+                </div>
+                <div class="partner-logo-container">
+                  <img class="partner-logo" alt="NH농협" src="../../public/partners/logo_nh.png" />
+                </div>
+                <div class="partner-logo-container">
+                  <img class="partner-logo" alt="롯데" src="../../public/partners/logo_lotte.png" />
+                </div>
+              </div>
+            </div>
+            
+            <!-- 슬라이더 인디케이터 -->
+            <div class="partners-slider-indicators">
+              <!-- 13개 로고 각각에 대한 인디케이터 -->
+              <div class="partners-indicator active" data-index="0"></div>
+              <div class="partners-indicator" data-index="1"></div>
+              <div class="partners-indicator" data-index="2"></div>
+              <div class="partners-indicator" data-index="3"></div>
+              <div class="partners-indicator" data-index="4"></div>
+              <div class="partners-indicator" data-index="5"></div>
+              <div class="partners-indicator" data-index="6"></div>
+              <div class="partners-indicator" data-index="7"></div>
+              <div class="partners-indicator" data-index="8"></div>
+              <div class="partners-indicator" data-index="9"></div>
+              <div class="partners-indicator" data-index="10"></div>
+              <div class="partners-indicator" data-index="11"></div>
+              <div class="partners-indicator" data-index="12"></div>
+            </div>
           </div>
-          <div class="rectangle-div"></div>
-          <div class="group-child1"></div>
         </div>
         <div class="parent1">
           <div class="div29">
@@ -225,7 +320,7 @@
               <div class="contain15">
                 <div class="text18">
                   <div class="title11">
-                    <div class="system-integration">
+                    <div class="system-integration1">
                       <p class="global-report">Global Report</p>
                       <p class="global-report">System</p>
                     </div>
@@ -245,7 +340,7 @@
               <div class="contain15">
                 <div class="text18">
                   <div class="title11">
-                    <div class="system-integration">
+                    <div class="system-integration1">
                       <p class="global-report">Smart</p>
                       <p class="global-report">System</p>
                     </div>
@@ -265,7 +360,7 @@
               <div class="contain15">
                 <div class="text18">
                   <div class="title11">
-                    <div class="system-integration">TALON</div>
+                    <div class="system-integration1">TALON</div>
                   </div>
                   <div class="description8">
                     <div>

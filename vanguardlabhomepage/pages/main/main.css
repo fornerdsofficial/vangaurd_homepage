@@ -40,9 +40,23 @@
   position: absolute;
   top: 232px;
   left: 0px;
-  line-height: 102%;
-  text-shadow: 3px 0 0#393b57, 0 3px 0#393b57, -3px 0 0#393b57, 0-3px 0#393b57;
-  text-align: left; /* 텍스트 왼쪽 정렬 추가 */
+  color: var(--Color-Black, #393B57);
+  -webkit-text-stroke-width: 6px;
+  -webkit-text-stroke-color: var(--Color-Black, #393B57);
+  /* text-shadow: 
+  3px 0 0 #393B57,
+  -3px 0 0 #393B57,
+  0 3px 0 #393B57,
+  0 -3px 0 #393B57,
+  2px 2px 0 #393B57,
+  -2px 2px 0 #393B57,
+  2px -2px 0 #393B57,
+  -2px -2px 0 #393B57; */
+  font-family: Garet;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 102%; /* 97.92px */
 }
 .enterprise,
 .it-consulting {
@@ -51,21 +65,60 @@
 .enterprise {
   top: 0;
 }
+
+/* 슬라이더 스타일 */
+.slide-heading,
+.slide-subtitle,
+.slide-title {
+  position: absolute;
+  left: 0px;
+  color: var(#393B57, #393B57);
+  -webkit-text-stroke-width: 6px;
+  -webkit-text-stroke-color: var(#393B57, #393B57);
+  font-family: Garet;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 102%; /* 97.92px */
+  height: 100%;
+}
+
+.slide-title {
+  top: 232px;
+}
+
+.slide-subtitle {
+  top: 116px;
+}
+
+.slide-heading {
+  top: 0;
+}
+
 .landingpage-inner,
-.service-partner-parent {
+.service-partner-parent,
+.slide-content {
   position: absolute;
   top: 0;
-  left: 250px; /* 왼쪽 정렬로 변경 - 헤더 로고와 맞춘 값 */
-  width: 800px;
-  height: 330px;
+  left: 0; /* 왼쪽 정렬 수정 */
+  width: 100%;
+  height: 100%;
 }
+
 .landingpage-inner {
   position: absolute;
-  top: 379px;
-  left: 118px; /* 왼쪽 정렬로 변경 */
+  top: 180px; /* 상단 위치 조정 */
+  left: 20%; /* 왼쪽 정렬 변경 */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   font-size: var(--font-size-77xl);
   font-weight: 300;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  overflow: hidden;
 }
+
 .group-child,
 .group-inner,
 .group-item {
@@ -90,19 +143,21 @@
   left: calc(50% + 44.5px);
 }
 .rectangle-parent {
-  position: absolute;
-  top: 762px;
   left: 50%;
   transform: translateX(-50%);
   width: 113px;
-  height: 12px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .trusted-by {
   position: absolute;
   top: 3px;
   left: calc(50% - 60.5px);
   line-height: 50px;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 20px;
 }
 .group-icon,
 .group-icon1 {
@@ -214,14 +269,23 @@
   position: relative;
   line-height: 49px;
   font-weight: 400;
+  color: var(--Color-Black, #393B57);
+  text-align: center;
+  font-family: "Gmarket Sans";
+  font-size: 34px;
+  font-style: normal;
 }
 .it {
-  align-self: stretch;
-  font-size: var(--font-size-xl);
-  line-height: var(--font-size-13xl);
+  color: var(--Color-Black, #393B57);
+  text-align: center;
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: var(--Color-Black, #393B57);
+  font-family: "Gmarket Sans";
+  font-size: 20px;
+  font-style: normal;
   font-weight: 300;
-  text-shadow: 0.2px 0 0#393b57, 0 0.2px 0#393b57, -0.2px 0 0#393b57,
-    0-0.2px 0#393b57;
+  line-height: 32px; /* 160% */
+  width: 500px;
 }
 .landingpagebutton {
   width: 200px;
@@ -317,10 +381,13 @@
 .div30 {
   width: 249px;
   position: relative;
-  line-height: var(--font-size-7xl);
+  color: #393B57;
+  text-align: center;
+  font-family: "Gmarket Sans";
+  font-size: 32px;
+  font-style: normal;
   font-weight: 400;
-  height: 48px;
-  flex-shrink: 0;
+  line-height: 26px; /* 81.25% */
 }
 .title4 {
   align-self: stretch;
@@ -341,12 +408,15 @@
 .div31 {
   width: 264px;
   position: relative;
-  line-height: 22px;
+  color: #393B57;
+  text-align: center;
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: #393B57;
+  font-family: "Gmarket Sans";
+  font-size: 16px;
+  font-style: normal;
   font-weight: 300;
-  height: 46px;
-  flex-shrink: 0;
-  text-shadow: 0.2px 0 0#393b57, 0 0.2px 0#393b57, -0.2px 0 0#393b57,
-    0-0.2px 0#393b57;
+  line-height: 22px; /* 137.5% */
 }
 .description4 {
   align-self: stretch;
@@ -412,14 +482,14 @@
 }
 .div38 {
   width: 890px;
-  position: relative;
-  line-height: 56px;
-  font-weight: 300;
-  display: inline-block;
-  height: 131px;
-  flex-shrink: 0;
-  text-shadow: 0.4px 0 0#393b57, 0 0.4px 0#393b57, -0.4px 0 0#393b57,
-    0-0.4px 0#393b57;
+  color: var(--Color-Black, #393B57);
+  -webkit-text-stroke-width: 0.4px;
+  -webkit-text-stroke-color: var(--Color_Black, #393B57);
+  font-family: "Gmarket Sans";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 56px; /* 140% */
 }
 .frame {
   align-self: stretch;
@@ -430,8 +500,12 @@
 }
 .all-in-one-low-code-platform {
   position: relative;
-  line-height: 56px;
+  color: var(--Color-Black, #393B57);
+  font-family: "Pretendard Variable";
+  font-size: 20px;
+  font-style: normal;
   font-weight: 400;
+  line-height: 56px; /* 280% */
 }
 .decription {
   align-self: stretch;
@@ -445,7 +519,6 @@
   width: 34px;
   position: relative;
   height: 27px;
-  transition: transform 0.3s ease;
 }
 .title8 {
   align-self: stretch;
@@ -491,17 +564,40 @@
 }
 .system-integration {
   position: relative;
-  line-height: 34px;
-  font-weight: 400;
   text-shadow: 0.5px 0 0#393b57, 0 0.5px 0#393b57, -0.5px 0 0#393b57, 0-0.5px 0#393b57;
   transition: transform 0.3s ease, color 0.3s ease;
   display: inline-block;
+  color: var(--Color-Black, #393B57);
+  text-align: right;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--Color-Black, #393B57);
+  font-family: "Gmarket Sans";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px; /* 113.333% */
+}
+
+.system-integration1{
+  color: var(--Color-Black, #393B57);
+
+/* Gmarket Medium 30_34 */
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: var(--Color-Black, #393B57);
+font-family: "Gmarket Sans";
+font-size: 30px;
+font-style: normal;
+font-weight: 400;
+line-height: 34px; /* 113.333% */
 }
 
 .title8:hover .system-integration, .servicecard:hover .system-integration {
   transform: translateX(10px);
-  color: var(--KeyColor);
+  color: #5482E7;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #5482E7;
 }
+
 .title11 {
   height: 88px;
   display: flex;
@@ -531,9 +627,12 @@
   flex-direction: row;
   padding: var(--padding-3xs);
   box-sizing: border-box;
-  font-size: var(--font-size-xl);
-  font-family: var(--font-pretendard-variable);
+  color: var(--Color-Black, #393B57);
+  font-family: "Pretendard Variable";
+  font-size: 20px;
+  font-style: normal;
   font-weight: 400;
+  line-height: 30px; /* 150% */
 }
 
 .description8 > div {
@@ -638,7 +737,7 @@
 }
 .group-parent {
   position: absolute;
-  top: 960px;
+  top: 650px; /* 인디케이터 아래에 위치하도록 조정 */
   left: 50%;
   transform: translateX(-50%);
   width: 1184px;
@@ -679,12 +778,201 @@
 }
 
 /* 호버 시 카드 타이틀 색상 변경 */
-.servicecard2:hover .system-integration {
-  color: #4c7bf7;
+.servicecard2:hover .system-integration1 {
+  color: #5482E7;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #5482E7;
 }
 
 /* 기본 호버 효과 - 자바스크립트가 비활성화된 환경에서도 적용 */
 .servicecard2:hover {
   box-shadow: 0 4px 10px rgba(33, 71, 155, 0.1);
   z-index: 1;
+}
+
+/* 슬라이더 관련 스타일 */
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 100%; /* 초기에는 화면 오른쪽 밖에 위치 */
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: left 0.8s ease, opacity 0.8s ease; /* 왼쪽으로 슬라이딩 효과 추가 */
+  display: flex;
+  justify-content: center;
+}
+
+.slide.active {
+  left: 0; /* 활성화된 슬라이드는 화면 중앙에 위치 */
+  opacity: 1;
+}
+
+.slide.prev {
+  left: -100%; /* 이전 슬라이드는 화면 왼쪽 밖으로 이동 */
+  opacity: 0;
+}
+
+.slide-content {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 100%;
+}
+
+/* 인디케이터 스타일 */
+.slider-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #21479B;
+}
+
+.indicator.active {
+  width: 80px; /* 활성화 시 가로로 길어짐 */
+  border-radius: 10px; /* 모서리를 약간 둥글게 하여 타원 형태로 */
+}
+
+/* 호버 시 아이콘 색상 변경 */
+.servicecard:hover .icon7 {
+  filter: invert(48%) sepia(70%) saturate(2848%) hue-rotate(207deg) brightness(99%) contrast(91%);
+}
+
+/* 파트너사 로고 슬라이더 스타일 */
+.partners-slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 30px auto;
+  overflow: hidden;
+}
+
+.partners-slider {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  cursor: default; /* 드래그 가능함을 표시하는 커서 제거하고 기본 커서로 변경 */
+  touch-action: pan-y; /* 수직 스크롤은 허용, 수평은 제스처 처리 */
+  user-select: none; /* 텍스트 선택 방지 */
+}
+
+.partners-logos-wrapper {
+  display: flex;
+  position: relative;
+  width: 100%; /* 13개 로고, 각 로고가 25%이면 총 너비는 325%에서 기본값인 100%로 변경 */
+  height: 100%;
+  transition: transform 0.5s ease;
+  will-change: transform; /* 성능 최적화 */
+}
+
+/* 개별 파트너 로고 컨테이너 */
+.partner-logo-container {
+  flex: 0 0 25%; /* 한 화면에 4개씩 표시 */
+  width: 25%; /* 너비 명시적 설정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  transition: opacity 0.3s ease;
+}
+
+.partner-logo {
+  max-height: 60px;
+  max-width: 80%; /* 로고 크기 조정 */
+  object-fit: contain;
+  /* 흑백 효과 */
+  filter: grayscale(100%) brightness(0.8);
+  transition: filter 0.3s ease;
+  cursor: default; /* 포인터 커서 제거 */
+}
+
+/* 개별 로고에 호버 시 채도 복원 */
+.partner-logo:hover {
+  filter: grayscale(0%) brightness(1);
+}
+
+/* 드래그 중 커서 스타일 */
+.partners-slider.dragging {
+  cursor: default; /* 드래그 시 grabbing 커서 제거하고 기본 커서로 변경 */
+}
+
+/* 슬라이더 인디케이터 */
+.partners-slider-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 6px; /* 간격 줄임 */
+  flex-wrap: wrap; /* 필요시 줄바꿈 허용 */
+  max-width: 600px; /* 최대 너비 설정 */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
+}
+
+.partners-indicator {
+  width: 8px; /* 크기 줄임 */
+  height: 8px; /* 크기 줄임 */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #21479B;
+  background-color: transparent;
+  position: relative;
+}
+
+.partners-indicator.active {
+  width: 16px; /* 활성화 시 크기 줄임 */
+  border-radius: 8px; /* 모서리를 약간 둥글게 하여 타원 형태로 */
+  background-color: #21479B;
+}
+
+/* 네비게이션 버튼 */
+.partners-slider-nav {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.partners-nav-btn {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #eee;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.partners-nav-btn:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: #5482E7;
 }
