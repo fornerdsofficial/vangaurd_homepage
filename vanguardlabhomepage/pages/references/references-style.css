@@ -202,7 +202,7 @@
 /* 뷰 전환 아이콘 호버 효과 */
 .referencesicon-card {
   cursor: pointer;
-  transition: background-color 0.2s, transform 0.2s;
+  transition: background-color 0.2s, transform 0.2s, opacity 0.3s ease;
   width: 40px;
   height: 40px;
   display: flex;
@@ -215,6 +215,7 @@
 .referencesicon-card:hover {
   background-color: rgba(33, 71, 155, 0.05);
   transform: translateY(-2px);
+  opacity: 0.8;
 }
 
 /* 아이콘 색상 활성화/비활성화 스타일 */
@@ -224,4 +225,50 @@
 
 .referencesicon-card:not(.active) .icon67 {
   opacity: 0.7;
+}
+
+/* 카테고리 버튼 스타일 */
+.category-button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 50px; /* 모서리 둥글게 */
+}
+
+.category-button:hover {
+  transform: translateY(-2px);
+}
+
+.category-button.active {
+  background-color: #393B57;
+}
+
+.category-button.active .general5,
+.category-button.active .general6 {
+  color: white;
+  -webkit-text-stroke-width: 0.6px;
+  -webkit-text-stroke-color: #fff;
+}
+
+/* All 버튼 특별 스타일 - General5 색상 관리 */
+.general-wrapper2:not(.active) .general5 {
+  color: #393B57; /* 비활성화 시 기본 색상 */
+}
+
+.general-wrapper2.active {
+  background-color: #393B57;
+  border-radius: 50px;
+}
+
+.general-wrapper2.active .general5 {
+  color: white;
+}
+
+/* 그리드 뷰에서 카드 호버 효과 */
+.grid-view .referencesbox2 {
+  transition: all 0.3s ease;
+}
+
+.grid-view .referencesbox2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }

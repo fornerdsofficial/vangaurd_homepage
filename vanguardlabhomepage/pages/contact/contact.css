@@ -3,9 +3,14 @@
 }
 .mendix64 {
   position: relative;
-  line-height: 140%;
-  text-shadow: 1.6px 0 0#393b57, 0 1.6px 0#393b57, -1.6px 0 0#393b57,
-    0-1.6px 0#393b57;
+  color: var(--Color-Black, #393B57);
+  -webkit-text-stroke-width: 3.2px;
+  -webkit-text-stroke-color: var(--Color-Black, #393B57);
+  font-family: Garet;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 140%; /* 89.6px */
 }
 .title78 {
   width: 404px;
@@ -157,8 +162,12 @@
   padding: var(--padding-3xs);
   box-sizing: border-box;
   gap: var(--gap-31xl);
-  font-size: var(--font-size-xl);
-  font-family: var(--font-pretendard-variable);
+  color: var(--Color-Black, #393B57);
+  font-family: "Pretendard Variable";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 150% */
 }
 .title-parent20 {
   align-self: stretch;

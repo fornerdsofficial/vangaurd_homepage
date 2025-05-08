@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // 필요한 요소 찾기
     const gridViewIcon = document.getElementById('gridViewBtn');
     const listViewIcon = document.getElementById('listViewBtn');
+    const categoryButtons = document.querySelectorAll('.category-button');
+    const referenceItems = document.querySelectorAll('.referencesbox2');
     
     // 초기 상태 설정 - 그리드뷰가 기본 (references.html 스타일)
     let currentView = 'grid';
@@ -10,6 +12,34 @@ document.addEventListener('DOMContentLoaded', function() {
     // 컨텐츠 컨테이너와 테이블 헤더 식별
     const contentContainer = document.querySelector('.referencesbox2-parent');
     const tableHeader = document.querySelector('.table-header');
+    
+    // 카테고리 버튼 클릭 이벤트
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // 모든 버튼에서 active 클래스 제거
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            // 클릭한 버튼에 active 클래스 추가
+            this.classList.add('active');
+            
+            const category = this.getAttribute('data-category');
+            
+            // 항목 필터링
+            referenceItems.forEach(item => {
+                // 항목에 지정된 카테고리 가져오기
+                const itemCategories = item.getAttribute('data-category');
+                const itemYear = item.getAttribute('data-year');
+                
+                // 'all'이거나 카테고리/연도에 해당하는 경우 표시
+                if (category === 'all' || 
+                    itemCategories.includes(category) || 
+                    (category.startsWith('20') && itemYear === category)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
     
     // 카드 뷰(그리드) 형식의 HTML
     function getGridViewHTML() {
