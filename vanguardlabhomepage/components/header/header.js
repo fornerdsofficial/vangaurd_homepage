@@ -7,6 +7,23 @@ class HeaderComponent extends HTMLElement {
   connectedCallback() {
     // Shadow DOM 대신 일반 DOM 사용 - 전역 CSS가 적용되도록 함
     
+    // 현재 페이지 경로에 따라 각 페이지의 상대 경로 계산
+    const getBasePath = () => {
+      const path = window.location.pathname;
+      // index.html 또는 루트 폴더에 있는 경우
+      if (path.endsWith('index.html') || path === '/' || path.endsWith('/')) {
+        return './';
+      }
+      // pages/ 하위의 폴더에 있는 경우
+      if (path.includes('/pages/')) {
+        return '../../';
+      }
+      // 기타 경우
+      return '../';
+    };
+    
+    const basePath = getBasePath();
+    
     // HTML 템플릿 생성
     this.innerHTML = `
       <div class="header1" id="headerMain">
@@ -48,25 +65,25 @@ class HeaderComponent extends HTMLElement {
             <!-- Company 드롭다운 메뉴 -->
             <div class="dropdown-menu" id="companyDropdown">
               <div class="category-links">
-                <a href="../company-overview/company-overview.html">Overview</a>
-                <a href="../company-ceo/company-ceo.html">CEO Message</a>
-                <a href="../company-history/company-history.html">History</a>
+                <a href="${basePath}pages/company-overview/company-overview.html">Overview</a>
+                <a href="${basePath}pages/company-ceo/company-ceo.html">CEO Message</a>
+                <a href="${basePath}pages/company-history/company-history.html">History</a>
               </div>
             </div>
             <!-- Service 드롭다운 메뉴 -->
             <div class="dropdown-menu" id="serviceDropdown">
               <div class="category-links">
-                <a href="../service-mendix/service-mendix.html">Mendix</a>
-                <a href="../service-perfec-twin/service-perfec-twin.html">Perfectwin</a>
-                <a href="../service-system-integration/service-system-integration.html">System Integration</a>
+                <a href="${basePath}pages/service-mendix/service-mendix.html">Mendix</a>
+                <a href="${basePath}pages/service-perfec-twin/service-perfec-twin.html">Perfectwin</a>
+                <a href="${basePath}pages/service-system-integration/service-system-integration.html">System Integration</a>
               </div>
             </div>
             <!-- Solution 드롭다운 메뉴 -->
             <div class="dropdown-menu" id="solutionDropdown">
               <div class="category-links">
-                <a href="../solution-grs/solution-grs.html">Global Report System</a>
-                <a href="../solution-smart-report/solution-smart-report.html">Smart System</a>
-                <a href="../solution-talon/solution-talon.html">TALON</a>
+                <a href="${basePath}pages/solution-grs/solution-grs.html">Global Report System</a>
+                <a href="${basePath}pages/solution-smart-report/solution-smart-report.html">Smart System</a>
+                <a href="${basePath}pages/solution-talon/solution-talon.html">TALON</a>
               </div>
             </div>
           </div>
@@ -79,9 +96,9 @@ class HeaderComponent extends HTMLElement {
     const vanguardlabText = document.getElementById("vanguardlabText");
     if (vanguardlabText) {
       vanguardlabText.addEventListener("click", () => {
-        // 현재 페이지가 main.html이 아닌 경우에만 이동
-        if (!window.location.href.includes('main.html')) {
-          window.location.href = "../main/main.html";
+        // 현재 페이지가 루트 페이지가 아닌 경우에만 이동
+        if (!window.location.pathname.endsWith('index.html') && !window.location.pathname.endsWith('/')) {
+          window.location.href = `${basePath}index.html`;
         }
       });
     }
@@ -90,14 +107,21 @@ class HeaderComponent extends HTMLElement {
     const referencesBtn = document.getElementById("referencesBtn");
     if (referencesBtn) {
       referencesBtn.addEventListener("click", () => {
-        window.location.href = "../references/references.html";
+        window.location.href = `${basePath}pages/references/references.html`;
+      });
+    }
+    
+    const blogBtn = document.getElementById("blogBtn");
+    if (blogBtn) {
+      blogBtn.addEventListener("click", () => {
+        window.location.href = `${basePath}pages/blog/blog.html`;
       });
     }
     
     const contactBtn = document.getElementById("contactBtn");
     if (contactBtn) {
       contactBtn.addEventListener("click", () => {
-        window.location.href = "../contact/contact.html";
+        window.location.href = `${basePath}pages/contact/contact.html`;
       });
     }
     
