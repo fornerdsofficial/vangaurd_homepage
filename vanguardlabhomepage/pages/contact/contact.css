@@ -204,12 +204,6 @@
   text-align: center;
 }
 
-/* 모바일 반응형 스타일 */
-@media screen and (max-width: 768px) {
-  #map {
-    height: 350px;
-  }
-}
 .frame-parent57 {
   width: 1182px;
   display: flex;
@@ -257,4 +251,162 @@
   font-size: var(--font-size-17xl);
   color: var(--color-lightslategray);
   font-family: var(--font-garet);
+}
+
+@media screen and (max-width: 768px) {
+
+  .contact {
+    width: 100%;
+    max-width: 100vw;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+  
+  .frame-parent56 {
+    width: 100%;
+    max-width: 100vw;
+    padding: 80px 12px 400px;
+    box-sizing: border-box;
+  }
+  
+  .header-parent9 {
+    width: 100%;
+    gap: 40px;
+  }
+  
+  .frame-parent57 {
+    width: 100%;
+    gap: 40px;
+  }
+  
+  .title-parent20 {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .title77, .title78 {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+  
+  .mendix64 {
+    font-size: 36px;
+    line-height: 130%;
+    -webkit-text-stroke-width: 1px;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .parent9 {
+    width: 100%;
+    padding: 0;
+    gap: 20px;
+  }
+  
+  .telfax-parent {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  
+  .e-mail-parent {
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+  }
+  
+  .contactvanguardlabnet-parent {
+    width: 100%;
+  }
+  
+  .contactvanguardlabnet {
+    font-size: 16px;
+    line-height: 24px;
+    word-break: break-all;
+  }
+  
+  .telfax, .e-mail {
+    font-size: 16px;
+  }
+  
+  .frame-parent58 {
+    width: 100%;
+    gap: 24px;
+  }
+  
+  /* 지도 반응형 크기 조정 */
+  #map {
+    height: 300px;
+  }
+
+  .contact {
+    width: 100%;
+    max-width: 100vw;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+  
+  .main-content {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .title-parent {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 16px;
+  }
+  
+  .title {
+    width: 100%;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 8px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  
+  .description-parent {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .description {
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0;
+    margin-bottom: 12px;
+  }
+  
+  .contact-form {
+    width: 100%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+  }
+  
+  .form-group {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .form-label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
 }

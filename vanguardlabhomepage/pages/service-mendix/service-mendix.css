@@ -69,7 +69,6 @@
 }
 .title17 {
   width: 404px;
-  height: 330px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -962,4 +961,226 @@
 
 .dot.active {
   background-color: #393B57;
+}
+
+@media screen and (max-width: 768px) {
+  .service-mendix {
+    width: 100%;
+    max-width: 100vw;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+  .main-content,
+  .frame-parent14 {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .header-parent1 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .title-parent1 {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .title16 {
+    width: 100%;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 8px;
+    margin-top: 100px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -1px;
+    display: block;
+  }
+  .description-parent1 {
+    width: 100%;
+    padding: 0;
+    margin-top: 16px;
+  }
+  .description13 {
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0;
+    margin-bottom: 12px;
+  }
+  .button3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+  }
+  .titlebutton21 {
+    min-width: 60px;
+    font-size: 13px;
+    padding: 6px 10px;
+    margin: 0 2px 8px 0;
+  }
+  .parent2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+  .icon10,
+  .img-mendix-feature-01-1-icon,
+  .img-mendix-feature-03-1-icon {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+    margin: 0 auto 16px auto;
+  }
+  .mendix-vanguardlab-parent {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+  .longcard-parent {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  .longcard {
+    width: 100%;
+    height: auto;
+    min-height: 81px;
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+  }
+  .faq {
+    width: 100%;
+    margin-top: 16px;
+  }
+  .slide-item {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+  .slide-image-wrapper img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+    margin: 0 auto 8px auto;
+  }
+  .contents4 {
+    width: 100%;
+    gap: 16px;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+  .mendix13 {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .check-square {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .mendix-container1 {
+    width: 100%;
+    height: auto;
+    min-height: 131px;
+    font-size: 28px;
+    line-height: 1.4;
+    padding: 0 12px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mendix-container2 {
+    width: 100%;
+    font-size: 28px;
+    line-height: 1.4;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+  .mendix-container3 {
+    width: 100%;
+    height: auto;
+    min-height: 131px;
+    font-size: 28px;
+    line-height: 1.4;
+    padding: 0 12px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .contain25 {
+    width: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
+    margin-top: 32px;
+    height: auto;
+    min-height: 400px;
+  }
+  .contain26 {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    gap: 12px;
+    padding: 0;
+  }
+  .slide-image-wrapper {
+    width: 100%;
+    height: 160px;
+    margin-bottom: 12px;
+  }
+  .mendixtextbox {
+    width: 100%;
+    height: auto;
+    min-height: 180px;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+  }
+  .title19 {
+    width: 100%;
+    height: auto;
+    min-height: 60px;
+    padding: 0;
+  }
+  .react-native {
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.3;
+    white-space: normal;
+    word-break: keep-all;
+    text-align: left;
+  }
+  .description15 {
+    width: 100%;
+    max-height: none;
+    font-size: 14px;
+    line-height: 1.4;
+    white-space: normal;
+    word-break: keep-all;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+  }
+  .pageindicator {
+    position: relative;
+    height: 30px;
+    margin-top: 12px;
+  }
 }

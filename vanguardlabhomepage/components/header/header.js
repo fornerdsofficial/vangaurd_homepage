@@ -57,6 +57,55 @@ class HeaderComponent extends HTMLElement {
             </div>
           </div>
         </div>
+        
+        <!-- 모바일 메뉴 버튼 추가 -->
+        <div class="mobile-menu-btn" id="mobileMenuBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      
+      <!-- 모바일 메뉴 패널 추가 -->
+      <div class="mobile-menu-panel" id="mobileMenuPanel">
+        <div class="mobile-menu-header">
+          <div class="mobile-menu-close" id="mobileMenuClose">×</div>
+        </div>
+        <div class="mobile-menu-items">
+          <div class="mobile-menu-item mobile-dropdown" id="mobileCompanyBtn">
+            <div class="mobile-menu-title">Company</div>
+            <div class="mobile-submenu" id="mobileCompanySubmenu">
+              <a href="${basePath}pages/company-overview/company-overview.html">Overview</a>
+              <a href="${basePath}pages/company-ceo/company-ceo.html">CEO Message</a>
+              <a href="${basePath}pages/company-history/company-history.html">History</a>
+            </div>
+          </div>
+          <div class="mobile-menu-item mobile-dropdown" id="mobileServiceBtn">
+            <div class="mobile-menu-title">Service</div>
+            <div class="mobile-submenu" id="mobileServiceSubmenu">
+              <a href="${basePath}pages/service-mendix/service-mendix.html">Mendix</a>
+              <a href="${basePath}pages/service-perfec-twin/service-perfec-twin.html">Perfectwin</a>
+              <a href="${basePath}pages/service-system-integration/service-system-integration.html">System Integration</a>
+            </div>
+          </div>
+          <div class="mobile-menu-item mobile-dropdown" id="mobileSolutionBtn">
+            <div class="mobile-menu-title">Solution</div>
+            <div class="mobile-submenu" id="mobileSolutionSubmenu">
+              <a href="${basePath}pages/solution-grs/solution-grs.html">Global Report System</a>
+              <a href="${basePath}pages/solution-smart-report/solution-smart-report.html">Smart System</a>
+              <a href="${basePath}pages/solution-talon/solution-talon.html">TALON</a>
+            </div>
+          </div>
+          <div class="mobile-menu-item">
+            <a href="${basePath}pages/references/references.html">References</a>
+          </div>
+          <div class="mobile-menu-item">
+            <a href="${basePath}pages/blog/blog.html">Blog</a>
+          </div>
+          <div class="mobile-menu-item">
+            <a href="${basePath}pages/contact/contact.html">Contact</a>
+          </div>
+        </div>
       </div>
       
       <div class="mega-dropdown" id="megaDropdown">
@@ -89,7 +138,6 @@ class HeaderComponent extends HTMLElement {
           </div>
         </div>
       </div>
-      <!-- header-bg div 제거 -->
     `;
     
     // 이벤트 리스너 추가
@@ -194,6 +242,42 @@ class HeaderComponent extends HTMLElement {
         headerMain.classList.remove('header-active');
         menuItems.forEach(item => item.classList.remove('active'));
       }
+    });
+    
+    // 모바일 메뉴 기능 추가
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenuPanel = document.getElementById('mobileMenuPanel');
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+    
+    // 모바일 메뉴 버튼 클릭
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenuPanel.classList.add('active');
+      document.body.style.overflow = 'hidden'; // 메뉴 열릴 때 스크롤 방지
+    });
+    
+    // 모바일 메뉴 닫기 버튼 클릭
+    mobileMenuClose.addEventListener('click', () => {
+      mobileMenuPanel.classList.remove('active');
+      document.body.style.overflow = ''; // 스크롤 다시 허용
+    });
+    
+    // 모바일 서브메뉴 토글 기능
+    const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
+    mobileDropdowns.forEach(dropdown => {
+      const title = dropdown.querySelector('.mobile-menu-title');
+      const submenu = dropdown.querySelector('.mobile-submenu');
+      
+      title.addEventListener('click', () => {
+        // 다른 서브메뉴 닫기
+        document.querySelectorAll('.mobile-submenu').forEach(menu => {
+          if (menu !== submenu) {
+            menu.classList.remove('open');
+          }
+        });
+        
+        // 현재 서브메뉴 토글
+        submenu.classList.toggle('open');
+      });
     });
   }
 }

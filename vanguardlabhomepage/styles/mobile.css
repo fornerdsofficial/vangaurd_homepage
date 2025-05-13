@@ -1,0 +1,549 @@
+/* 모바일 반응형 스타일 */
+@media screen and (max-width: 768px) {
+  /* 전체 레이아웃 조정 */
+  .landingpage {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    min-height: 600vh;
+  }
+
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .landingpage-child {
+    width: 100%;
+    left: 0;
+    transform: none;
+    max-width: 100vw;
+    top: 3000px;
+    height: 4500px;
+  }
+
+  /* 헤더 슬라이더 영역 */
+  .landingpage-inner {
+    top: 120px;
+    left: 5%;
+    width: 90%;
+    max-width: 90vw;
+    overflow: hidden;
+  }
+
+  .slide-heading,
+  .slide-subtitle,
+  .slide-title {
+    font-size: 28px;
+    -webkit-text-stroke-width: 1.5px;
+    max-width: 90vw;
+    word-break: break-word;
+  }
+
+  .slide-title {
+    top: 116px;
+  }
+
+  .slide-subtitle {
+    top: 58px;
+  }
+
+  /* 파트너사 로고 영역 */
+  .trusted-by-parent {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 90vw;
+    overflow: hidden;
+  }
+
+  .partners-slider-container {
+    width: 100%;
+    overflow: hidden;
+    max-width: 90vw;
+  }
+
+  .partner-logo-container {
+    padding: 10px;
+  }
+
+  .partner-logo {
+    max-width: 50px;
+    height: auto;
+  }
+
+  /* 회사 소개 영역 */
+  .parent1 {
+    width: 90%;
+    margin: 40px auto;
+    padding: 0;
+    position: relative;
+    left: 0;
+    transform: none;
+    max-width: 90vw;
+  }
+
+  .div29 {
+    font-size: 20px;
+    line-height: 1.3;
+    width: 100%;
+    word-break: keep-all;
+  }
+
+  .it {
+    font-size: 14px;
+    width: 100%;
+    margin: 20px 0;
+    word-break: keep-all;
+  }
+
+  .landingpagebutton {
+    margin: 20px 0;
+    width: auto;
+    max-width: 100%;
+  }
+
+  /* 특징 영역 */
+  .instance-parent1 {
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    left: 0;
+    transform: none;
+    max-width: 90vw;
+    box-sizing: border-box;
+    margin-top: 40px;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .frame-parent2 {
+    width: 100% !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 0;
+  }
+
+  /* 서비스 소개 영역 */
+  .frame-parent6 {
+    width: 90%;
+    margin: 30px auto;
+    left: 0;
+    transform: none;
+    max-width: 90vw;
+    position: relative;
+  }
+
+  .div38 {
+    font-size: 22px;
+    line-height: 1.3;
+    text-align: center;
+    width: 100%;
+    word-break: keep-all;
+  }
+
+  .servicecard-parent {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .servicecard {
+    width: 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .servicecard2variant {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .servicecard2 {
+    width: 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+    height: 250px;
+  }
+
+  .contain15 {
+    height: 250px;
+  }
+
+  /* 슬라이더 인디케이터 조정 */
+  .slider-indicator {
+    width: 90%;
+    justify-content: center;
+  }
+
+  .partners-slider-indicators {
+    display: none; /* 모바일에서는 인디케이터 숨김 처리 */
+  }
+  
+  /* 고객 중심 섹션 스타일 */
+  .user-check-wrapper {
+    width: 120px;
+    height: 120px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .user-check {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 아이콘 크기 조정 */
+  .icon3, .icon4, .icon5, .icon6 {
+    position: relative;
+    width: 70%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+  }
+  
+  /* 텍스트 크기 조정 */
+  .text14 {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title4 {
+    margin-bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .div30 {
+    font-size: 20px;
+    line-height: 28px;
+    width: 100%;
+    padding: 0;
+  }
+  
+  .description4 {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .div31 {
+    font-size: 14px;
+    line-height: 20px;
+    width: 100% !important;
+  }
+
+  .div31 p {
+    margin: 0;
+  }
+  
+  .global-report {
+    font-size: 15px;
+    word-break: keep-all;
+  }
+  
+  .all-in-one-low-code-platform {
+    font-size: 14px;
+    word-break: keep-all;
+    /* white-space: nowrap;/ */
+    line-height: 1.5;
+  }
+  
+  .system-integration, .system-integration1 {
+    font-size: 16px;
+  }
+  
+  .description8 > div {
+    font-size: 12px;
+    word-break: keep-all;
+  }
+  
+  /* 푸터 조정 */
+  footer-component {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer-component .footer {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer-component .footer-contents {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    text-align: center;
+  }
+
+  footer-component .footer-vanguardlab {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  footer-component .footer-telfax-container {
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  footer-component .footer-telfax-container p {
+    width: 100%;
+    margin: 4px 0;
+    text-align: center;
+  }
+
+  footer-component .footer-copyrights {
+    width: 100%;
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  footer-component .footer-copyright-vanguardlab-all {
+    width: 100%;
+    font-size: 11px;
+    text-align: center;
+    color: var(--color-lightslategray);
+  }
+  
+  /* 헤더 및 모바일 메뉴 스타일 */
+  header-component {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--color-white);
+    height: 60px;
+  }
+
+  header-component .header1 {
+    padding: 0 12px;
+    height: 60px;
+    position: relative;
+  }
+  
+  /* 기존 헤더와 네비게이션 숨기기 */
+  header-component .header {
+    display: none;
+  }
+  
+  header-component .nav-container {
+    display: none;
+  }
+
+  .mega-dropdown {
+    display: none !important;
+  }
+  
+  /* 로고 중앙 정렬 */
+  header-component .vanguardlab {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    padding-top: 0;
+    margin: 0;
+  }
+  
+  /* 모바일 헤더 스타일 */
+  header-component .mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    height: 80px;
+  }
+
+  header-component .mobile-header .logo {
+    width: 150px;
+    height: auto;
+  }
+  
+  /* 햄버거 메뉴 버튼 */
+  header-component .mobile-menu-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  header-component .mobile-menu-btn span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--Color-Black);
+    transition: all 0.3s ease;
+  }
+  
+  /* 모바일 메뉴 오버레이 */
+  header-component .mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+  }
+
+  header-component .mobile-menu-overlay.active {
+    display: block;
+  }
+  
+  /* 모바일 메뉴 패널 */
+  header-component .mobile-menu-panel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 999;
+    padding-top: 60px;
+    overflow-y: auto;
+  }
+
+  header-component .mobile-menu-panel.active {
+    right: 0;
+  }
+  
+  /* 모바일 메뉴 헤더 */
+  header-component .mobile-menu-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+  }
+
+  header-component .mobile-menu-close {
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--Color-Black);
+  }
+  
+  /* 모바일 메뉴 아이템 */
+  header-component .mobile-menu-items {
+    padding: 16px 0;
+  }
+
+  header-component .mobile-menu-item {
+    padding: 14px;
+    border-bottom: 1px solid #eee;
+  }
+
+  header-component .mobile-menu-item:last-child {
+    border-bottom: none;
+  }
+  
+  /* 메인 메뉴 타이틀 */
+  header-component .mobile-menu-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--Color-Black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* 화살표 아이콘 */
+  header-component .mobile-menu-title::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--Color-Black);
+    border-bottom: 2px solid var(--Color-Black);
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+  }
+
+  header-component .mobile-menu-item.active .mobile-menu-title::after {
+    transform: rotate(-135deg);
+  }
+  
+  /* 서브메뉴 */
+  header-component .mobile-submenu {
+    margin-top: 8px;
+    padding: 0;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    display: none;
+  }
+
+  header-component .mobile-submenu.open {
+    display: block;
+  }
+
+  header-component .mobile-submenu a {
+    padding: 10px 14px;
+    font-size: 14px;
+    color: var(--Color-Black);
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s ease;
+  }
+
+  header-component .mobile-submenu a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* 일반 메뉴 링크 */
+  header-component .mobile-menu-item > a {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--Color-Black);
+    text-decoration: none;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  header-component .mobile-header,
+  header-component .mobile-menu-btn,
+  header-component .mobile-menu-overlay,
+  header-component .mobile-menu-panel {
+    display: none !important;
+  }
+}

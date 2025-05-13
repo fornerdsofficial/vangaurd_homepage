@@ -434,3 +434,214 @@
   color: var(--Color-Black);
   font-family: var(--font-garet);
 }
+
+/* 모바일 반응형 스타일 */
+@media screen and (max-width: 768px) {
+  .service-perfectwin {
+    width: 100%;
+    max-width: 100vw;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+
+  .service-perfectwin-child {
+    left: 50%;
+    width: 100%;
+    max-width: 100vw;
+    padding: 0;
+    top: 2480px;
+    height: 3000px;
+  }
+
+  .main-content {
+    width: 100%;
+    padding-top: 160px;
+    padding-bottom: 200px;
+  }
+
+  .header-parent3 {
+    width: 100%;
+    gap: 40px;
+  }
+
+  .title-parent3 {
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .title26, .title27, .title28 {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .mendix22 {
+    font-size: 36px;
+    line-height: 130%;
+    -webkit-text-stroke-width: 1px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .ai-container5 {
+    font-size: 18px;
+    line-height: 26px;
+    width: 100%;
+  }
+
+  .description19, .description20 {
+    padding: 0;
+  }
+
+  .mendix23 {
+    width: 100%;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .description-parent3 {
+    width: 100%;
+  }
+
+  .button5 {
+    justify-content: center;
+  }
+
+  /* 이미지 섹션 조정 */
+  .img-perfecttwin1-1-icon {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .img-perfecttwin1-1-parent {
+    gap: 50px;
+  }
+
+  /* FAQ 섹션 */
+  .frame-parent18 {
+    width: 100%;
+    gap: 60px;
+  }
+
+  .faq {
+    width: 100%;
+    padding: 20px 15px 300px;
+    border-radius: 10px;
+  }
+
+  .mendix-faq {
+    font-size: 28px;
+    line-height: 36px;
+    -webkit-text-stroke-width: 0.5px;
+  }
+
+  .faqlist {
+    width: 100%;
+  }
+
+  .longcard {
+    max-width: 100%;
+    padding: 15px 10px;
+    margin-bottom: 12px;
+  }
+
+  .q {
+    padding: 5px 0;
+  }
+
+  .text35 {
+    gap: var(--gap-xs);
+  }
+
+  .q1 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .div65 {
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .chevron {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+
+  .a {
+    padding: 10px 0 5px;
+  }
+
+  .qa-wrapper {
+    gap: var(--gap-xs);
+  }
+
+  .microflow-domain {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+/* 500px 이하의 더 작은 화면 대응 */
+@media screen and (max-width: 500px) {
+  .service-perfectwin-child {
+    height: 3500px;
+  }
+  
+  .mendix-faq {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  
+  .longcard {
+    padding: 12px 8px;
+  }
+  
+  .q1 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .div65 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .chevron {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .microflow-domain {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  
+  .faq {
+    padding: 15px 8px;
+  }
+  
+  .title-parent3 {
+    gap: 20px;
+  }
+  
+  .mendix22 {
+    font-size: 30px;
+    line-height: 120%;
+  }
+  
+  .button5 {
+    justify-content: center;
+  }
+  
+  .titlebutton35 {
+    height: 32px;
+    padding: 8px 14px;
+    margin-bottom: 8px;
+  }
+}

@@ -236,3 +236,110 @@
   color: var(--Color-Black);
   font-family: var(--font-garet);
 }
+
+@media screen and (max-width: 768px) {
+  .mendix {
+    font-size: 36px;
+    -webkit-text-stroke-width: 1px;
+  }
+
+  .company-ceo-message {
+    width: 100%;
+    max-width: 100vw;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+  .frame-parent {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding-top: 100px;
+  }
+  .header-parent {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .instance-parent {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .title-parent {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 16px;
+  }
+  .title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .description-parent {
+    width: 100%;
+    padding: 0;
+  }
+  .description {
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0;
+    margin-bottom: 12px;
+  }
+  .button {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+  }
+  .titlebutton {
+    min-width: 60px;
+    font-size: 13px;
+    padding: 6px 10px;
+    margin: 0 2px 8px 0;
+  }
+  .img-organization-ceo-2-1-parent {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+  .img-organization-ceo-2-1-icon {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+    margin: 0 auto 16px auto;
+  }
+  .frame-group {
+    width: 100%;
+    align-items: center;
+    gap: 8px;
+  }
+  .mendix-201-wrapper {
+    width: 90%;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 8px;
+    margin: auto;
+  }
+  .parent {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .div7 {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .img-organization-ceo-sign-1-icon {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
