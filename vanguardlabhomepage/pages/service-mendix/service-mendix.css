@@ -1560,7 +1560,6 @@
     width: 100%;
     font-size: 14px;
     line-height: 1.5;
-    padding: 0 15px;
   }
   
   .mendix13 {
@@ -1596,8 +1595,6 @@
   .ai-container3 {
     font-size: 18px;
     line-height: 26px;
-    text-align: center;
-    padding: 0 10px;
   }
 
   .icon-card {
