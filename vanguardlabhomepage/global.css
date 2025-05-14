@@ -153,9 +153,9 @@ header-component .contain22 {
 
 /* 세로 구분선 스타일 강화 */
 header-component .divider {
-  width: 1px;
+  width: 1.5px;
   height: 18px; /* 높이 조정 */
-  background-color: #e0e0e0; /* 피그마와 동일한 색상으로 변경 */
+  background-color: #393B57; /* 피그마와 동일한 색상으로 변경 */
   margin: 0 25px 0 40px; /* 간격 조정 */
 }
 
@@ -340,6 +340,7 @@ header-component .dropdown-content a:hover {
 
 /* 공통 footer 스타일 */
 .footer {
+  position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);

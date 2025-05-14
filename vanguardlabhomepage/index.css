@@ -176,7 +176,7 @@ section {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding-top: 60px;
+  padding: 60px 10px 0 0;
 }
 
 .slide-heading,
@@ -197,17 +197,14 @@ section {
 
 .slide-heading {
   order: 1;
-  margin-bottom: 30px;
 }
 
 .slide-subtitle {
   order: 2;
-  margin-bottom: 30px;
 }
 
 .slide-title {
   order: 3;
-  margin-bottom: 30px;
 }
 
 /* 슬라이더 인디케이터 */
@@ -234,7 +231,7 @@ section {
 .indicator.active {
   width: 80px;
   border-radius: 10px;
-  background-color: var(--color-primary);
+  background-color: transparent;
 }
 
 /* ========= 파트너 섹션 ========= */
@@ -260,7 +257,7 @@ section {
   position: absolute;
   top: 0;
   height: 100%;
-  width: 15%;
+  width: 30%;
   z-index: 4;
   pointer-events: none;
 }
@@ -344,7 +341,7 @@ section {
 .partners-indicator.active {
   width: 16px;
   border-radius: 8px;
-  background-color: var(--color-primary);
+  background-color: transparent;
 }
 
 /* ========= 소개 섹션 ========= */
@@ -522,7 +519,7 @@ section {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 1s ease;
   text-decoration: none;
   color: inherit;
 }
@@ -546,7 +543,6 @@ section {
   line-height: 56px;
   color: var(--color-black);
   margin: 0;
-  padding: 0 var(--spacing-xl);
 }
 
 .card-title {
@@ -598,7 +594,7 @@ section {
   height: 421px;
   padding: var(--spacing-2xl) var(--spacing-lg);
   box-sizing: border-box;
-  transition: width 0.3s ease, box-shadow 0.3s ease;
+  transition: width 2s ease, box-shadow 1.5s ease;
   position: relative;
   text-decoration: none;
   color: inherit;
@@ -628,7 +624,7 @@ section {
   -webkit-text-stroke-color: var(--color-black);
   margin: 0;
   padding: var(--spacing-sm) 0;
-  transition: all 0.3s ease;
+  transition: all 1.2s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -673,10 +669,12 @@ section {
 @supports (selector(:has(*))) {
   .solution-cards:has(.solution-card:hover) .solution-card:not(:hover) {
     width: 334px;
+    transition: width 2s ease;
   }
   
   .solution-card:hover {
     width: 50%;
+    transition: width 2s ease;
   }
 }
 
@@ -718,41 +716,5 @@ section {
   .value-card {
     width: 200px;
     min-width: 200px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .slide-heading,
-  .slide-subtitle,
-  .slide-title {
-    font-size: 60px;
-  }
-  
-  .section-values {
-    gap: var(--spacing-xl);
-  }
-  
-  .value-card {
-    width: 45%;
-  }
-  
-  .solution-card {
-    width: 100%;
-  }
-  
-  .intro-description {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .slide-heading,
-  .slide-subtitle,
-  .slide-title {
-    font-size: 40px;
-  }
-  
-  .value-card {
-    width: 100%;
   }
 }
