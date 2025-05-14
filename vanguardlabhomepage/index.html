@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>뱅가드랩 - Enterprise IT Consulting & Service Partner</title>
 
     <link rel="stylesheet" href="./global.css" />
     <link rel="stylesheet" href="./index.css" />
@@ -23,59 +24,60 @@
     <script src="./components/footer/footer.js"></script>
   </head>
   <body>
-    <div class="landingpage">
-      <div class="landingpage-child"></div>
-      <div class="landingpage-item"></div>
-      <div class="landingpage-item-second"></div>
+    <div class="page-wrapper">
+      <!-- 배경 요소 -->
+      <!-- <div class="bg-gradient primary"></div>
+      <div class="bg-gradient secondary"></div> -->
       
-      <!-- 웹 컴포넌트를 이용한 footer 적용 -->
-      <footer-component></footer-component>
-      
-      <!-- 웹 컴포넌트를 이용한 header 적용 -->
+      <!-- 헤더 -->
       <header-component></header-component>
-      <div class="landingpage-inner">
-        <div class="slider-container">
-          <!-- 슬라이드 1 -->
-          <div class="slide">
-            <div class="slide-content">
-              <div class="slide-title">Service Partner</div>
-              <div class="slide-subtitle">IT Consulting &</div>
-              <div class="slide-heading">Enterprise</div>
+      
+      <!-- 메인 컨텐츠 -->
+      <main>
+        <!-- 히어로 섹션 (슬라이더) -->
+        <section class="section-hero">
+          <div class="hero-slider">
+            <!-- 슬라이드 1 -->
+            <div class="slide">
+              <div class="slide-content">
+                <h3 class="slide-title">Service Partner</h3>
+                <h2 class="slide-subtitle">IT Consulting &</h2>
+                <h1 class="slide-heading">Enterprise</h1>
+              </div>
+            </div>
+            <!-- 슬라이드 2 -->
+            <div class="slide">
+              <div class="slide-content">
+                <h3 class="slide-title">Digital Solution</h3>
+                <h2 class="slide-subtitle">Innovation &</h2>
+                <h1 class="slide-heading">Business</h1>
+              </div>
+            </div>
+            <!-- 슬라이드 3 -->
+            <div class="slide">
+              <div class="slide-content">
+                <h3 class="slide-title">Tech Partner</h3>
+                <h2 class="slide-subtitle">Low-Code &</h2>
+                <h1 class="slide-heading">Integration</h1>
+              </div>
             </div>
           </div>
-          <!-- 슬라이드 2 -->
-          <div class="slide">
-            <div class="slide-content">
-              <div class="slide-title">Digital Solution</div>
-              <div class="slide-subtitle">Innovation &</div>
-              <div class="slide-heading">Business</div>
-            </div>
+          
+          <!-- 슬라이더 인디케이터 -->
+          <div class="slider-indicator">
+            <div class="indicator active" data-index="0"></div>
+            <div class="indicator" data-index="1"></div>
+            <div class="indicator" data-index="2"></div>
           </div>
-          <!-- 슬라이드 3 -->
-          <div class="slide">
-            <div class="slide-content">
-              <div class="slide-title">Tech Partner</div>
-              <div class="slide-subtitle">Low-Code &</div>
-              <div class="slide-heading">Integration</div>
-            </div>
-          </div>
-        </div>
-      </div>
-        <div class="group-parent">
-          <div class="rectangle-parent">
-            <div class="slider-indicator">
-              <div class="indicator active" data-index="0"></div>
-              <div class="indicator" data-index="1"></div>
-              <div class="indicator" data-index="2"></div>
-            </div>
-          </div>
-        <div class="trusted-by-parent">
-          <div class="trusted-by">Trusted by.</div>
+        </section>
+
+        <!-- 파트너 섹션 -->
+        <section class="section-partners">
+          <h2 class="section-title">Trusted by.</h2>
           
           <!-- 파트너사 로고 슬라이더 -->
           <div class="partners-slider-container">
             <div class="partners-slider">
-              <!-- 전체 13개 로고를 포함하는 슬라이더 영역 -->
               <div class="partners-logos-wrapper">
                 <div class="partner-logo-container">
                   <img class="partner-logo" alt="KDB산업은행" src="./public/partners/logo_kdb.gif" />
@@ -150,223 +152,186 @@
               <div class="partners-indicator" data-index="12"></div>
             </div>
           </div>
-        </div>
-        <div class="parent1">
-          <div class="div29">
-            <p class="global-report">신뢰받는 최고의 전문가</p>
-            <p class="global-report">"뱅가드랩"</p>
-          </div>
-          <div class="it">
+        </section>
+        
+        <!-- 소개 섹션 -->
+        <section class="section-intro">
+          <h2 class="intro-title">
+            <p>신뢰받는 최고의 전문가</p>
+            <p>"뱅가드랩"</p>
+          </h2>
+          <p class="intro-description">
             뱅가드랩은 로우코드, 테스트이행, 뱅킹 서비스를 제공하는 IT전문
             기업입니다. 고객의 성공이 곧 뱅가드랩의 성공이라는 신념으로 함께
             하겠습니다.
-          </div>
-          <a href="./pages/company-overview/company-overview.html" class="landingpagebutton">
-            <div class="about-us">ABOUT US</div>
-            <img
-              class="arrow-right-icon"
-              alt=""
-              src="./public/arrow-right.svg"
-            />
+          </p>
+          <a href="./pages/company-overview/company-overview.html" class="btn-primary">
+            <span class="btn-text">ABOUT US</span>
+            <img class="btn-icon" alt="화살표" src="./public/arrow-right.svg" />
           </a>
-        </div>
-        <div class="instance-parent1">
-          <div class="frame-parent2">
-            <div class="user-check-wrapper">
-              <div class="user-check">
-                <img class="icon3" alt="" src="./public/icon.svg" />
-              </div>
+        </section>
+        
+        <!-- 핵심 가치 섹션 -->
+        <section class="section-values">
+          <div class="value-card">
+            <div class="value-icon-wrapper">
+              <img class="value-icon" alt="고객 중심 아이콘" src="./public/icon.svg" />
             </div>
-            <div class="text14">
-              <div class="title4">
-                <div class="div30">고객 중심</div>
-              </div>
-              <div class="description4">
-                <div class="div31">
-                  <span class="txt">
-                    <p class="global-report">고객가치 향상을 위한 서비스</p>
-                    <p class="global-report">제공으로 고객과 동반 성장</p>
-                  </span>
-                </div>
-              </div>
+            <div class="value-content">
+              <h3 class="value-title">고객 중심</h3>
+              <p class="value-description">
+                <span>고객가치 향상을 위한 서비스</span>
+                <span>제공으로 고객과 동반 성장</span>
+              </p>
             </div>
           </div>
-          <div class="frame-parent2">
-            <div class="user-check-wrapper">
-              <div class="user-check">
-                <img class="icon4" alt="" src="./public/icon1.svg" />
-              </div>
+          
+          <div class="value-card">
+            <div class="value-icon-wrapper">
+              <img class="value-icon" alt="최고의 서비스 아이콘" src="./public/icon1.svg" />
             </div>
-            <div class="text14">
-              <div class="title4">
-                <div class="div30">최고의 서비스</div>
-              </div>
-              <div class="description4">
-                <div class="div31">
-                  <span class="txt">
-                    <p class="global-report">전문성과 기술력을 바탕으로</p>
-                    <p class="global-report">최고의 서비스 제공</p>
-                  </span>
-                </div>
-              </div>
+            <div class="value-content">
+              <h3 class="value-title">최고의 서비스</h3>
+              <p class="value-description">
+                <span>전문성과 기술력을 바탕으로</span>
+                <span>최고의 서비스 제공</span>
+              </p>
             </div>
           </div>
-          <div class="frame-parent2">
-            <div class="user-check-wrapper">
-              <div class="user-check">
-                <img class="icon5" alt="" src="./public/icon2.svg" />
-              </div>
+          
+          <div class="value-card">
+            <div class="value-icon-wrapper">
+              <img class="value-icon" alt="유연한 대처 아이콘" src="./public/icon2.svg" />
             </div>
-            <div class="text14">
-              <div class="title4">
-                <div class="div30">유연한 대처</div>
-              </div>
-              <div class="description4">
-                <div class="div31">
-                  <span class="txt">
-                    <p class="global-report">기업 환경 변화에 유연하고도</p>
-                    <p class="global-report">빠른 대처방안 제시</p>
-                  </span>
-                </div>
-              </div>
+            <div class="value-content">
+              <h3 class="value-title">유연한 대처</h3>
+              <p class="value-description">
+                <span>기업 환경 변화에 유연하고도</span>
+                <span>빠른 대처방안 제시</span>
+              </p>
             </div>
           </div>
-          <div class="frame-parent2">
-            <div class="user-check-wrapper">
-              <div class="user-check">
-                <img class="icon6" alt="" src="./public/icon3.svg" />
-              </div>
+          
+          <div class="value-card">
+            <div class="value-icon-wrapper">
+              <img class="value-icon" alt="신뢰성 아이콘" src="./public/icon3.svg" />
             </div>
-            <div class="text14">
-              <div class="title4">
-                <div class="div30">신뢰성</div>
-              </div>
-              <div class="description4">
-                <div class="div31">
-                  <span class="txt">
-                    <p class="global-report">높은 품질과 안정성을 바탕으로</p>
-                    <p class="global-report">고객과의 신뢰 구축</p>
-                  </span>
-                </div>
-              </div>
+            <div class="value-content">
+              <h3 class="value-title">신뢰성</h3>
+              <p class="value-description">
+                <span>높은 품질과 안정성을 바탕으로</span>
+                <span>고객과의 신뢰 구축</span>
+              </p>
             </div>
           </div>
-        </div>
-        <div class="frame-parent6">
-          <div class="frame">
-            <div class="div38">
-              <p class="global-report">뱅가드랩이 제공하는</p>
-              <p class="global-report">최고의 서비스를 경험해 보세요!</p>
-            </div>
-          </div>
-          <div class="servicecard-parent">
-            <a href="./pages/service-mendix/service-mendix.html" class="servicecard card-link">
-              <div class="text14">
-                <div class="decription">
-                  <div class="all-in-one-low-code-platform">
-                    All-in-one Low-code Platform이 필요하다면?
-                  </div>
-                </div>
-                <div class="title8">
-                  <div class="system-integration">Mendix</div>
-                  <img class="icon7" alt="" src="./public/icon4.svg" />
+        </section>
+        
+        <!-- 서비스 섹션 -->
+        <section class="section-services">
+          <h2 class="section-heading">
+            <p>뱅가드랩이 제공하는</p>
+            <p>최고의 서비스를 경험해 보세요!</p>
+          </h2>
+          
+          <!-- 서비스 카드 영역 -->
+          <div class="service-cards-horizontal">
+            <a href="./pages/service-mendix/service-mendix.html" class="service-card card-link">
+              <div class="card-content">
+                <p class="card-description">
+                  All-in-one Low-code Platform이 필요하다면?
+                </p>
+                <div class="card-title">
+                  <h3>Mendix</h3>
+                  <img class="card-icon" alt="화살표" src="./public/icon4.svg" />
                 </div>
               </div>
             </a>
-            <a href="./pages/service-perfec-twin/service-perfec-twin.html" class="servicecard card-link">
-              <div class="text14">
-                <div class="decription">
-                  <div class="all-in-one-low-code-platform">
-                    실 거래 자동 재현으로 개발 기능 완성도 및 성능 검증 자동화
-                    솔루션
-                  </div>
-                </div>
-                <div class="title8">
-                  <div class="system-integration">PerfecTwin</div>
-                  <img class="icon7" alt="" src="./public/icon4.svg" />
+            
+            <a href="./pages/service-perfec-twin/service-perfec-twin.html" class="service-card card-link">
+              <div class="card-content">
+                <p class="card-description">
+                  실 거래 자동 재현으로 개발 기능 완성도 및 성능 검증 자동화 솔루션
+                </p>
+                <div class="card-title">
+                  <h3>PerfecTwin</h3>
+                  <img class="card-icon" alt="화살표" src="./public/icon4.svg" />
                 </div>
               </div>
             </a>
-            <a href="./pages/service-system-integration/service-system-integration.html" class="servicecard card-link">
-              <div class="text14">
-                <div class="decription">
-                  <div class="all-in-one-low-code-platform">
-                    다양한 업종의 시스템 구축, 유지보수 및 컨설팅 솔루션 제안
-                  </div>
-                </div>
-                <div class="title8">
-                  <div class="system-integration">System Integration</div>
-                  <img class="icon7" alt="" src="./public/icon4.svg" />
+            
+            <a href="./pages/service-system-integration/service-system-integration.html" class="service-card card-link">
+              <div class="card-content">
+                <p class="card-description">
+                  다양한 업종의 시스템 구축, 유지보수 및 컨설팅 솔루션 제안
+                </p>
+                <div class="card-title">
+                  <h3>System Integration</h3>
+                  <img class="card-icon" alt="화살표" src="./public/icon4.svg" />
                 </div>
               </div>
             </a>
           </div>
-          <div class="servicecard2variant">
-            <a href="./pages/solution-grs/solution-grs.html" class="servicecard2 card-link">
-              <div class="contain15">
-                <div class="text18">
-                  <div class="title11">
-                    <div class="system-integration1">
-                      <p class="global-report">Global Report</p>
-                      <p class="global-report">System</p>
-                    </div>
-                  </div>
-                  <div class="description8">
-                    <div>
-                      대외보고서 마트, 표준계수, 대외보고서의 업무를 빠르게 구축할 수 있는 솔루션
-                    </div>
-                  </div>
+          
+          <!-- 솔루션 카드 영역 -->
+          <div class="solution-cards">
+            <a href="./pages/solution-grs/solution-grs.html" class="solution-card card-link">
+              <div class="solution-content">
+                <div class="solution-header">
+                  <h3 class="solution-title">
+                    <p>Global Report</p>
+                    <p>System</p>
+                  </h3>
+                  <p class="solution-description">
+                    대외보고서 마트, 표준계수, 대외보고서의 업무를 빠르게 구축할 수 있는 솔루션
+                  </p>
                 </div>
-                <div class="viewmore">
-                  <div class="view-more">View more</div>
+                <div class="solution-footer">
+                  <span class="view-more">View more</span>
                 </div>
               </div>
             </a>
-            <a href="./pages/solution-smart-report/solution-smart-report.html" class="servicecard2 card-link">
-              <div class="contain15">
-                <div class="text18">
-                  <div class="title11">
-                    <div class="system-integration1">
-                      <p class="global-report">Smart</p>
-                      <p class="global-report">System</p>
-                    </div>
-                  </div>
-                  <div class="description8">
-                    <div>
-                      캐피탈사를 위한 금융감독원, 한국은행 대외보고서 업무개선을 위한 대외보고서 자동 제작 솔루션
-                    </div>
-                  </div>
+            
+            <a href="./pages/solution-smart-report/solution-smart-report.html" class="solution-card card-link">
+              <div class="solution-content">
+                <div class="solution-header">
+                  <h3 class="solution-title">
+                    <p>Smart</p>
+                    <p>System</p>
+                  </h3>
+                  <p class="solution-description">
+                    캐피탈사를 위한 금융감독원, 한국은행 대외보고서 업무개선을 위한 대외보고서 자동 제작 솔루션
+                  </p>
                 </div>
-                <div class="viewmore">
-                  <div class="view-more">View more</div>
+                <div class="solution-footer">
+                  <span class="view-more">View more</span>
                 </div>
               </div>
             </a>
-            <a href="./pages/solution-talon/solution-talon.html" class="servicecard2 card-link">
-              <div class="contain15">
-                <div class="text18">
-                  <div class="title11">
-                    <div class="system-integration1">TALON</div>
-                  </div>
-                  <div class="description8">
-                    <div>
-                      지배구조법 개정에 따른 내부통제 대응,
-                      실시간 관리, 이행점검, 보고까지 가능한
-                      All-in-One 솔루션
-                    </div>
-                  </div>
+            
+            <a href="./pages/solution-talon/solution-talon.html" class="solution-card card-link">
+              <div class="solution-content">
+                <div class="solution-header">
+                  <h3 class="solution-title">TALON</h3>
+                  <p class="solution-description">
+                    지배구조법 개정에 따른 내부통제 대응,
+                    실시간 관리, 이행점검, 보고까지 가능한
+                    All-in-One 솔루션
+                  </p>
                 </div>
-                <div class="viewmore">
-                  <div class="view-more">View more</div>
+                <div class="solution-footer">
+                  <span class="view-more">View more</span>
                 </div>
               </div>
             </a>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
+      
+      <!-- 푸터 -->
+      <footer-component></footer-component>
     </div>
 
-    <!-- 외부 자바스크립트 파일 연결 -->
+    <!-- 외부 자바스크립트 -->
     <script src="./scripts/main.js"></script>
   </body>
 </html>

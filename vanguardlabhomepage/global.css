@@ -60,21 +60,21 @@ header-component {
 header-component .nav-container {
   display: flex;
   align-items: center;
-  margin-left: 118px; /* 오른쪽 정렬 */
+  margin-left: auto; /* 오른쪽 정렬 */
 }
 header-component .header1 {
   position: relative;
   height: 100%;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* 왼쪽 정렬로 변경 */
   box-sizing: border-box;
   font-family: var(--font-garet);
-  padding: 0 63px; /* 정확한 양쪽 63px 여백 */
+  padding: 0 10%; /* 정확한 양쪽 63px 여백 - 메인 슬라이드와 정렬 */
   background-color: transparent;
   z-index: 100; /* 중요: 헤더 메뉴 항목들이 배경 위에 표시되도록 설정 */
 }
@@ -86,7 +86,7 @@ header-component .vanguardlab {
   font-weight: 300;
   cursor: pointer;
   font-family: var(--font-garet);
-  letter-spacing: -0.2px;
+  letter-spacing: 0.5px; /* 자간 조정 */
   padding-top: 3px; /* 세로 정렬 미세 조정 */
   text-shadow: 1px 0 0 #393b57, 0 1px 0 #393b57, -1px 0 0 #393b57, 0 -1px 0 #393b57;
 
@@ -103,13 +103,14 @@ header-component .vanguardlab {
 header-component .company {
   position: relative;
   color: var(--Color_Black, #393B57);
-  -webkit-text-stroke-width: 0.4px;
+  -webkit-text-stroke-width: 0.3px; /* 줄임 */
   -webkit-text-stroke-color: var(--Color-Black, #393B57);
   font-family: Garet;
   font-size: 15px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  letter-spacing: 1px; /* 자간 넓힘 */
 }
 
 /* 더 이상 필요없는 호버 스타일 */
@@ -121,7 +122,6 @@ header-component .tap {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px; /* 각 메뉴 항목 너비 100px로 고정 */
   cursor: pointer;
   position: relative;
   height: 80px;
@@ -129,7 +129,6 @@ header-component .tap {
 }
 
 header-component .tap3 {
-  width: 100px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -142,14 +141,16 @@ header-component .tap3 {
 header-component .contain {
   display: flex;
   align-items: center;
-  gap: 80px; /* 정확한 메뉴 간격 80px */
+  justify-content: space-evenly; /* 균등 간격 자동 배치 */
+  gap: 100px;
   height: 100%;
 }
 
 header-component .contain1 {
   display: flex;
   align-items: center;
-  margin-left: 5px; /* 구분선 이후 약간의 여백 */
+  gap: 50px; /* 서브 탭 간격도 메인 탭과 동일하게 설정 */
+  margin-left: 10px; /* 구분선 이후 여백 늘림 */
 }
 
 header-component .contain22 {
@@ -158,12 +159,12 @@ header-component .contain22 {
   height: 100%;
 }
 
-/* 세로 구분선 스타일 */
+/* 세로 구분선 스타일 강화 */
 header-component .divider {
-  width: 1px;
-  height: 16px;
-  background-color: #e0e0e0;
-  margin: 0 20px 0 40px; /* 정확한 간격 */
+  width: 1.5px;
+  height: 18px; /* 높이 조정 */
+  background-color: #393B57; /* 피그마와 동일한 색상으로 변경 */
+  margin: 0 25px 0 40px; /* 간격 조정 */
 }
 
 header-component .taps {
@@ -352,7 +353,6 @@ header-component .dropdown-content a:hover {
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--color-white);
-  width: 1440px;
   height: 355px;
   display: flex;
   flex-direction: column;
@@ -549,23 +549,72 @@ header-component .dropdown-content a:hover {
 
 
 /* 모바일 화면 반응형 스타일 */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1280px) {
+  header-component .header1 {
+    padding: 0 5%; /* 1200px 이하에서 5% 패딩으로 변경 - 슬라이드와 정렬 */
+  }
+  
   header-component .dropdown-items-container {
-    gap: 40px;
+    left: 5%;
+    right: 5%;
+  }
+  
+  header-component .contain,
+  header-component .contain1 {
+    gap: 50px; /* 화면이 작을 때 간격 줄임 */
+  }
+  
+  header-component .divider {
+    margin: 0 20px 0 30px; /* 화면이 작을 때 간격 줄임 */
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header-component .contain,
+  header-component .contain1 {
+    gap: 40px; /* 더 작은 화면에서 간격 더 줄임 */
+  }
+  
+  header-component .divider {
+    margin: 0 15px 0 20px; /* 더 작은 화면에서 간격 더 줄임 */
+  }
+  
+  header-component .company {
+    letter-spacing: 0.3px; /* 화면이 작을 때 자간 줄임 */
   }
 }
 
 @media screen and (max-width: 768px) {
+  header-component .header1 {
+    padding: 0 20px; /* 768px 이하에서 20px 패딩으로 변경 - 슬라이드와 정렬 */
+  }
+  
   header-component .dropdown-content {
-    padding: 10px 0;
+    gap: 10px;
   }
   
   header-component .dropdown-items-container {
-    flex-direction: column;
-    gap: 5px;
+    left: 20px;
+    right: 20px;
   }
   
   header-component .dropdown-content a {
-    padding: 8px 10px;
+    font-size: 14px;
+  }
+  
+  /* 모바일에서 메뉴 간격 조정 */
+  header-component .contain,
+  header-component .contain1 {
+    gap: 30px; /* 모바일에서 메뉴 간격 줄임 */
+  }
+  
+  header-component .divider {
+    margin: 0 10px 0 15px; /* 모바일에서 간격 더 줄임 */
+    height: 16px; /* 모바일에서 높이 줄임 */
+  }
+  
+  header-component .company {
+    letter-spacing: 0.2px; /* 모바일에서 자간 더 줄임 */
+    font-size: 14px; /* 모바일에서 글자 크기 줄임 */
   }
 }
