@@ -631,7 +631,6 @@
   gap: var(--gap-31xl);
   border-radius: 18px;
   padding: 30px;
-  margin-bottom: 60px;
   z-index: 2;
 }
 
@@ -659,6 +658,7 @@
 }
 .grs-container2 {
   width: 100%;
+  z-index: 3;
 }
 .grs-container1 {
   width: 679px;
@@ -819,12 +819,12 @@
 
   .solution-grs-child {
     top: 2000px;
-    height: 3500px;
+    height: 0;
   }
 
   .solution-grs-item {
     top: 500px;
-    height: 1500px;
+    height: 0;
     z-index: 0;
   }
 
@@ -851,6 +851,14 @@
     height: auto;
     padding: 0;
     flex-direction: column;
+  }
+
+  .title21{
+    padding-top: 20px;
+  }
+
+  .title23{
+    padding: 26px 0;
   }
 
   .description-parent2 {
@@ -891,13 +899,17 @@
 
   /* 모바일에서 슬라이더 조정 */
   .mokup {
-    width: 100%;
+    width: 100vw;
+    left: 0;
+    transform: translateX(-24px);
     overflow: visible;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    background-color: var(--color-whitesmoke);
+    padding: 40px 0;
   }
 
   .contain31 {
@@ -1061,9 +1073,11 @@
 
   /* FAQ 섹션 조정 */
   .faq {
-    width: 100%;
-    padding: 20px 10px;
+    width: 100vw;
+    left: 0;
+    padding: 40px 0;
     border-radius: 10px;
+    background-color: var(--color-whitesmoke);
   }
 
   .mendix-faq {
@@ -1079,11 +1093,6 @@
   .q, .q1 {
     padding: 15px 10px;
   }
-
-  .text35, .div65 {
-    font-size: 14px;
-    line-height: 20px;
-  }
   
   .a {
     padding: 0 10px 15px;
@@ -1096,11 +1105,10 @@
 
   /* GRS 설명 이미지 영역 */
   .img-copyright-grs-report-parent {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    gap: 10px;
   }
 
   .img-copyright-grs-report-icon1,
@@ -1152,16 +1160,38 @@
   }
 
   .frame-parent16 {
-    width: 0;
+    background-color: var(--color-whitesmoke);
+    width: 100vw;
+    left: 0;
+    transform: translateY(-200px) translateX(-24px);
     height: 0;
+    padding-top: 160px;
+    height: 200px;
+  }
+  
+  .faqlist .longcard {
+    padding: 12px 10px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+  }
+  
+  .div65, .div78, .text35, .text46 {
+    line-height: 18px;
+    width: 60vw;
+  }
+
+  .faqlist {
+    width: 90vw;
+    margin: 0 auto;
+  }
+  
+  .faqlist .q, .faqlist .q1 {
+    padding: 8px 5px;
   }
 }
 
 /* 500px 이하의 더 작은 화면 대응 */
 @media screen and (max-width: 500px) {
-  .solution-grs-child {
-    height: 4000px;
-  }
   
   /* 슬라이드 관련 스타일 */
   .contain31 {
@@ -1236,28 +1266,6 @@
     height: 14px;
   }
   
-  /* FAQ 섹션 개선 */
-  .faqlist {
-    width: 90vw;
-    margin: 0 auto;
-  }
-  
-  .faqlist .longcard {
-    padding: 12px 10px;
-    border-radius: 12px;
-    margin-bottom: 8px;
-  }
-  
-  .faqlist .q, .faqlist .q1 {
-    padding: 8px 5px;
-  }
-  
-  .div65, .div78, .text35, .text46 {
-    font-size: 13px;
-    line-height: 18px;
-    width: calc(100% - 30px);
-  }
-  
   .microflow-domain, .microflow-domain1 {
     font-size: 12px;
     line-height: 18px;
@@ -1320,13 +1328,6 @@
     line-height: 22px;
     text-align: center;
     padding: 0 5px;
-  }
-
-  /* GRS 설명 이미지 영역 개선 */
-  .img-copyright-grs-report-parent {
-    width: 90vw;
-    margin: 0 auto;
-    gap: 10px;
   }
   
   .img-copyright-grs-report-icon1,

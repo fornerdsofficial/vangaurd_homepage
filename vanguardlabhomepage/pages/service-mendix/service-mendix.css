@@ -1014,6 +1014,10 @@
     padding: 0;
   }
 
+  .mendix11{
+    text-align: left;
+  }
+
   .frame-parent7 {
     width: 100%;
     max-width: 100vw;
@@ -1550,7 +1554,6 @@
     width: 100%;
     font-size: 14px;
     line-height: 1.5;
-    text-align: center;
     padding: 0 15px;
   }
   

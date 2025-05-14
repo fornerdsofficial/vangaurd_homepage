@@ -40,6 +40,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: 30px; /* 125% */
+  width: 400px;
 }
 
 .ai-container5 {
@@ -456,7 +457,7 @@
 
   .main-content {
     width: 100%;
-    padding-top: 160px;
+    padding-top: 100px;
     padding-bottom: 200px;
   }
 
@@ -471,11 +472,19 @@
     gap: 30px;
   }
 
-  .title26, .title27, .title28 {
+  .title26 {
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
+    flex-direction: column;
+  }
+
+  .title27, .title28 {
     width: 100%;
     height: auto;
     padding: 0;
     flex-direction: column;
+
   }
 
   .mendix22 {
@@ -497,8 +506,16 @@
     gap: 20px;
   }
 
+  .p43 {
+    width: 85vw;
+  }
+
+  .description20 {
+    justify-content: left;
+  }
+
   .mendix23 {
-    width: 100%;
+    width: 92%;
     font-size: 14px;
     line-height: 22px;
   }
@@ -583,6 +600,10 @@
     font-size: 14px;
     line-height: 22px;
   }
+  
+  .button5 {
+    padding: 0;
+  }
 }
 
 /* 500px 이하의 더 작은 화면 대응 */
@@ -631,10 +652,6 @@
   .mendix22 {
     font-size: 30px;
     line-height: 120%;
-  }
-  
-  .button5 {
-    justify-content: center;
   }
   
   .titlebutton35 {
