@@ -97,6 +97,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   padding: var(--padding-3xs);
+  text-align: left;
 }
 .mendix11 {
   width: 595px;
@@ -982,7 +983,6 @@
     box-sizing: border-box;
   }
 
-  
   .mendix10 {
     font-size: 36px;
     line-height: 1.3;
@@ -1006,8 +1006,12 @@
   }
 
   .service-mendix-item {
-    top: 500px;
+    top: 600px;
     height: 1500px;
+  }
+
+  .title17 {
+    padding: 0;
   }
 
   .frame-parent7 {
@@ -1288,7 +1292,7 @@
   }
   .faq {
     width: 100%;
-    margin-top: 16px;
+    margin-top: 800px;
   }
   .slide-item {
     flex-direction: column;
@@ -1347,6 +1351,10 @@
     margin-top: 10px;
     bottom: auto;
     z-index: 5;
+  }
+
+  .group-div {
+    height: auto;
   }
 
   .faqlist {
@@ -1457,6 +1465,7 @@
     box-sizing: border-box;
     min-height: 350px;
     padding-bottom: 30px;
+    gap: 50px;
   }
   
   .contain26 {

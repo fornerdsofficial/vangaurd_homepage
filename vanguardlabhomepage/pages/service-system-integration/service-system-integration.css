@@ -40,6 +40,10 @@
   font-weight: 600;
   line-height: 30px; /* 125% */
 }
+
+.ai-container6 .integration {
+  color: var(--Color-Black, #393B57);
+}
 .title36 {
   align-self: stretch;
   display: flex;
@@ -447,10 +451,6 @@
 
   .description-parent5 {
     width: 100%;
-  }
-
-  .button7 {
-    justify-content: center;
   }
 
   /* 숏카드 섹션 최적화 */
