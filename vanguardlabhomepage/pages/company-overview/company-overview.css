@@ -644,10 +644,13 @@
     margin: 0;
     padding: 0;
   }
+  .mendix4 {
+    padding: 20px;
+  }
   .company-info-container {
     width: 90vw;
     margin: 0;
-    padding: 20px 20px 0;
+    padding: 20px;
     justify-content: center;
     margin: 0 auto;
   }
@@ -715,11 +718,16 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 4px;
+    width: 100%;
+  }
+  .frame-parent1 {
+    width: 80vw;
+    margin: 20px;
   }
   .wrapper{
-    justify-content: center;
     padding: 0%;
     width: 100%;
+    white-space: nowrap;
   }
   .frame-div {
     padding: 0;

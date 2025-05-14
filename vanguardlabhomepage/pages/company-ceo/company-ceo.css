@@ -157,6 +157,7 @@
   font-style: normal;
   font-weight: 200;
   line-height: 32px; /* 160% */
+  white-space: nowrap;
 }
 .img-organization-ceo-sign-1-icon {
   width: 217.4px;
@@ -272,6 +273,7 @@
     margin-bottom: 16px;
   }
   .title {
+    height: 100%;
     font-size: 28px;
     text-align: center;
     margin-bottom: 8px;
