@@ -89,6 +89,15 @@ header-component .vanguardlab {
   letter-spacing: -0.2px;
   padding-top: 3px; /* 세로 정렬 미세 조정 */
   text-shadow: 1px 0 0 #393b57, 0 1px 0 #393b57, -1px 0 0 #393b57, 0 -1px 0 #393b57;
+
+  color: var(--Color-Black, #393B57);
+  -webkit-text-stroke-width: 1.6px;
+  -webkit-text-stroke-color: var(--Color-Black, #393B57);
+  font-family: Garet;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
 }
 
 header-component .company {
