@@ -1731,11 +1731,12 @@
     -webkit-text-stroke-width: 0.8px;
     -webkit-text-stroke-color: #393B57;
     font-family: "Gmarket Sans";
-    font-size: 40px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 56px; /* 140% */
     width: 100%;
+    transform: translateY(-40px);
   }
 
   .title43, .title44 {
@@ -1756,6 +1757,10 @@
     padding: 0 20px;
     flex-direction: column;
     gap: 26px;
+  }
+
+  .frame-parent32 {
+    gap: 60px;
   }
 
   .line12 {
@@ -1867,6 +1872,16 @@
     -webkit-text-stroke-width: 0.5px;
   }
 
+  .talon-container1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .talon9 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
   .check-parent {
     gap: 3px;
   }
@@ -1910,7 +1925,7 @@
 
   .mockup-1-parent {
     width: 100%;
-    height: 80vh;
+    height: 50vh;
   }
 
   .img-155-icon,
@@ -1975,11 +1990,6 @@
     background: transparent;
   }
 
-  .text84 {
-    font-size: 18px;
-  }
-
-
   /* 리뷰 섹션 조정 */
   .talon-parent1 {
     width: 100%;
@@ -2038,6 +2048,11 @@
   /* 하단 비교 섹션 */
   .frame-parent45 {
     width: 100%;
+    gap: 20px;
+  }
+
+  .frame-parent46 {
+    height: 100%;
   }
 
   .frame-wrapper32 {
@@ -2176,6 +2191,11 @@
     width: 0;
     height: 0;
   }
+
+  .mockup-1-parent {
+    width: 100%;
+    height: 20vh;
+  }
   
   /* 500px 이하에서는 카드를 한 줄에 하나씩 표시 */
   .shortcard-group {
@@ -2245,65 +2265,81 @@
     font-size: 16px;
   }
   
-  .talonbutton1, .texticon-wrapper, .texticon-container {
-    width: 160px;
-    height: 40px;
-    font-size: 14px;
+  /* 버튼 컨테이너 너비 조정 */
+  .talonbutton-parent {
+    width: 100%;
+    flex-direction: row; /* 수평 배치 유지 */
+    flex-wrap: wrap; /* 필요시 줄바꿈 허용 */
+    gap: 10px; /* 더 작은 간격 */
+    justify-content: center; /* 중앙 정렬 */
+    padding: 0;
     margin: 0 auto;
-    border-radius: 6px;
   }
   
+  /* 모든 버튼의 공통 스타일 */
   .talonbutton, .texticon-wrapper {
-    width: 160px;
-    height: 40px;
+    width: 140px; /* 더 작은 너비 */
+    height: 36px; /* 더 작은 높이 */
+    padding: 0;
+    border-radius: 6px; /* 더 작은 테두리 반경 */
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
-    border-radius: 6px;
   }
   
-  .talonbutton-parent {
-    width: 100%;
-    flex-direction: column;
-    gap: 8px;
-    align-items: center;
-    margin: 0 auto;
-    padding: 0;
-  }
-  
-  .talonbutton-group {
-    padding: 0;
-    gap: 8px;
-  }
-  
+  /* 버튼 내 텍스트 컨테이너 스타일 */
   .texticon {
-    gap: 5px;
+    gap: 4px; /* 아이콘과 텍스트 사이 간격 줄임 */
+  }
+  
+  /* 버튼 내 텍스트 스타일 */
+  .div122 {
+    font-size: 14px; /* 더 작은 글자 크기 */
+    line-height: 18px; /* 더 작은 줄 간격 */
+    font-weight: 500; /* 약간 가벼운 폰트 웨이트 */
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
   }
 
-  /* 테이블 스타일 */
-  .tabletitle-parent {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding: 0 5px;
+  .div156 {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    color: #393B57;
+  
+    /* Gmarket Medium 40_56 */
+    -webkit-text-stroke-width: 0.8px;
+    -webkit-text-stroke-color: #393B57;
+    font-family: "Gmarket Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 56px; /* 140% */
+    width: 100%;
+    transform: translateY(-30px);
+  }
+  
+  /* 아이콘 크기 조정 */
+  .icon30, .phone, .download {
+    width: 16px;
+    height: 16px;
+  }
+  
+  /* 푸터 영역 버튼 스타일 (하단 CTA 영역) */
+  .talonbutton1, .texticon-container {
+    width: 140px;
+    height: 36px;
+    font-size: 14px;
+    border-radius: 6px;
     margin: 0 auto;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    scrollbar-width: thin;
-    scrollbar-color: #ccc transparent;
   }
-
-  .tabletitle-parent::-webkit-scrollbar {
-    height: 4px;
-  }
-
-  .tabletitle-parent::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 2px;
-  }
-
-  .tabletitle-parent::-webkit-scrollbar-track {
-    background: transparent;
+  
+  /* 푸터 버튼 그룹 */
+  .talonbutton-group {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
   }
 
   .tabletitle, .table {
@@ -2339,17 +2375,7 @@
     justify-self: center;
   }
   
-  /* 테이블 헤더 정렬 통일화 */
-  .text-parent {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    width: 100%;
-    padding-right: 40px;
-  }
-  
   .si-wrapper, .text84 {
-    width: 100%;
     grid-column: 1;
   }
   
@@ -2367,5 +2393,16 @@
   .parent3 {
     gap: 30px;
   }
+}
+
+/* 아주 작은 화면에서 버튼 그룹 재배치 */
+@media screen and (max-width: 400px) {
+  .talonbutton-parent, .talonbutton-group {
+    flex-direction: column;
+    align-items: center;
+  }
   
+  .talonbutton, .texticon-wrapper, .talonbutton1, .texticon-container {
+    width: 180px; /* 세로 배치 시 너비 약간 증가 */
+  }
 }
