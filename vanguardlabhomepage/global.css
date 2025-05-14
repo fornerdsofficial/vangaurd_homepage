@@ -171,6 +171,7 @@ header-component .taps {
   display: flex;
   align-items: center;
   height: 100%;
+  padding-right: 11vw;
 }
 
 header-component .text {

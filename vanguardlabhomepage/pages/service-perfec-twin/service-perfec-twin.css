@@ -458,7 +458,7 @@
   .main-content {
     width: 100%;
     padding-top: 100px;
-    padding-bottom: 200px;
+    padding-bottom: 400px;
   }
 
   .header-parent3 {
@@ -608,9 +608,6 @@
 
 /* 500px 이하의 더 작은 화면 대응 */
 @media screen and (max-width: 500px) {
-  .service-perfectwin-child {
-    height: 3500px;
-  }
   
   .mendix-faq {
     font-size: 24px;
