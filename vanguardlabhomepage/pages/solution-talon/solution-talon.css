@@ -383,7 +383,7 @@
   font-weight: 400;
   line-height: 24px; /* 150% */
   white-space: normal;
-  width: auto;
+  width: 312px;
   flex: none;
 }
 .description33,
@@ -767,6 +767,7 @@
 .table1 {
   align-items: flex-start;
 }
+/* 테이블 셀 너비 균일화를 위한 스타일 */
 .table1 {
   align-self: stretch;
   display: flex;
@@ -774,6 +775,72 @@
   justify-content: flex-start;
   padding: var(--padding-3xs);
   gap: var(--gap-3xs);
+  width: 100%; /* 전체 너비 사용 */
+}
+
+/* 행 내부의 체크 아이콘과 텍스트 레이아웃 통일 */
+.frame-parent40 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-11xl);
+  width: 100%; /* 전체 너비 사용 */
+}
+
+/* 체크 아이콘 영역 고정 너비 설정 */
+.check-wrapper {
+  width: 32px;
+  min-width: 32px; /* 최소 너비 고정 */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 가운데 정렬 */
+  justify-content: center; /* 가운데 정렬 */
+}
+
+/* 텍스트 영역 너비 균일화 */
+.div140 {
+  width: calc(100% - 50px); /* 체크 아이콘 영역과 간격을 빼니 나머지 */
+  position: relative;
+  line-height: var(--font-size-21xl);
+  font-weight: 500;
+  flex-grow: 1; /* 나머지 공간 채우기 */
+}
+
+/* 테이블 헤더 레이아웃 통일 */
+.text-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 32px; /* 체크 아이콘 너비만큼 오른쪽 패딩 추가 */
+}
+
+/* 테이블 헤더 텍스트 영역 균일화 */
+.text84, .talon3 {
+  width: 15%; /* 헤더 텍스트 너비 균등 분할 */
+  flex-shrink: 0;
+}
+
+/* SI 텍스트 영역 */
+.si-wrapper {
+  width: 50%; /* 왼쪽 헤더 영역 너비 */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Talon 텍스트 영역 */
+.frame-wrapper26 {
+  width: 50%; /* 오른쪽 헤더 영역 너비 */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 .table {
   width: 1027px;
@@ -1085,6 +1152,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 56px; /* 140% */
+  width: 35%;
 }
 .contain-wrapper5,
 .contain-wrapper6,
@@ -1367,6 +1435,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 56px; /* 140% */
+  width: 485px;
 }
 .talon-container3 {
   position: relative;
@@ -1606,6 +1675,7 @@
     max-width: 100vw;
     padding: 0 12px;
     box-sizing: border-box;
+    height: 100%;
   }
 
   .solution-talon-child {
@@ -1642,6 +1712,30 @@
     flex-direction: column;
     gap: 30px;
     padding-bottom: 300px;
+  }
+
+  .div140 {
+    width: auto;
+    font-size: 16px;
+    line-height: 24px;
+    grid-column: 2;
+  }
+
+  .div156 {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    color: #393B57;
+  
+    /* Gmarket Medium 40_56 */
+    -webkit-text-stroke-width: 0.8px;
+    -webkit-text-stroke-color: #393B57;
+    font-family: "Gmarket Sans";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 56px; /* 140% */
+    width: 100%;
   }
 
   .title42, .title43, .title44 {
@@ -1752,6 +1846,15 @@
     -webkit-text-stroke-width: 0.5px;
   }
 
+  .check-parent {
+    gap: 3px;
+  }
+
+  .margin-wrap {
+    margin: 0 auto;
+    padding: 0;
+  }
+
   .talon-group {
     width: 100%;
   }
@@ -1816,6 +1919,7 @@
   
   .si-wrapper {
     font-size: 14px;
+    width: 30vw;
   }
 
   .tabletitle-parent {
@@ -1944,8 +2048,18 @@
 
   /* 하단 버튼 섹션 */
   .section-459 {
-    height: auto;
+    height: 80vh;
     padding: 30px 0;
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .talon-container2 {
+    width: 60vw;
+  }
+
+  .talon-container3 {
+    width: 60vw;
   }
 
   .div-460 {
@@ -2002,7 +2116,6 @@
     font-size: 16px;
     white-space: normal;
     width: auto;
-    text-align: center;
   }
   
   .talonbutton1 {
@@ -2055,7 +2168,6 @@
     margin: 0 auto 15px;
   }
   
-
   .book-open {
     width: 15vw;
     height: 15vh;
@@ -2065,7 +2177,6 @@
     width: 12vw;
     height: 12vh;
   }
-
 
   .div131 {
     font-size: 20px;
@@ -2087,7 +2198,6 @@
     flex: none;
     text-align: center;
   }
-
   
   .line12 {
     width: 100%;
@@ -2107,11 +2217,6 @@
   .corner-down-right {
     width: 24px;
     height: 24px;
-  }
-  
-  .talonbox {
-    max-width: 280px;
-    padding: 15px 10px;
   }
   
   .si1 {
@@ -2162,8 +2267,8 @@
     gap: 5px;
   }
 
+  /* 테이블 스타일 */
   .tabletitle-parent {
-    width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     padding: 0 5px;
@@ -2203,25 +2308,41 @@
     opacity: 0.7;
   }
 
+  /* 테이블 내용 정렬 통일화 */
   .frame-parent40 {
-    gap: 8px;
-    padding: 3px 0;
-  }
-
-  .check {
-    width: 24px;
-    height: 24px;
+    gap: 12px;
+    padding: 8px 12px;
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    align-items: center;
+    width: 100%;
   }
 
   .check-wrapper {
     width: 24px;
+    min-width: 24px;
+    grid-column: 1;
+    justify-self: center;
   }
-
-  .div140 {
-    width: auto;
-    font-size: 16px;
-    line-height: 24px;
-    padding-left: 3px;
+  
+  /* 테이블 헤더 정렬 통일화 */
+  .text-parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    width: 100%;
+    padding-right: 40px;
+  }
+  
+  .si-wrapper, .text84 {
+    width: 100%;
+    grid-column: 1;
+  }
+  
+  .frame-wrapper26, .talon3 {
+    width: 100%;
+    grid-column: 2;
+    justify-self: flex-start;
   }
 
   .text84, .talon3 {
@@ -2232,81 +2353,5 @@
   .parent3 {
     gap: 30px;
   }
-}
-
-/* 400px 이하의 매우 작은 화면 대응 */
-@media screen and (max-width: 400px) {
-  .tabletitle-parent {
-    padding: 0 3px;
-    margin-bottom: 10px;
-    scrollbar-width: thin;
-    scrollbar-color: #aaa transparent;
-  }
-
-  .tabletitle-parent::-webkit-scrollbar {
-    height: 3px;
-  }
-
-  .tabletitle-parent::-webkit-scrollbar-thumb {
-    background-color: #aaa;
-    border-radius: 1.5px;
-  }
-
-  .tabletitle-parent::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  .tabletitle, .table {
-    min-width: 350px;
-    padding: 3px;
-  }
-
-  .table1 {
-    padding: 3px;
-    gap: 5px;
-  }
-
-  .frame-parent40 {
-    gap: 5px;
-    padding: 2px 0;
-  }
-
-  .check {
-    width: 20px;
-    height: 20px;
-  }
-
-  .check-wrapper {
-    width: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .div140 {
-    font-size: 14px;
-    line-height: 20px;
-    padding-left: 2px;
-  }
-
-  .text84, .talon3 {
-    line-height: 18px;
-  }
-
-  .parent3 {
-    gap: 20px;
-  }
-
-  /* 테이블 내용을 더 보기 좋게 만듦 */
-  .text-parent {
-    gap: 10px;
-  }
-
-  .tabletitle-child {
-    margin-bottom: 5px;
-  }
-
-  .table-child {
-    opacity: 0.5;
-  }
+  
 }

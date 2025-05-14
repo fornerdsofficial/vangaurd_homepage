@@ -491,6 +491,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 5;
 }
 .contain25,
 .mendix18 {
@@ -761,7 +762,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  min-height: 650px; /* 컨테이너 높이 증가 */
+  min-height: 650px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -780,12 +781,20 @@
   justify-content: center;
   align-items: center;
   padding: 20px 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .slide-item.active {
   display: flex;
   opacity: 1;
   position: relative;
+  transform: translateX(0);
+}
+
+.slide-item:not(.active) {
+  opacity: 0;
+  transform: translateX(50px);
+  display: none;
 }
 
 /* 슬라이드 콘텐츠 컨테이너 */
@@ -933,6 +942,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 5;
 }
 
 .pageindicator1 {
@@ -940,6 +950,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 8px;
 }
 
 .indicator-dots {
@@ -970,6 +981,218 @@
     padding: 0 12px;
     box-sizing: border-box;
   }
+
+  
+  .mendix10 {
+    font-size: 36px;
+    line-height: 1.3;
+    -webkit-text-stroke-width: 1px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .service-mendix-child,
+  .service-mendix-item {
+    left: 50;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 100vw;
+    padding: 0;
+  }
+
+  .service-mendix-child {
+    top: 2000px;
+    height: 4000px;
+  }
+
+  .service-mendix-item {
+    top: 500px;
+    height: 1500px;
+  }
+
+  .frame-parent7 {
+    width: 100%;
+    max-width: 100vw;
+    padding: 80px 12px 400px;
+    box-sizing: border-box;
+  }
+
+  .header-parent,
+  .title-parent {
+    width: 100%;
+    gap: 40px;
+  }
+
+  .title-parent {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .title8, .title10 {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .mendix5 {
+    font-size: 36px;
+    line-height: 130%;
+    -webkit-text-stroke-width: 1px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .ai-container1 {
+    font-size: 18px;
+    line-height: 26px;
+    width: 100%;
+  }
+
+  .description4 {
+    padding: 0;
+  }
+
+  .mendix6 {
+    width: 100%;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  /* Mendix 소개 섹션 */
+  .what-is-mendix,
+  .mendix-wrapper {
+    width: 100%;
+    font-size: 28px;
+    line-height: 36px;
+    -webkit-text-stroke-width: 0.5px;
+  }
+
+  /* 이미지 섹션 조정 */
+  .img-mendix-4-icon,
+  .img-mendix-5-icon,
+  .img-mendix-detail-2-icon {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* 아이콘 섹션 조정 */
+  .icons {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .icon-card {
+    width: 280px;
+  }
+
+  .mendix-title-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon-title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .icon-text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  /* Why Mendix 섹션 */
+  .why-mendix {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .mendix-title {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .mendix-why-text {
+    font-size: 14px;
+    line-height: 22px;
+    width: 100%;
+    padding: 0 5px;
+  }
+
+  /* 폭포수 vs Agile 섹션 */
+  .waterfall-vs-agile {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .waterfall-card,
+  .agile-card {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .comparison-title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .comparison-detail {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  /* 프로세스 다이어그램 섹션 */
+  .process-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px 0;
+  }
+
+  .process-diagram {
+    min-width: 600px; /* 가로 스크롤을 위한 최소 너비 설정 */
+  }
+
+  .process-step {
+    width: 150px;
+    padding: 10px;
+  }
+
+  .step-title {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .step-detail {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  /* 기타 섹션 조정 */
+  .mendix-benefit {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .benefit-item {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .benefit-title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .benefit-detail {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
   .main-content,
   .frame-parent14 {
     width: 100%;
@@ -982,6 +1205,7 @@
   .header-parent1 {
     width: 100%;
     margin: 0;
+    margin-bottom: 500px;
     padding: 0;
   }
   .title-parent1 {
@@ -1069,36 +1293,133 @@
   .slide-item {
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    justify-content: flex-start;
+    gap: 10px;
     width: 100%;
+    padding: 0;
+  }
+  .slide-image-wrapper {
+    width: 90%;
+    max-width: 320px;
+    height: 140px;
+    margin: 0 auto 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
   .slide-image-wrapper img {
     width: 100%;
-    max-width: 320px;
-    height: auto;
-    display: block;
-    margin: 0 auto 8px auto;
+    height: 100%;
+    object-fit: cover;
   }
+  .mendixtextbox {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 5px;
+    min-height: auto;
+    height: auto;
+  }
+  .title19 {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+    margin-bottom: 5px;
+  }
+  .react-native {
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .description15 {
+    width: 100%;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+  }
+  .pageindicator {
+    position: relative;
+    width: 90vw;
+    height: 20px;
+    margin: 0 auto;
+    margin-top: 10px;
+    bottom: auto;
+    z-index: 5;
+  }
+
+  .faqlist {
+    width: 90vw;
+  }
+
+  .div65{
+    width: 60vw;
+  }
+
+  .microflow-domain {
+    width: 60vw;
+  }
+
+  .slides-container {
+    width: 90vw;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    touch-action: pan-x;
+    cursor: grab;
+    min-height: 400px;
+  }
+  
+  .slides-container:active {
+    cursor: grabbing;
+  }
+  
+  @keyframes swipeHint {
+    0% { opacity: 0; transform: translateX(-70%); }
+    25% { opacity: 1; }
+    50% { transform: translateX(-30%); }
+    75% { opacity: 1; }
+    100% { opacity: 0; transform: translateX(-70%); }
+  }
+  
+  .chevronleft,
+  .chevronright {
+    display: none; /* 화살표 숨기기 */
+  }
+  
+  /* 슬라이드 콘텐츠 */
+  .cotain {
+    gap: 0;
+    width: 100%;
+    padding: 0;
+  }
+  
   .contents4 {
     width: 100%;
     gap: 16px;
     padding: 0 12px;
     box-sizing: border-box;
   }
+  
   .mendix13 {
     width: 100%;
     font-size: 16px;
     line-height: 1.5;
   }
+  
   .check-square {
     width: 24px;
     height: 24px;
     flex-shrink: 0;
   }
+  
   .mendix-container1 {
     width: 100%;
     height: auto;
-    min-height: 131px;
+    min-height: 100px;
     font-size: 28px;
     line-height: 1.4;
     padding: 0 12px;
@@ -1108,6 +1429,7 @@
     align-items: center;
     justify-content: center;
   }
+  
   .mendix-container2 {
     width: 100%;
     font-size: 28px;
@@ -1115,72 +1437,327 @@
     padding: 0 12px;
     box-sizing: border-box;
   }
+  
   .mendix-container3 {
     width: 100%;
     height: auto;
-    min-height: 131px;
+    min-height: 100px;
     font-size: 28px;
     line-height: 1.4;
     padding: 0 12px;
     box-sizing: border-box;
     text-align: center;
   }
+  
+  /* 슬라이드 관련 스타일 */
   .contain25 {
-    width: 100%;
-    padding: 0 12px;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 0;
     box-sizing: border-box;
-    margin-top: 32px;
-    height: auto;
-    min-height: 400px;
+    min-height: 350px;
+    padding-bottom: 30px;
   }
+  
   .contain26 {
     width: 100%;
     height: auto;
-    min-height: 400px;
-    gap: 12px;
-    padding: 0;
+    min-height: 300px;
+    gap: 10px;
+    margin: 0 auto;
   }
-  .slide-image-wrapper {
-    width: 100%;
-    height: 160px;
-    margin-bottom: 12px;
-  }
-  .mendixtextbox {
-    width: 100%;
-    height: auto;
-    min-height: 180px;
+  
+  .slide-item {
     flex-direction: column;
-    gap: 12px;
-    padding: 0;
-  }
-  .title19 {
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
     width: 100%;
-    height: auto;
-    min-height: 60px;
     padding: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
   }
-  .react-native {
+  
+  .slide-image-wrapper {
+    width: 90%;
+    max-width: 320px;
+    height: 140px;
+    margin: 0 auto 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .slide-image-wrapper:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .slide-image-wrapper img {
     width: 100%;
-    font-size: 18px;
-    line-height: 1.3;
-    white-space: normal;
-    word-break: keep-all;
-    text-align: left;
+    height: 100%;
+    object-fit: cover;
   }
-  .description15 {
-    width: 100%;
-    max-height: none;
-    font-size: 14px;
-    line-height: 1.4;
-    white-space: normal;
-    word-break: keep-all;
-    text-align: left;
-    padding: 0;
-    margin: 0;
-  }
+  
+  /* 인디케이터 */
   .pageindicator {
     position: relative;
-    height: 30px;
-    margin-top: 12px;
+    width: 90vw;
+    height: 20px;
+    margin: 0 auto;
+    margin-top: 10px;
+    bottom: auto;
+    z-index: 5;
+  }
+  
+  .pageindicator1 {
+    gap: 6px;
+  }
+  
+  .on, .off {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .on {
+    width: 24px;
+    background-color: var(--KeyColor);
+    opacity: 1;
+    box-shadow: 0 0 3px rgba(33, 71, 155, 0.5);
+    transition: width 0.3s ease;
+    animation: none;
+  }
+}
+
+/* 500px 이하의 더 작은 화면 대응 */
+@media screen and (max-width: 500px) {
+  .service-mendix-child {
+    height: 5000px;
+  }
+  
+  .mendix11 {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    padding: 0 15px;
+  }
+  
+  .mendix13 {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 0 5px;
+  }
+  
+  .mendix-container1 {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 0 10px;
+    height: auto;
+    min-height: 100px;
+  }
+  
+  .mendix-container2 {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 0 10px;
+    text-align: center;
+  }
+  
+  .mendix-container3 {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 0 10px;
+    height: auto;
+    min-height: 100px;
+  }
+  
+  .ai-container3 {
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .icon-card {
+    width: 240px;
+  }
+
+  .mendix-title-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .mendix-title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .process-step {
+    width: 130px;
+    padding: 8px;
+  }
+
+  .benefit-item {
+    padding: 10px;
+  }
+  
+  .slides-container {
+    min-height: 320px;
+  }
+  
+  .slides-container::before {
+    font-size: 9px;
+    bottom: 3px;
+  }
+  
+  .slides-container::after {
+    bottom: 25px;
+    width: 40px;
+    height: 3px;
+  }
+  
+  .contain25 {
+    width: 90vw;
+    margin: 0 auto;
+    padding: 0;
+    min-height: 280px;
+    padding-bottom: 25px;
+  }
+  
+  .slide-item {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    gap: 8px;
+  }
+  
+  .slide-image-wrapper {
+    height: 120px;
+    margin-bottom: 8px;
+    max-width: 280px;
+  }
+  
+  .mendixtextbox {
+    gap: 5px;
+  }
+  
+  .react-native {
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 5px;
+  }
+  
+  .description15 {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  .pageindicator {
+    height: 15px;
+    margin-top: 5px;
+  }
+  
+  .pageindicator1 {
+    gap: 4px;
+  }
+  
+  .on, .off {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+  }
+  
+  .on {
+    width: 18px;
+  }
+}
+
+/* 인디케이터 스타일 개선 */
+.pageindicator {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.pageindicator1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.off, .on {
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.on {
+  background-color: var(--KeyColor);
+  opacity: 1;
+  box-shadow: 0 0 6px rgba(33, 71, 155, 0.5);
+  animation: indicatorPulse 2s infinite;
+}
+
+/* 활성 인디케이터 펄스 애니메이션 */
+@keyframes indicatorPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@media screen and (max-width: 768px) {
+  .pageindicator {
+    position: relative;
+    width: 90vw;
+    height: 20px;
+    margin: 0 auto;
+    margin-top: 10px;
+    bottom: auto;
+  }
+  
+  .pageindicator1 {
+    gap: 6px;
+  }
+  
+  .on, .off {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+  }
+  
+  .on {
+    width: 24px;
+    transition: width 0.3s ease;
+    animation: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .pageindicator {
+    height: 15px;
+    margin-top: 5px;
+  }
+  
+  .on, .off {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+  }
+  
+  .on {
+    width: 18px;
+  }
+  
+  .pageindicator1 {
+    gap: 4px;
   }
 }
