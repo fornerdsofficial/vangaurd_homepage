@@ -217,7 +217,7 @@ header-component .mega-dropdown-container {
   margin: 0 auto;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 30px 0 40px 0; /* 상하단 여백 조정 */
 }
 
@@ -225,17 +225,22 @@ header-component .mega-dropdown-container {
 header-component .dropdown-menu-row {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
-  gap: 80px; /* 메뉴 간 간격 */
-  margin-left: -145px; /* 왼쪽으로 이동 - 음수 값을 사용하여 왼쪽으로 이동 */
+  gap: 65px; /* 메뉴 간 간격 */
+  margin-left: 0; /* 왼쪽 마진 제거 */
+  padding-left: 25.5%; /* 상단 메뉴와 동일하게 패딩 적용 */
 }
 
 /* 드롭다운 메뉴별 위치 조정 */
 header-component .dropdown-menu {
   position: relative; /* absolute에서 relative로 변경 */
   display: block;
-  width: auto; /* 메뉴 너비 자동 조정 */
+}
+
+/* 첫 번째 드롭다운 메뉴(Company)를 상단 메뉴와 정확히 정렬 */
+header-component .dropdown-menu:first-child {
+  margin-left: 0;
 }
 
 /* 드롭다운 메뉴 안의 링크 스타일링 */
@@ -560,6 +565,10 @@ header-component .dropdown-content a:hover {
     right: 5%;
   }
   
+  header-component .dropdown-menu-row {
+    padding-left: 14%; /* 상단 메뉴와 동일하게 패딩 적용 */
+  }
+  
   header-component .contain,
   header-component .contain1 {
     gap: 50px; /* 화면이 작을 때 간격 줄임 */
@@ -597,6 +606,10 @@ header-component .dropdown-content a:hover {
   header-component .dropdown-items-container {
     left: 20px;
     right: 20px;
+  }
+  
+  header-component .dropdown-menu-row {
+    padding-left: 20px; /* 상단 메뉴와 동일하게 패딩 적용 */
   }
   
   header-component .dropdown-content a {
